@@ -28,81 +28,116 @@ const COLORS = {
   BG_LIGHT_NIGHT_PANEL: "rgb(25, 39, 52)",
 };
 
+const TEXT = {
+  PARAGRAPH: {
+    SIZE: {
+      XS: "15px",
+      MD: "15px",
+      LG: "16px",
+      XL: "17px",
+      XXL: "18px",
+    },
+    MARGIN: "1rem",
+  },
+  TITLE: {
+    TAGS: {
+      H1: {
+        SIZE: {
+          XS: "1.05rem",
+          MD: "1.15rem",
+          LG: "1.2rem",
+          XL: "1.25rem",
+          XXL: "1.3rem",
+        },
+        MARGIN: "1.2rem",
+      },
+      H2: {
+        SIZE: {
+          XS: "1rem",
+          MD: "1.05rem",
+          LG: "1.1rem",
+          XL: "1.15rem",
+          XXL: "1.2rem",
+        },
+        MARGIN: "1.15rem",
+      },
+      H3: {
+        SIZE: {
+          XS: "0.89rem",
+          MD: "1rem",
+          LG: "1.05rem",
+          XL: "1.1rem",
+          XXL: "1.15rem",
+        },
+        MARGIN: "1.13rem",
+      },
+      H4: {
+        SIZE: {
+          XS: "0.85rem",
+          MD: "0.9rem",
+          LG: "1.02rem",
+          XL: "1.08rem",
+          XXL: "1.1rem",
+        },
+        MARGIN: "1.1rem",
+      },
+      H5: {
+        SIZE: {
+          XS: "0.82rem",
+          MD: "0.89rem",
+          LG: "1rem",
+          XL: "1.05rem",
+          XXL: "1.09rem",
+        },
+        MARGIN: "1rem",
+      },
+      H6: {
+        SIZE: {
+          XS: "0.75rem",
+          MD: "0.78rem",
+          LG: ".8rem",
+          XL: ".83rem",
+          XXL: ".86rem",
+        },
+        MARGIN: ".8rem",
+      },
+    },
+  },
+};
+
 const THEME = {
   TEXT: {
     FONT: {
       PARAGRAPH: {
-        SIZE: {
-          XS: "15px",
-          MD: "15px",
-          LG: "16px",
-          XL: "17px",
-          XXL: "18px",
-        },
+        SIZE: TEXT.PARAGRAPH.SIZE.LG,
         WEIGHT: "normal",
-        MARGIN: "1rem",
+        MARGIN: TEXT.PARAGRAPH.MARGIN,
       },
       TITLE: {
         TAGS: {
           H1: {
-            SIZE: {
-              XS: "1.05rem",
-              MD: "1.15rem",
-              LG: "1.2rem",
-              XL: "1.25rem",
-              XXL: "1.3rem",
-            },
-            MARGIN: "1.2rem",
+            SIZE: TEXT.TITLE.TAGS.H1.SIZE.LG,
+            MARGIN: TEXT.TITLE.TAGS.H1.MARGIN,
           },
           H2: {
-            SIZE: {
-              XS: "1rem",
-              MD: "1.05rem",
-              LG: "1.1rem",
-              XL: "1.15rem",
-              XXL: "1.2rem",
-            },
-            MARGIN: "1.15rem",
+            SIZE: TEXT.TITLE.TAGS.H2.SIZE.LG,
+            MARGIN: TEXT.TITLE.TAGS.H2.MARGIN,
           },
           H3: {
-            SIZE: {
-              XS: "0.89rem",
-              MD: "1rem",
-              LG: "1.05rem",
-              XL: "1.1rem",
-              XXL: "1.15rem",
-            },
-            MARGIN: "1.13rem",
+            SIZE: TEXT.TITLE.TAGS.H3.SIZE.LG,
+            MARGIN: TEXT.TITLE.TAGS.H3.MARGIN,
           },
           H4: {
-            SIZE: {
-              XS: "0.85rem",
-              MD: "0.9rem",
-              LG: "1.02rem",
-              XL: "1.08rem",
-              XXL: "1.1rem",
-            },
-            MARGIN: "1.1rem",
+            SIZE: TEXT.TITLE.TAGS.H4.SIZE.LG,
+            MARGIN: TEXT.TITLE.TAGS.H4.MARGIN,
           },
           H5: {
-            SIZE: {
-              XS: "0.82rem",
-              MD: "0.89rem",
-              LG: "1rem",
-              XL: "1.05rem",
-              XXL: "1.09rem",
-            },
-            MARGIN: "1rem",
+            SIZE: TEXT.TITLE.TAGS.H5.SIZE.LG,
+            MARGIN: TEXT.TITLE.TAGS.H5.MARGIN,
           },
           H6: {
-            SIZE: {
-              XS: "0.75rem",
-              MD: "0.78rem",
-              LG: ".8rem",
-              XL: ".83rem",
-              XXL: ".86rem",
-            },
-            MARGIN: ".8rem",
+            SIZE: TEXT.TITLE.TAGS.H6.SIZE.LG,
+            MARGIN: TEXT.TITLE.TAGS.H6.MARGIN,
           },
         },
         WEIGHT: "700",

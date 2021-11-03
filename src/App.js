@@ -10,8 +10,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-      background-color: ${({ theme: { BACKGROUND: BG } }) => BG};
-      color: ${({ theme: { PRIMARY: COLOR } }) => COLOR}
+    background-color: ${({ theme: { BACKGROUND: BG } }) => BG};
+    color: ${({ theme: { PRIMARY: COLOR } }) => COLOR};
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 `;
 

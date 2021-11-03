@@ -11,9 +11,9 @@ const AuthBodyStyleContainer = styled.div`
   }
 `;
 const RightStyle = styled.div`
-  background-color: red;
   flex: 1 0 auto;
   max-width: 600px;
+  padding: 1rem;
 `;
 
 const BgImagenStyle = styled.div`
@@ -24,7 +24,6 @@ const BgImagenStyle = styled.div`
 `;
 
 const LeftStyle = styled.div`
-  background-color: blue;
   min-height: 45vh;
   position: relative;
   @media screen and (min-width: 600px) {
