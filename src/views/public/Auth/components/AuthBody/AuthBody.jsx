@@ -7,6 +7,7 @@ import {
   SvgStyle,
 } from "./authBody.style";
 import AuthBg from "../../../../../utils/img/png/bg_auth.png";
+import AuthWrapper from "../AuthWrapper";
 
 const AuthBody = () => {
   return (
@@ -20,10 +21,7 @@ const AuthBody = () => {
         </SvgStyle>
       </LeftStyle>
       <RightStyle>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo nisi nihil
-        iste sed dolore expedita voluptates cumque, quidem distinctio
-        perspiciatis porro sunt culpa nesciunt, delectus eos reprehenderit odit
-        temporibus harum.
+        <AuthWrapper />
       </RightStyle>
     </AuthBodyStyleContainer>
   );

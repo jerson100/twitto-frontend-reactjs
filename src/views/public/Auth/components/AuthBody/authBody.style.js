@@ -5,8 +5,7 @@ const AuthBodyStyleContainer = styled.div`
   flex: 1 0 0;
   display: flex;
   flex-direction: column-reverse;
-  height: 0;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 700px) {
     flex-direction: row;
   }
 `;
@@ -14,6 +13,9 @@ const RightStyle = styled.div`
   flex: 1 0 auto;
   max-width: 600px;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const BgImagenStyle = styled.div`
@@ -21,25 +23,27 @@ const BgImagenStyle = styled.div`
   height: 100%;
   width: 100%;
   background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
 `;
 
 const LeftStyle = styled.div`
   min-height: 45vh;
   position: relative;
-  @media screen and (min-width: 600px) {
-    flex: 1 0 0;
-  }
+  display: flex;
+  justify-content: center;
+  flex: 1 0 0;
 `;
 
 const SvgStyle = styled.svg`
   fill: #fff;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  height: 100%;
-  padding: 1rem;
-  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 `;
 
 export {
