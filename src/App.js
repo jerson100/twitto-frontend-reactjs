@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={THEME.COLORS[theme]}>
+      <ThemeProvider theme={{ ...THEME, COLORS: THEME.COLORS[theme] }}>
         <GlobalStyle />
         <AppRouter />
       </ThemeProvider>
