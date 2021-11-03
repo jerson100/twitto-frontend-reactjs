@@ -9,15 +9,19 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  body{
+      background-color: ${({ theme: { BACKGROUND: BG } }) => BG};
+      color: ${({ theme: { PRIMARY: COLOR } }) => COLOR}
+  }
 `;
 
 function App() {
-  const [theme, settheme] = useState("DEFAULT");
+  const [theme, settheme] = useState("LIGHT_NIGHT");
 
   return (
     <>
-      <GlobalStyle />
-      <ThemeProvider theme={THEME[theme]}>
+      <ThemeProvider theme={THEME.COLORS[theme]}>
+        <GlobalStyle />
         <AppRouter />
       </ThemeProvider>
     </>
