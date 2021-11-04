@@ -6,6 +6,14 @@ const BREAKPOINTS = {
   XLL: 1400,
 };
 
+const SIZES = {
+  SMALLER: "SMALLER", //16px
+  SMALL: "SMALL", //24px
+  NORMAL: "NORMAL", //38px
+  BIG: "BIG", //40px
+  VERY_BIG: "VERY_BIG", //46px
+};
+
 const COLORS = {
   PRIMARY_COLOR: "rgb(15, 20, 25)",
 
@@ -169,4 +177,4 @@ const THEME = {
   },
 };
 
-export { BREAKPOINTS, THEME, COLORS };
+export { BREAKPOINTS, THEME, COLORS, SIZES };
