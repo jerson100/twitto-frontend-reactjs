@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../../../../../components/common/Button";
 import Paragraph from "../../../../../components/common/Paragraph/Paragraph";
 import AuthForm from "../AuthForm";
 import { AuthLogoStyle, AuthWrapperStyle } from "./authWrapper.style";

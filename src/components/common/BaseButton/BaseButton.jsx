@@ -9,6 +9,7 @@ const BaseButton = ({
   block,
   rounded,
   className,
+  maxWidth,
 }) => {
   const sizeMemo = useMemo(() => size.toUpperCase(), [size]);
   //   console.log(sizeMemo);
@@ -19,6 +20,7 @@ const BaseButton = ({
       rounded={rounded}
       onClick={handleClick && handleClick}
       className={className}
+      maxWidth={maxWidth}
     >
       {children}
     </BaseButtonStyle>
@@ -29,12 +31,14 @@ BaseButton.propTypes = {
   size: PropTypes.oneOf(["SMALLER", "SMALL", "NORMAL", "BIG", "VERY_BIG"]),
   block: PropTypes.bool,
   rounded: PropTypes.bool,
+  maxWidth: PropTypes.string,
 };
 
 BaseButton.defaultProps = {
   size: "NORMAL",
   block: false,
   rounded: false,
+  maxWidth: "100%",
 };
 
 export default BaseButton;

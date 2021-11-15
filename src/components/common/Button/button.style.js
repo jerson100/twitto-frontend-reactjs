@@ -44,6 +44,10 @@ const getStyleButton = ({ type, theme, color }) => {
 
 const ButtonStyle = styled(BaseButton)`
   ${(res) => getStyleButton(res)}
+  .text {
+  }
+  .icon {
+  }
 `;
 
 export { ButtonStyle };

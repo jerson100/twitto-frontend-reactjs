@@ -20,7 +20,8 @@ const Button = ({
       type={type}
       color={color}
     >
-      {children}
+      {/* <span className="icon"></span> */}
+      <span className="text">{children}</span>
     </ButtonStyle>
   );
 };

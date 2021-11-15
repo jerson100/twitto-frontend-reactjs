@@ -29,7 +29,6 @@ const BaseButtonStyle = styled.button`
   border-radius: ${({ rounded }) => (rounded ? "99999px" : "2px")};
   border: solid 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  max-width: 100%;
   ${({ block }) =>
     block
       ? css`
@@ -50,6 +49,10 @@ const BaseButtonStyle = styled.button`
   overflow: hidden;
   outline: 0;
   ${({ $size }) => BUTTONS_SIZE[$size]}
+  ${({ maxWidth }) => css`
+    max-width: ${maxWidth};
+    width: 100%;
+  `}
   &:focus {
     outline: solid 2px ${COLORS["BLUE_COLOR"]};
   }
