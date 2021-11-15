@@ -1,5 +1,5 @@
 import React from "react";
-import BaseButton from "../../../../../components/common/BaseButton";
+import Button from "../../../../../components/common/Button";
 import Paragraph from "../../../../../components/common/Paragraph/Paragraph";
 import AuthForm from "../AuthForm";
 import { AuthLogoStyle, AuthWrapperStyle } from "./authWrapper.style";
@@ -14,10 +14,6 @@ const AuthWrapper = () => {
       </AuthLogoStyle>
       {/* Title */}
       <Paragraph as="h1">Lo que está pasando ahora</Paragraph>
-      <BaseButton block rounded size="big">
-        Registrar con el número de teléfono o con el gmail
-      </BaseButton>
-      {/* Description */}
       <AuthForm />
     </AuthWrapperStyle>
   );
