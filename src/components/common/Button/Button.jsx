@@ -10,6 +10,8 @@ const Button = ({
   rounded,
   type,
   color,
+  maxWidth,
+  Icon,
 }) => {
   return (
     <ButtonStyle
@@ -19,8 +21,9 @@ const Button = ({
       rounded={rounded}
       type={type}
       color={color}
+      maxWidth={maxWidth}
     >
-      {/* <span className="icon"></span> */}
+      <div className="icon">{Icon && Icon}</div>
       <span className="text">{children}</span>
     </ButtonStyle>
   );
@@ -28,7 +31,7 @@ const Button = ({
 
 Button.propTypes = {
   handleClick: PropTypes.func,
-  size: PropTypes.oneOf(["SMALLER", "SMALL", "NORMAL", "BIG", "VERY_BIG"]),
+  size: PropTypes.oneOf(["SMALL", "NORMAL", "BIG", "VERY_BIG"]),
   block: PropTypes.bool,
   rounded: PropTypes.bool,
   type: PropTypes.oneOf(["DEFAULT", "GOSTH"]),
@@ -44,6 +47,7 @@ Button.propTypes = {
     "green",
     "black",
   ]),
+  maxWidth: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -52,6 +56,7 @@ Button.defaultProps = {
   rounded: false,
   type: "DEFAULT", //actua dependiendo el tema seleccionado.
   color: undefined,
+  maxWidth: "100%",
 };
 
 export default Button;

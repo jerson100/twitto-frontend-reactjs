@@ -3,7 +3,7 @@ import { COLORS, SIZES } from "../../../configs/style";
 
 const BUTTONS_SIZE = {
   [SIZES.SMALL]: css`
-    font-size: 14px;
+    font-size: 13px;
     padding: 0 7px;
     height: 24px;
   `,
@@ -13,12 +13,12 @@ const BUTTONS_SIZE = {
     padding: 4px 12px;
   `,
   [SIZES.BIG]: css`
-    font-size: 18px;
+    font-size: 17px;
     padding: 4px 16px;
     height: 40px;
   `,
   [SIZES.VERY_BIG]: css`
-    font-size: 20px;
+    font-size: 18px;
     height: 48px;
     padding: 4px 20px;
   `,

@@ -47,6 +47,8 @@ const ButtonStyle = styled(BaseButton)`
   .text {
   }
   .icon {
+    display: inline-block;
+    margin-right: 0.5rem;
   }
 `;
 
