@@ -11,5 +11,8 @@ const AuthLogoStyle = styled.svg`
   margin-bottom: 2rem;
   fill: ${({ theme }) => theme.COLORS.PRIMARY};
 `;
+const AuthWrapperHeaderStyle = styled.div`
+  max-width: 500px;
+`;
 
-export { AuthWrapperStyle, AuthLogoStyle };
+export { AuthWrapperStyle, AuthLogoStyle, AuthWrapperHeaderStyle };

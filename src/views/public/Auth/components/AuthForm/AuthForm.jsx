@@ -5,19 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faApple } from "@fortawesome/free-brands-svg-icons";
 import Space from "../../../../../components/common/Space/Space";
 import JeLink from "../../../../../components/common/JeLink";
-import { RegisterTermsStyle } from "./authForm.style";
+import { AuthFormStyle, RegisterTermsStyle } from "./authForm.style";
 
 const AuthForm = () => {
   return (
-    <div>
-      <Paragraph as="p" type="h4">
-        Únete a Twitto hoy mismo
-      </Paragraph>
+    <AuthFormStyle>
       <Button
         rounded
         size="NORMAL"
         color="normal"
-        maxWidth="300px"
+        // maxWidth="300px"
         Icon={<FontAwesomeIcon icon={faGoogle} />}
       >
         Iniciar sesión con google
@@ -26,12 +23,17 @@ const AuthForm = () => {
         rounded
         size="NORMAL"
         color="normal"
-        maxWidth="300px"
+        // maxWidth="300px"
         Icon={<FontAwesomeIcon icon={faApple} />}
       >
         Iniciar sesión con apple
       </Button>
-      <Button rounded size="NORMAL" color="NORMAL" maxWidth="300px">
+      <Button
+        rounded
+        size="NORMAL"
+        color="NORMAL"
+        //    maxWidth="300px"
+      >
         Iniciar sesión con una cuenta de gmail o telèfono
       </Button>
       <RegisterTermsStyle>
@@ -47,10 +49,16 @@ const AuthForm = () => {
       <Paragraph as="p" type="h6">
         ¿Ya tienes una cuenta?
       </Paragraph>
-      <Button rounded size="NORMAL" color="BLUE" type="GOSTH" maxWidth="300px">
+      <Button
+        rounded
+        size="NORMAL"
+        color="BLUE"
+        type="GOSTH"
+        //   maxWidth="300px"
+      >
         Iniciar sesión
       </Button>
-    </div>
+    </AuthFormStyle>
   );
 };
 

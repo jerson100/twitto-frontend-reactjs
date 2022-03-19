@@ -11,7 +11,7 @@ const AuthBodyStyleContainer = styled.div`
 `;
 const RightStyle = styled.div`
   flex: 1 0 auto;
-  max-width: 600px;
+  max-width: 760px;
   padding: 1rem;
   display: flex;
   align-items: center;
