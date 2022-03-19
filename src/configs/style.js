@@ -1,3 +1,5 @@
+import { css } from "styled-components";
+
 const BREAKPOINTS = {
   SM: 576, // Small devices (landscape phones, 576px and up)
   MD: 768, // Medium devices (tablets, 768px and up)
@@ -76,11 +78,11 @@ const BUTTONS = {
 const TEXT = {
   PARAGRAPH: {
     SIZE: {
-      XS: "15px",
-      MD: "15px",
-      LG: "16px",
-      XL: "17px",
-      XXL: "18px",
+      XS: { name: "XS", val: "15px" },
+      MD: { name: "XS", val: "15px" },
+      LG: { name: "XS", val: "16px" },
+      XL: { name: "XS", val: "17px" },
+      XXL: { name: "XS", val: "18px" },
     },
     MARGIN: "1rem",
   },
@@ -88,66 +90,94 @@ const TEXT = {
     TAGS: {
       H1: {
         SIZE: {
+          SM: "2rem",
           XS: "2.2rem",
           MD: "2.4rem",
           LG: "2.6rem",
-          XL: "2.7rem",
-          XXL: "2.6rem",
+          XL: "2.8rem",
+          XLL: "3.6rem",
         },
         MARGIN: "1.5rem",
       },
       H2: {
         SIZE: {
+          SN: "1.8rem",
           XS: "1.9rem",
           MD: "2rem",
           LG: "2.2rem",
           XL: "2.4rem",
-          XXL: "2.6rem",
+          XLL: "2.7rem",
         },
-        MARGIN: "1.4rem",
+        MARGIN: { name: "XS", val: "1.4rem" },
       },
       H3: {
         SIZE: {
+          SM: "1.5rem",
           XS: "1.7rem",
           MD: "1.9rem",
           LG: "2rem",
           XL: "2.2rem",
-          XXL: "2.3rem",
+          XLL: "2.4rem",
         },
         MARGIN: "1.35rem",
       },
       H4: {
         SIZE: {
+          SM: "1.3rem",
           XS: "1.4rem",
           MD: "1.65rem",
           LG: "1.75rem",
           XL: "2rem",
-          XXL: "2.1rem",
+          XLL: "2.1rem",
         },
         MARGIN: "1.45rem",
       },
       H5: {
         SIZE: {
+          SM: ".8rem",
           XS: "1rem",
           MD: "1.2rem",
           LG: "1.3rem",
           XL: "1.4rem",
-          XXL: "1.5rem",
+          XLL: "1.5rem",
         },
         MARGIN: "1.2rem",
       },
       H6: {
         SIZE: {
+          SM: "0.6rem",
           XS: "0.8rem",
           MD: "0.85rem",
           LG: ".9rem",
           XL: "1rem",
-          XXL: "1.1rem",
+          XLL: "1.1rem",
         },
         MARGIN: "1.1rem",
       },
     },
   },
+};
+
+const getTitlesSizeBreakPoint = (tag = "") => {
+  tag = tag.toUpperCase();
+  return css`
+    @media (min-width: ${BREAKPOINTS.SM}px) {
+      font-size: ${TEXT.TITLE.TAGS[tag].SIZE.SM};
+    }
+    @media (min-width: ${BREAKPOINTS.MD}px) {
+      font-size: ${TEXT.TITLE.TAGS[tag].SIZE.MD};
+    }
+    @media (min-width: ${BREAKPOINTS.LG}px) {
+      font-size: ${TEXT.TITLE.TAGS[tag].SIZE.LG};
+    }
+    @media (min-width: ${BREAKPOINTS.XL}px) {
+      font-size: ${TEXT.TITLE.TAGS[tag].SIZE.XL};
+    }
+    @media (min-width: ${BREAKPOINTS.XLL}px) {
+      font-size: ${TEXT.TITLE.TAGS[tag].SIZE.XLL};
+    }
+    margin-bottom: ${TEXT.TITLE.TAGS[tag].MARGIN};
+  `;
 };
 
 const THEME = {
@@ -160,30 +190,12 @@ const THEME = {
       },
       TITLE: {
         TAGS: {
-          H1: {
-            SIZE: TEXT.TITLE.TAGS.H1.SIZE.LG,
-            MARGIN: TEXT.TITLE.TAGS.H1.MARGIN,
-          },
-          H2: {
-            SIZE: TEXT.TITLE.TAGS.H2.SIZE.LG,
-            MARGIN: TEXT.TITLE.TAGS.H2.MARGIN,
-          },
-          H3: {
-            SIZE: TEXT.TITLE.TAGS.H3.SIZE.LG,
-            MARGIN: TEXT.TITLE.TAGS.H3.MARGIN,
-          },
-          H4: {
-            SIZE: TEXT.TITLE.TAGS.H4.SIZE.LG,
-            MARGIN: TEXT.TITLE.TAGS.H4.MARGIN,
-          },
-          H5: {
-            SIZE: TEXT.TITLE.TAGS.H5.SIZE.LG,
-            MARGIN: TEXT.TITLE.TAGS.H5.MARGIN,
-          },
-          H6: {
-            SIZE: TEXT.TITLE.TAGS.H6.SIZE.LG,
-            MARGIN: TEXT.TITLE.TAGS.H6.MARGIN,
-          },
+          H1: getTitlesSizeBreakPoint("h1"),
+          H2: getTitlesSizeBreakPoint("h2"),
+          H3: getTitlesSizeBreakPoint("h3"),
+          H4: getTitlesSizeBreakPoint("h4"),
+          H5: getTitlesSizeBreakPoint("h5"),
+          H6: getTitlesSizeBreakPoint("h6"),
         },
         WEIGHT: "700",
       },
