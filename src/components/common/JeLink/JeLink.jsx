@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { LinkStyled } from "./Link.style";
 
-const Link = ({ childen, color, target }) => {
+const JeLink = ({ children, color, target }) => {
   return (
     <LinkStyled color={color} target={target}>
-      {childen}
+      {children}
     </LinkStyled>
   );
 };
 
-Link.PropTypes = {
+JeLink.propTypes = {
   color: PropTypes.oneOf([
     "NORMAL",
     "PURPLE",
@@ -28,9 +28,9 @@ Link.PropTypes = {
   target: PropTypes.oneOf(["__blank", "_self", "_parent", "_top"]),
 };
 
-Link.defaultProps = {
+JeLink.defaultProps = {
   color: null,
   target: null,
 };
 
-export default Link;
+export default JeLink;
