@@ -14,6 +14,33 @@ const Button = ({
   Icon,
 }) => {
   return (
+    <ButtonInitial
+      handleClick={handleClick}
+      size={size}
+      block={block}
+      rounded={rounded}
+      type={type}
+      color={color}
+      maxWidth={maxWidth}
+      Icon={Icon}
+    >
+      {children}
+    </ButtonInitial>
+  );
+};
+
+const ButtonInitial = ({
+  handleClick,
+  size,
+  block,
+  rounded,
+  type,
+  color,
+  maxWidth,
+  children,
+  Icon,
+}) => {
+  return (
     <ButtonStyle
       handleClick={handleClick}
       size={size}

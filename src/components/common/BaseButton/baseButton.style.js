@@ -48,17 +48,19 @@ const BaseButtonStyle = styled.button`
   text-overflow: ellipsis;
   overflow: hidden;
   outline: 0;
+  transition: transform 200ms ease;
   ${({ $size }) => BUTTONS_SIZE[$size]}
   ${({ maxWidth }) => css`
     max-width: ${maxWidth};
     width: 100%;
   `}
   &:focus {
-    outline: solid 2px ${COLORS["BLUE_COLOR"]};
+    outline: solid 2px orange;
   }
   &:active {
     outline: solid 2px ${COLORS["BLUE_COLOR"]};
     background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
   }
 `;
 

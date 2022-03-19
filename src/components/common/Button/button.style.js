@@ -4,7 +4,7 @@ import BaseButton from "../BaseButton";
 import { darken, lighten } from "polished";
 
 const getStyleButton = ({ type, theme, color }) => {
-  let c, b, bg, bg_hover;
+  let c, b, bg, bg_hover, b_hover;
   if (color) {
     color = color?.toUpperCase();
     if (BUTTONS.COLORS[color]) {
@@ -23,18 +23,21 @@ const getStyleButton = ({ type, theme, color }) => {
   if (type === "GOSTH") {
     c = bg;
     b = c;
-    bg = "transparente";
+    b_hover = lighten(0.1, c);
+    bg = "transparent";
     bg_hover = "transparent";
   }
   return css`
     background-color: ${bg};
     border-color: ${b};
     color: ${c};
-    &:focus {
+    /* &:focus {
       outline: solid 2px ${bg_hover};
-    }
+    } */
     &:hover {
       background-color: ${bg_hover};
+      border-color: ${b_hover};
+      color: ${b_hover};
     }
     &:active {
       outline: solid 2px ${lighten(0.08, b)};
@@ -51,5 +54,7 @@ const ButtonStyle = styled(BaseButton)`
     margin-right: 0.5rem;
   }
 `;
+
+// const ButtonGosht = styled(ButtonStyle)``;
 
 export { ButtonStyle };
