@@ -65,6 +65,11 @@ const BUTTONS = {
       BG_COLOR: COLORS.WHITE,
       COLOR: COLORS.BLACK,
     },
+    BLUE: {
+      BORDER: COLORS.BLUE,
+      BG_COLOR: COLORS.BLUE,
+      COLOR: COLORS.WHITE,
+    },
   },
 };
 

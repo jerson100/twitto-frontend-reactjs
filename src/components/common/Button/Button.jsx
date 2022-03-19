@@ -68,11 +68,13 @@ Button.propTypes = {
     "ORANGE",
     "GREEN",
     "BLACK",
+    "BLUE",
     "normal",
     "purple",
     "orange",
     "green",
     "black",
+    "blue",
   ]),
   maxWidth: PropTypes.string,
 };
