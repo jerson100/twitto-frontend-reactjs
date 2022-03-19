@@ -17,7 +17,7 @@ const ParagraphStyle = styled.p`
           font-weight: ${TEXT.FONT.PARAGRAPH.WEIGHT};
         `;
   }};
-  ${({ size }) => size && `font-size:${size}`}
+  ${({ size }) => size && `font-size:${size} !important`}
 `;
 
 export { ParagraphStyle };
