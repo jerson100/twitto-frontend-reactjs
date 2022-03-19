@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { LinkStyled } from "./Link.style";
 
-const JeLink = ({ children, color, target }) => {
+const JeLink = ({ children, color, target, className }) => {
   return (
-    <LinkStyled color={color} target={target}>
+    <LinkStyled color={color} target={target} className={className}>
       {children}
     </LinkStyled>
   );
