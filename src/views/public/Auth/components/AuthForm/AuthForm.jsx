@@ -3,9 +3,10 @@ import Button from "../../../../../components/common/Button";
 import Paragraph from "../../../../../components/common/Paragraph";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faApple } from "@fortawesome/free-brands-svg-icons";
-import Space from "../../../../../components/common/Space/Space";
+import Space from "../../../../../components/common/Space";
 import JeLink from "../../../../../components/common/JeLink";
 import { AuthFormStyle, RegisterTermsStyle } from "./authForm.style";
+import AuthLoginButton from "../AuthLoginButton/AuthLoginButton";
 
 const AuthForm = () => {
   return (
@@ -46,18 +47,7 @@ const AuthForm = () => {
         </Paragraph>
       </RegisterTermsStyle>
       <Space size="NORMAL" />
-      <Paragraph as="p" type="h6">
-        ¿Ya tienes una cuenta?
-      </Paragraph>
-      <Button
-        rounded
-        size="NORMAL"
-        color="BLUE"
-        type="GOSTH"
-        //   maxWidth="300px"
-      >
-        Iniciar sesión
-      </Button>
+      <AuthLoginButton />
     </AuthFormStyle>
   );
 };

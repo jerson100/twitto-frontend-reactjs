@@ -1,5 +1,5 @@
 import React from "react";
-import Paragraph from "../../../../../components/common/Paragraph/Paragraph";
+import Paragraph from "../../../../../components/common/Paragraph";
 import AuthForm from "../AuthForm";
 import {
   AuthLogoStyle,
@@ -18,7 +18,7 @@ const AuthWrapper = () => {
         </AuthLogoStyle>
         {/* Title */}
         <Paragraph as="h1">Lo que está pasando ahora</Paragraph>
-        <Paragraph as="p" type="h3">
+        <Paragraph as="p" type="h4">
           Únete a Twitto hoy mismo
         </Paragraph>
       </AuthWrapperHeaderStyle>
