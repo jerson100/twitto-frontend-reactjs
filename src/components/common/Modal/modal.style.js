@@ -5,6 +5,9 @@ const ModalPanelStyle = styled.div`
   width: 100%;
   z-index: ${({ theme }) => theme.Z_INDEX.MODAL};
   background-color: ${({ theme }) => theme.COLORS.PANEL_BG};
+  position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 const breakpointContainer = (breakpoint) => `

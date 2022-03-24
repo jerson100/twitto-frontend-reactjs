@@ -1,5 +1,6 @@
 import React from "react";
 import LogoTwitter from "../../../LogoTwitter";
+import useModalContext from "../../hooks/useModalContext";
 import {
   CloseStyle,
   ModalHeaderStyle,
@@ -7,11 +8,13 @@ import {
 } from "./modalHeader.style";
 
 const ModalHeader = ({ children, isDefault }) => {
+  const { handleClose } = useModalContext();
   return (
     <ModalHeaderStyle>
       <CloseStyle
         viewBox="0 0 24 24"
         aria-hidden="true"
+        onClick={handleClose}
         // style="color: rgb(239, 243, 244);"
       >
         <g>
