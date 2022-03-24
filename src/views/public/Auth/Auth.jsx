@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "../../../components/common/Modal";
 import { AuthContainerStyle } from "./auth.style";
 import AuthBody from "./components/AuthBody";
 import AuthFooter from "./components/AuthFooter";
@@ -7,8 +8,13 @@ import AuthFooter from "./components/AuthFooter";
 const Auth = () => {
   return (
     <AuthContainerStyle>
-      <AuthBody />
-      <AuthFooter />
+      <Modal size="SM" align="center">
+        <Modal.Header isDefault />
+        <Modal.Body>Body</Modal.Body>
+        <Modal.Footer>Footer</Modal.Footer>
+      </Modal>
+      {/* <AuthBody />
+      <AuthFooter /> */}
     </AuthContainerStyle>
   );
 };

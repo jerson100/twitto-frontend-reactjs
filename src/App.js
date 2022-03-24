@@ -1,7 +1,7 @@
 import AppRouter from "./components/routers/AppRouter/AppRouter";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { THEME } from "./configs/style";
+import { THEME, Z_INDEX } from "./configs/style";
 
 const GlobalStyle = createGlobalStyle`
   *::before, *::after, * {

@@ -224,6 +224,10 @@ const THEME = {
       ACTIONS: COLORS.ACTIONS,
     },
   },
+  Z_INDEX: {
+    NORMAL: 100,
+    MODAL: 1000,
+  },
 };
 
 export { BREAKPOINTS, THEME, COLORS, SIZES, BUTTONS };
