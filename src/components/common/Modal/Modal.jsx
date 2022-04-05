@@ -7,19 +7,30 @@ import {
   ModalPanelStyle,
 } from "./modal.style";
 import ModalContextProvider from "./providers/ModalContextProvider";
+import { modal as modalVariants } from "./variants/modal.varitans";
+import { AnimatePresence } from "framer-motion/dist/framer-motion";
 
 const Modal = ({ size, align, children, open, onCancel }) => {
   return createPortal(
     <>
-      {open && (
-        <ModalContextProvider show={open} onCancel={onCancel}>
-          <ModalPanelStyle>
-            <ModalBackgroundStyle $size={size} align={align}>
-              <ModalContainerStyle>{children}</ModalContainerStyle>
-            </ModalBackgroundStyle>
-          </ModalPanelStyle>
-        </ModalContextProvider>
-      )}
+      <AnimatePresence>
+        {open && (
+          <ModalContextProvider show={open} onCancel={onCancel}>
+            <ModalPanelStyle>
+              <ModalBackgroundStyle $size={size} align={align}>
+                <ModalContainerStyle
+                  variants={modalVariants}
+                  animate="open"
+                  initial="exit"
+                  exit="exit"
+                >
+                  {children}
+                </ModalContainerStyle>
+              </ModalBackgroundStyle>
+            </ModalPanelStyle>
+          </ModalContextProvider>
+        )}
+      </AnimatePresence>
     </>,
     document.body
   );

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "../../../configs/style";
+import { motion } from "framer-motion/dist/framer-motion";
 
 const ModalPanelStyle = styled.div`
   width: 100%;
@@ -38,7 +39,7 @@ const ModalBackgroundStyle = styled.div`
   ${({ $size }) => $size && breakpointContainer(BREAKPOINTS[$size])}
 `;
 
-const ModalContainerStyle = styled.div`
+const ModalContainerStyle = styled(motion.div)`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   border: solid 1px green;
   /* padding: 1rem; */
