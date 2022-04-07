@@ -1,9 +1,15 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AuthView from "../../../views/public/Auth";
+import LoginView from "../../../views/public/Login";
 
 const PublicRouter = () => {
-  return <Route path="/auth" component={AuthView} />;
+  return (
+    <Routes>
+      <Route path="/auth" element={<AuthView />} />
+      <Route path="i/flow/login" element={<LoginView />}></Route>
+    </Routes>
+  );
 };
 
 export default PublicRouter;
