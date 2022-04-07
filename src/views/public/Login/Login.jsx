@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../../../components/common/Modal";
+import LoginContent from "./components/LoginContent";
 
 const Login = () => {
   const [open, setopen] = useState(true);
@@ -12,7 +13,9 @@ const Login = () => {
         onCancel={() => setopen(false)}
       >
         <Modal.Header isDefault />
-        <Modal.Body>Body</Modal.Body>
+        <Modal.Body>
+          <LoginContent />
+        </Modal.Body>
         <Modal.Footer>Footer</Modal.Footer>
       </Modal>
     </div>
