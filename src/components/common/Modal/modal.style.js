@@ -6,7 +6,8 @@ const ModalPanelStyle = styled.div`
   width: 100%;
   z-index: ${({ theme }) => theme.Z_INDEX.MODAL};
   background-color: ${({ theme }) => theme.COLORS.PANEL_BG};
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   top: 0;
   left: 0;
 `;
@@ -29,8 +30,9 @@ const ModalBackgroundStyle = styled.div`
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
-  max-height: 100vh;
+  /* height: 100vh; */
+  min-height: 100vh;
+  /* max-height: 100vh; */
   display: flex;
   align-items: ${({ align }) =>
     align && aligns[align.toLowerCase()]
