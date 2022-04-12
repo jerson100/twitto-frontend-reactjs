@@ -13,7 +13,7 @@ const LoginContent = () => {
   return (
     <LoginContentStyle>
       <Paragraph type="h4" as="h1">
-        Inicia sesión en twitter
+        Inicia sesión en twitto
       </Paragraph>
       <Button
         rounded

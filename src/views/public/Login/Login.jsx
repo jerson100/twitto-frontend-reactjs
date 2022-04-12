@@ -16,7 +16,6 @@ const Login = () => {
         <Modal.Body>
           <LoginContent />
         </Modal.Body>
-        <Modal.Footer>Footer</Modal.Footer>
       </Modal>
     </div>
   );

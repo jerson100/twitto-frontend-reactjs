@@ -25,7 +25,7 @@ const aligns = {
 };
 
 const ModalBackgroundStyle = styled.div`
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
   /* max-width: 500px; */
   max-width: 100%;
   margin-left: auto;
@@ -43,7 +43,7 @@ const ModalBackgroundStyle = styled.div`
 
 const ModalContainerStyle = styled(motion.div)`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
-  border: solid 1px green;
+  /* border: solid 1px green; */
   /* padding: 1rem; */
   margin: 1rem;
   width: 100%;
