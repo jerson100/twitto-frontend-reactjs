@@ -6,7 +6,7 @@ import DescriptionText from "../../../../../components/common/DescriptionText";
 import JeLink from "../../../../../components/common/JeLink";
 import Paragraph from "../../../../../components/common/Paragraph";
 import Space from "../../../../../components/common/Space";
-import { LoginContentStyle } from "../../login.style";
+import { LoginContentStyle, InputStyle } from "../../login.style";
 
 const LoginContent = () => {
   return (
@@ -32,6 +32,7 @@ const LoginContent = () => {
       >
         Iniciar sesión con apple
       </Button>
+      <InputStyle type="text" />
       <Button
         rounded
         size="BIG"
