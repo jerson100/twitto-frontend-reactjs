@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faApple } from "@fortawesome/free-brands-svg-icons";
 import Space from "../../../../../components/common/Space";
 import JeLink from "../../../../../components/common/JeLink";
-import { AuthFormStyle, RegisterTermsStyle } from "./authForm.style";
+import { AuthFormStyle } from "./authForm.style";
 import AuthLoginButton from "../AuthLoginButton/AuthLoginButton";
+import DescriptionText from "../../../../../components/common/DescriptionText";
 
 const AuthForm = () => {
   return (
@@ -37,7 +38,7 @@ const AuthForm = () => {
       >
         Iniciar sesión con una cuenta de gmail o telèfono
       </Button>
-      <RegisterTermsStyle>
+      <DescriptionText>
         <Paragraph as="p" type="h6" size="11px">
           Al registrarte, aceptas los{" "}
           <JeLink color="BLUE">Términos de servicio</JeLink> y la
@@ -45,7 +46,7 @@ const AuthForm = () => {
           política de
           <JeLink color="BLUE">Uso de Cookies</JeLink>.
         </Paragraph>
-      </RegisterTermsStyle>
+      </DescriptionText>
       <Space size="NORMAL" />
       <AuthLoginButton />
     </AuthFormStyle>

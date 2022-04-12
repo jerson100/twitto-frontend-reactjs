@@ -2,7 +2,10 @@ import { faApple, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Button from "../../../../../components/common/Button";
+import DescriptionText from "../../../../../components/common/DescriptionText";
+import JeLink from "../../../../../components/common/JeLink";
 import Paragraph from "../../../../../components/common/Paragraph";
+import Space from "../../../../../components/common/Space";
 import { LoginContentStyle } from "../../login.style";
 
 const LoginContent = () => {
@@ -46,6 +49,13 @@ const LoginContent = () => {
       >
         Olvidaste tu contraseña
       </Button>
+      <Space />
+      <DescriptionText>
+        <Paragraph as="P" type="p" size="14px">
+          ¿No tienes una cuenta?
+          <JeLink color="BLUE"> Registrate</JeLink>
+        </Paragraph>
+      </DescriptionText>
     </LoginContentStyle>
   );
 };
