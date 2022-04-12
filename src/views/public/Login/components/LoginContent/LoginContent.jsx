@@ -5,6 +5,7 @@ import Button from "../../../../../components/common/Button";
 import DescriptionText from "../../../../../components/common/DescriptionText";
 import JeLink from "../../../../../components/common/JeLink";
 import Paragraph from "../../../../../components/common/Paragraph";
+import Separator from "../../../../../components/common/Separator";
 import Space from "../../../../../components/common/Space";
 import { LoginContentStyle, InputStyle } from "../../login.style";
 
@@ -32,6 +33,7 @@ const LoginContent = () => {
       >
         Iniciar sesión con apple
       </Button>
+      <Separator text="O" />
       <InputStyle type="text" />
       <Button
         rounded
