@@ -7,7 +7,8 @@ import JeLink from "../../../../../components/common/JeLink";
 import Paragraph from "../../../../../components/common/Paragraph";
 import Separator from "../../../../../components/common/Separator";
 import Space from "../../../../../components/common/Space";
-import { LoginContentStyle, InputStyle } from "../../login.style";
+import { InputStyle } from "../../../../../components/styleComponents/input.style";
+import { LoginContentStyle } from "../../login.style";
 
 const LoginContent = () => {
   return (
