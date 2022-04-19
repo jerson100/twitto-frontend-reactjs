@@ -57,8 +57,10 @@ const LoginContent = ({ handleNext }) => {
       <Space />
       <DescriptionText>
         <Paragraph as="p" type="p" size="14px">
-          ¿No tienes una cuenta?
-          <JeLink color="BLUE"> Registrate</JeLink>
+          ¿No tienes una cuenta?{" "}
+          <JeLink color="BLUE" href="/auth">
+            Registrate
+          </JeLink>
         </Paragraph>
       </DescriptionText>
     </LoginContentStyle>
