@@ -81,7 +81,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   size: "NORMAL",
-  block: false,
+  block: true,
   rounded: false,
   type: "DEFAULT", //actua dependiendo el tema seleccionado.
   color: undefined,

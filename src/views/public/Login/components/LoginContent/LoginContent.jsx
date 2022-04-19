@@ -10,7 +10,7 @@ import Space from "../../../../../components/common/Space";
 import { InputStyle } from "../../../../../components/styleComponents/input.style";
 import { LoginContentStyle } from "../../login.style";
 
-const LoginContent = () => {
+const LoginContent = ({ handleNext }) => {
   return (
     <LoginContentStyle>
       <Paragraph type="h4" as="h1">
@@ -40,6 +40,7 @@ const LoginContent = () => {
         rounded
         size="BIG"
         color="NORMAL"
+        handleClick={handleNext}
         //    maxWidth="300px"
       >
         Siguiente
@@ -55,7 +56,7 @@ const LoginContent = () => {
       </Button>
       <Space />
       <DescriptionText>
-        <Paragraph as="P" type="p" size="14px">
+        <Paragraph as="p" type="p" size="14px">
           ¿No tienes una cuenta?
           <JeLink color="BLUE"> Registrate</JeLink>
         </Paragraph>

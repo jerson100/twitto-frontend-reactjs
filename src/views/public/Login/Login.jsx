@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Modal from "../../../components/common/Modal";
 import LoginContent from "./components/LoginContent";
+import LoginPassword from "./components/LoginPassword/LoginPassword";
 
 const Login = () => {
   const [open, setopen] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
+  const handleNext = () => {
+    setShowPassword(true);
+  };
   return (
     <div>
       <Modal
@@ -14,7 +19,11 @@ const Login = () => {
       >
         <Modal.Header isDefault />
         <Modal.Body>
-          <LoginContent />
+          {showPassword ? (
+            <LoginPassword />
+          ) : (
+            <LoginContent handleNext={handleNext} />
+          )}
         </Modal.Body>
       </Modal>
     </div>

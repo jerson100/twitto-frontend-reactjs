@@ -2,15 +2,21 @@ import React from "react";
 import { SpaceStyled } from "./space.style";
 import PropTypes from "prop-types";
 
-const Space = ({ size, children }) => {
-  return <SpaceStyled size={size}>{children}</SpaceStyled>;
+const Space = ({ type, size, children }) => {
+  return (
+    <SpaceStyled type={type} size={size}>
+      {children}
+    </SpaceStyled>
+  );
 };
 
 Space.propTypes = {
-  size: PropTypes.oneOf(["SMALL", "NORMAL", "BIG"]),
+  type: PropTypes.oneOf(["SMALL", "NORMAL", "BIG"]),
+  size: PropTypes.string,
 };
 
 Space.defaultProps = {
-  size: "NORMAL",
+  type: "NORMAL",
+  size: null,
 };
 export default Space;

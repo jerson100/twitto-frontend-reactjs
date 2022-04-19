@@ -7,7 +7,7 @@ const sizes = {
 };
 
 const SpaceStyled = styled.div`
-  height: ${({ size }) => sizes[size]};
+  height: ${({ type, size }) => size || (type && sizes[type])};
 `;
 
 export { SpaceStyled };

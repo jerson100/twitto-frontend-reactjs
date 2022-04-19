@@ -18,7 +18,7 @@ const BaseButton = ({
       $size={sizeMemo}
       block={block}
       rounded={rounded}
-      onClick={handleClick && handleClick}
+      onClick={() => handleClick && handleClick()}
       className={className}
       maxWidth={maxWidth}
     >
@@ -36,7 +36,7 @@ BaseButton.propTypes = {
 
 BaseButton.defaultProps = {
   size: "NORMAL",
-  block: false,
+  block: true,
   rounded: false,
   maxWidth: "100%",
 };

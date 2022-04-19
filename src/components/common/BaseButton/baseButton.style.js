@@ -29,18 +29,6 @@ const BaseButtonStyle = styled.button`
   border-radius: ${({ rounded }) => (rounded ? "99999px" : "2px")};
   border: solid 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  ${({ block }) =>
-    block
-      ? css`
-          display: block;
-          margin-bottom: 1rem;
-          width: 100%;
-        `
-      : css`
-          display: inline-block;
-          margin-bottom: 1rem;
-          margin-right: 1rem;
-        `}
   font-weight: 400;
   line-height: 1.5;
   text-align: center;
@@ -62,6 +50,19 @@ const BaseButtonStyle = styled.button`
     background-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.05);
   }
+  ${({ block }) =>
+    block
+      ? css`
+          display: block;
+          margin-bottom: 1rem;
+          width: 100%;
+        `
+      : css`
+          display: inline-block;
+          margin-bottom: 1rem;
+          margin-right: 1rem;
+          width: initial;
+        `}
 `;
 
 export { BaseButtonStyle };
