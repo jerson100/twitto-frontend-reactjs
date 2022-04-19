@@ -1,32 +1,22 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Modal from "../../../components/common/Modal";
-import LoginContent from "./components/LoginContent";
-import LoginPassword from "./components/LoginPassword/LoginPassword";
+import LoginModal from "./components/LoginModal";
 
 const Login = () => {
   const [open, setopen] = useState(true);
-  const [showPassword, setShowPassword] = useState(false);
-  const handleNext = () => {
-    setShowPassword(true);
+  const nagivate = useNavigate();
+  const handleClose = () => {
+    setopen(false);
+    nagivate("/auth");
   };
   return (
-    <div>
-      <Modal
-        size="SM"
-        align="center"
-        open={open}
-        onCancel={() => setopen(false)}
-      >
-        <Modal.Header isDefault />
-        <Modal.Body>
-          {showPassword ? (
-            <LoginPassword />
-          ) : (
-            <LoginContent handleNext={handleNext} />
-          )}
-        </Modal.Body>
-      </Modal>
-    </div>
+    <Modal size="SM" align="center" open={open} onCancel={handleClose}>
+      <Modal.Header isDefault />
+      <Modal.Body>
+        <LoginModal />
+      </Modal.Body>
+    </Modal>
   );
 };
 
