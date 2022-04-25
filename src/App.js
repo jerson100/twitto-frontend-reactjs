@@ -1,7 +1,8 @@
 import AppRouter from "./components/routers/AppRouter/AppRouter";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { THEME, Z_INDEX } from "./configs/style";
+import { THEME } from "./configs/style";
+import { AuthProvider } from "./contexts/authContext";
 
 const GlobalStyle = createGlobalStyle`
   *::before, *::after, * {
@@ -33,7 +34,9 @@ function App() {
     <>
       <ThemeProvider theme={{ ...THEME, COLORS: THEME.COLORS[theme] }}>
         <GlobalStyle />
-        <AppRouter />
+        <AuthProvider>
+          <AppRouter />
+        </AuthProvider>
       </ThemeProvider>
     </>
   );
