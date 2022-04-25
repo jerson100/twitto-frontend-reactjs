@@ -39,15 +39,15 @@ const AuthProvider = ({ children }) => {
   const onLogin = useCallback((email, password) => {
     const log = async () => {
       try {
-        const dataLogin = await login(email, password);
+        const { token, user } = await login(email, password);
         dispatch({
           type: AUTH_ACTIONS.LOGIN,
           payload: {
-            user: dataLogin.user,
-            auth_token: dataLogin.token,
+            user,
+            auth_token: token,
           },
         });
-        AuthToken.add(dataLogin.token);
+        AuthToken.add(token);
       } catch (msg) {
         console.log(`Error: ${msg}`);
       }
