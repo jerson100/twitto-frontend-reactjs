@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
     const loadUser = async () => {
       if (AuthToken.get()) {
         try {
-          const data = await whoIAm();
+          const { data } = await whoIAm();
           dispatch({
             type: AUTH_ACTIONS.LOGIN,
             payload: {
@@ -39,15 +39,15 @@ const AuthProvider = ({ children }) => {
   const onLogin = useCallback((email, password) => {
     const log = async () => {
       try {
-        const { token, user } = await login(email, password);
+        const { data } = await login(email, password);
         dispatch({
           type: AUTH_ACTIONS.LOGIN,
           payload: {
-            user,
-            auth_token: token,
+            user: data.user,
+            auth_token: data.token,
           },
         });
-        AuthToken.add(token);
+        AuthToken.add(data.token);
       } catch (msg) {
         console.log(`Error: ${msg}`);
       }
