@@ -1,19 +1,24 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../../../../components/common/Button";
 import JeLink from "../../../../../components/common/JeLink";
 import Paragraph from "../../../../../components/common/Paragraph";
 import Space from "../../../../../components/common/Space";
 import { InputStyle } from "../../../../../components/styleComponents/input.style";
-import { AuthContext } from "../../../../../contexts/authContext";
+import { useAuthContext } from "../../../../../hooks/useAuthContext";
 import { LoginPasswordContainerStyle } from "./passwordForm.style";
 
 const LoginPassword = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  const { onLogin } = useContext(AuthContext);
+  const { onLogin } = useAuthContext();
+  const navigate = useNavigate();
   const handleClick = async () => {
     try {
       const v = await onLogin(email, password);
+      //   navigate("/home", {
+      //     replace: true,
+      //   });
     } catch (e) {
       console.log(e);
     }

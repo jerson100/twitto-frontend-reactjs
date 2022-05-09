@@ -1,4 +1,10 @@
-import { createContext, useCallback, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useCallback,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import { login } from "../api/authorization";
 import { whoIAm } from "../api/user";
 import {
@@ -18,6 +24,10 @@ const AuthProvider = ({ children }) => {
     const loadUser = async () => {
       if (AuthToken.get()) {
         try {
+          dispatch({
+            type: AUTH_ACTIONS.SET_PREVIOUS_LOADING,
+            payload: true,
+          });
           const { data } = await whoIAm();
           dispatch({
             type: AUTH_ACTIONS.LOGIN,
@@ -28,9 +38,18 @@ const AuthProvider = ({ children }) => {
           });
           AuthToken.add(data.token);
         } catch (e) {
-          console.log(e);
           AuthToken.remove();
+        } finally {
+          dispatch({
+            type: AUTH_ACTIONS.SET_PREVIOUS_LOADING,
+            payload: false,
+          });
         }
+      } else {
+        dispatch({
+          type: AUTH_ACTIONS.SET_PREVIOUS_LOADING,
+          payload: false,
+        });
       }
     };
     loadUser();
@@ -74,6 +93,7 @@ const AuthProvider = ({ children }) => {
         auth_token: state.auth_token,
         onLogin,
         onLogout,
+        previousLoadingUser: state.previousLoadingUser,
       }}
     >
       {children}
