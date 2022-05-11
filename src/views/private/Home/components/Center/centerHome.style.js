@@ -14,17 +14,14 @@ const HeaderStyle = styled.header`
   padding-left: 1rem;
   padding-right: 1rem;
   height: 53px;
-  border: solid 1px green;
 `;
 const UserStyle = styled.img`
   height: 32px;
-  border: solid 1px blue;
   border-radius: 50%;
   width: auto;
 `;
 const UserContainerStyle = styled.div`
   min-width: 56px;
-  border: solid 1px red;
   ${center}
 `;
 const TitleStyle = styled.div`
@@ -38,7 +35,6 @@ const TitleStyle = styled.div`
 `;
 const FeaturedStyle = styled.div`
   min-width: 56px;
-  border: solid 1px white;
   ${center}
   justify-content: flex-end;
 `;
