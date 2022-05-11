@@ -13,9 +13,9 @@ const CenterHome = () => {
   return (
     <CenterContainerStyle>
       <HeaderStyle>
-        <UserContianerStyle>
+        <UserContainerStyle>
           <UserStyle />
-        </UserContianerStyle>
+        </UserContainerStyle>
         <TitleStyle>
           <Paragraph>Inicio</Paragraph>
         </TitleStyle>
