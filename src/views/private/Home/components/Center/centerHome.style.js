@@ -1,3 +1,4 @@
+import Color from "color";
 import styled, { css } from "styled-components";
 
 /*
@@ -8,12 +9,19 @@ const center = css`
   align-items: center;
 `;
 
-const CenterContainerStyle = styled.div``;
+const CenterContainerStyle = styled.div`
+  margin-top: 53px;
+`;
 const HeaderStyle = styled.header`
   display: flex;
   padding-left: 1rem;
   padding-right: 1rem;
   height: 53px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: ${({ theme }) => Color(theme.COLORS.BACKGROUND).alpha(0.9)};
 `;
 const UserStyle = styled.img`
   height: 32px;

@@ -20,27 +20,19 @@ const Tweet = ({ user, date, content, comments, retwitts, likes }) => {
     <ContainerStyle>
       <ContentStyle>
         <LeftStyle>
-          <UserImageStyle
-            src="https://pbs.twimg.com/profile_images/1456456434187636736/bYB38_bW_bigger.jpg"
-            alt="usuario"
-          />
+          <UserImageStyle src={user.img} alt={user.username} />
         </LeftStyle>
         <RightStyle>
           <HeaderStyle>
-            <UserNameStyle>Vic_42</UserNameStyle>
-            <UserGmailStyle>@VicAroxby42</UserGmailStyle>
-            <TimeStyle>1h</TimeStyle>
+            <UserNameStyle>{user.username}</UserNameStyle>
+            <UserGmailStyle>{user.gmail}</UserGmailStyle>
+            <TimeStyle>{date}</TimeStyle>
             <OptionsStyle />
           </HeaderStyle>
           <DataStyle>
-            <Paragraph as="p">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-              eveniet voluptate deserunt inventore aperiam magnam, ullam odio.
-              Ex dolores qui nisi, tempore, velit aliquid dolorum sint eum esse
-              fugiat aspernatur!
-            </Paragraph>
+            <Paragraph as="p">{content}</Paragraph>
           </DataStyle>
-          <Actions />
+          <Actions comments={comments} likes={likes} retwitts={retwitts} />
         </RightStyle>
       </ContentStyle>
     </ContainerStyle>

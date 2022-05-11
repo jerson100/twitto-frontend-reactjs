@@ -6,7 +6,7 @@ import {
   ActionGroupStyle,
 } from "./actions.style";
 
-const Actions = () => {
+const Actions = ({ comments, likes, retwitts }) => {
   return (
     <ActionsContainerStyle>
       <ActionGroupStyle>
@@ -17,7 +17,7 @@ const Actions = () => {
             </g>
           </svg>
         </ActionContentStyle>
-        <ActionCountStyle>15</ActionCountStyle>
+        <ActionCountStyle>{comments}</ActionCountStyle>
       </ActionGroupStyle>
       <ActionGroupStyle>
         <ActionContentStyle>
@@ -27,7 +27,7 @@ const Actions = () => {
             </g>
           </svg>
         </ActionContentStyle>
-        <ActionCountStyle>69</ActionCountStyle>
+        <ActionCountStyle>{retwitts}</ActionCountStyle>
       </ActionGroupStyle>
       <ActionGroupStyle>
         <ActionContentStyle>
@@ -37,7 +37,7 @@ const Actions = () => {
             </g>
           </svg>
         </ActionContentStyle>
-        <ActionCountStyle>645</ActionCountStyle>
+        <ActionCountStyle>{likes}</ActionCountStyle>
       </ActionGroupStyle>
       <ActionGroupStyle>
         <ActionContentStyle>
