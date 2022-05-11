@@ -1,4 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+/*
+    Header
+*/
+const center = css`
+  display: flex;
+  align-items: center;
+`;
 
 const CenterContainerStyle = styled.div``;
 const HeaderStyle = styled.header`
@@ -9,24 +17,52 @@ const HeaderStyle = styled.header`
   border: solid 1px green;
 `;
 const UserStyle = styled.img`
-  height: 100%;
+  height: 32px;
+  border: solid 1px blue;
+  border-radius: 50%;
   width: auto;
 `;
 const UserContainerStyle = styled.div`
   min-width: 56px;
+  border: solid 1px red;
+  ${center}
 `;
 const TitleStyle = styled.div`
   flex-grow: 1;
+  width: 100%;
+  ${center}
+  .title {
+    margin-bottom: 0;
+    width: 100%;
+  }
 `;
 const FeaturedStyle = styled.div`
   min-width: 56px;
+  border: solid 1px white;
+  ${center}
+  justify-content: flex-end;
 `;
+
+const FeaturedSvgStyle = styled.svg`
+  /* fill: rgb(239, 243, 244); */
+  height: 20px;
+  width: auto;
+  fill: ${({ theme }) => theme.COLORS.SECONDARY};
+`;
+
+/*
+  Main
+*/
+
+const MainContainerStyle = styled.main``;
 
 export {
   CenterContainerStyle,
   HeaderStyle,
+  FeaturedSvgStyle,
   UserStyle,
   TitleStyle,
   FeaturedStyle,
   UserContainerStyle,
+  MainContainerStyle, //---> main
 };

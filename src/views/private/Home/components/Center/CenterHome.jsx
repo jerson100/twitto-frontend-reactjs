@@ -1,26 +1,13 @@
 import React from "react";
-import Paragraph from "../../../../../components/common/Paragraph";
-import {
-  CenterContainerStyle,
-  FeaturedStyle,
-  HeaderStyle,
-  TitleStyle,
-  UserStyle,
-  UserContainerStyle,
-} from "./centerHome.style";
+import { CenterContainerStyle } from "./centerHome.style";
+import Header from "./components/Header";
+import Main from "./components/Main/Main";
 
 const CenterHome = () => {
   return (
     <CenterContainerStyle>
-      <HeaderStyle>
-        <UserContainerStyle>
-          <UserStyle />
-        </UserContainerStyle>
-        <TitleStyle>
-          <Paragraph>Inicio</Paragraph>
-        </TitleStyle>
-        <FeaturedStyle />
-      </HeaderStyle>
+      <Header />
+      <Main />
     </CenterContainerStyle>
   );
 };

@@ -7,9 +7,9 @@ import { HomeContainerStyle } from "./home.style";
 const Home = () => {
   return (
     <HomeContainerStyle>
-      <LeftHome />
+      {/* <LeftHome /> */}
       <CenterHome />
-      <RightHome />
+      {/* <RightHome /> */}
     </HomeContainerStyle>
   );
 };

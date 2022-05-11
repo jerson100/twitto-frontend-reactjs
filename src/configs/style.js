@@ -161,9 +161,9 @@ const TEXT = {
 const getTitlesSizeBreakPoint = (tag = "") => {
   tag = tag.toUpperCase();
   return css`
-    @media (min-width: ${BREAKPOINTS.SM}px) {
-      font-size: ${TEXT.TITLE.TAGS[tag].SIZE.SM};
-    }
+    /* @media (min-width: ${BREAKPOINTS.SM}px) { */
+    font-size: ${TEXT.TITLE.TAGS[tag].SIZE.SM};
+    /* } */
     @media (min-width: ${BREAKPOINTS.MD}px) {
       font-size: ${TEXT.TITLE.TAGS[tag].SIZE.MD};
     }
