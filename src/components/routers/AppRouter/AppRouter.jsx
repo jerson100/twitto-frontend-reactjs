@@ -1,13 +1,37 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import PrivateRouter from "../PrivateRouter";
-import PublicRouter from "../PublicRouter";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ConfigurationView from "../../../views/private/ConfigurationView/ConfigurationView";
+import HomeView from "../../../views/private/Home";
+import AuthView from "../../../views/public/Auth";
+import LoginView from "../../../views/public/Login";
+import PrivateLayout from "../../layouts/PrivateLayout/PrivateLayout";
+import PublicRoute from "../PublicRoute";
 
 const AppRouter = () => {
   return (
     <Router>
-      <PrivateRouter />
-      <PublicRouter />
+      <Routes>
+        <Route
+          path="/auth"
+          element={
+            <PublicRoute>
+              <AuthView />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="i/flow/login"
+          element={
+            <PublicRoute>
+              <LoginView />
+            </PublicRoute>
+          }
+        />
+        <Route path="/" element={<PrivateLayout />}>
+          <Route path="/home" index element={<HomeView />} />
+          <Route path="/configuration" element={<ConfigurationView />} />
+        </Route>
+      </Routes>
     </Router>
   );
 };
