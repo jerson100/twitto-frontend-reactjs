@@ -1,5 +1,5 @@
 import React from "react";
-import Paragraph from "../../../../../../../components/common/Paragraph";
+import Paragraph from "../../../../../components/common/Paragraph";
 import {
   FeaturedStyle,
   HeaderStyle,
@@ -7,7 +7,7 @@ import {
   UserStyle,
   UserContainerStyle,
   FeaturedSvgStyle,
-} from "../../centerHome.style.js";
+} from "../../home.style";
 
 const Header = () => {
   return (

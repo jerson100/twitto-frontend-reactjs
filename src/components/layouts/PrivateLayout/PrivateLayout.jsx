@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, Navigate, Outlet, useLocation } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useAuth } from "../../../hooks/useAuth";
+import { CenterLayout, LeftLayout, RightLayout } from "./privateLayout.style";
 
 const PrivateLayout = ({ to = "/i/flow/login" }) => {
   const { user, previousLoadingUser } = useAuth();
@@ -10,21 +11,13 @@ const PrivateLayout = ({ to = "/i/flow/login" }) => {
     return <Navigate to={to} state={{ from: location }} replace />;
   }
   return (
-    <div>
-      <ul
-        style={{
-          marginTop: "20rem",
-        }}
-      >
-        <li>
-          <Link to={"/configuration"}>Configuración</Link>
-        </li>
-        <li>
-          <Link to={"/home"}>Home</Link>
-        </li>
-      </ul>
-      <Outlet />
-    </div>
+    <>
+      <LeftLayout />
+      <CenterLayout>
+        <Outlet />
+      </CenterLayout>
+      <RightLayout />
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import ConfigurationView from "../../../views/private/ConfigurationView/Configur
 import HomeView from "../../../views/private/Home";
 import AuthView from "../../../views/public/Auth";
 import LoginView from "../../../views/public/Login";
+import NotFound from "../../common/NotFound/NotFound";
 import PrivateLayout from "../../layouts/PrivateLayout/PrivateLayout";
 import PublicRoute from "../PublicRoute";
 
@@ -28,8 +29,9 @@ const AppRouter = () => {
           }
         />
         <Route path="/" element={<PrivateLayout />}>
-          <Route path="/home" index element={<HomeView />} />
+          <Route path="/home" element={<HomeView />} />
           <Route path="/configuration" element={<ConfigurationView />} />
+          <Route index element={<NotFound />} />
         </Route>
       </Routes>
     </Router>

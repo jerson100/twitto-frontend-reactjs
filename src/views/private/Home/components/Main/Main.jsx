@@ -1,6 +1,6 @@
 import React from "react";
-import Tweet from "../../../../../../../components/common/Tweet/Tweet";
-import { MainContainerStyle } from "../../centerHome.style";
+import Tweet from "../../../../../components/common/Tweet";
+import { MainContainerStyle } from "../../home.style";
 
 const twitts = [
   {
