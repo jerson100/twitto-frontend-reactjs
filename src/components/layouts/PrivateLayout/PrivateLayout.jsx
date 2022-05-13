@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useAuth } from "../../../hooks/useAuth";
+import MobileMenu from "./components/MobileMenu";
 import { CenterLayout, LeftLayout, RightLayout } from "./privateLayout.style";
 
 const PrivateLayout = ({ to = "/i/flow/login" }) => {
@@ -12,7 +13,9 @@ const PrivateLayout = ({ to = "/i/flow/login" }) => {
   }
   return (
     <>
-      <LeftLayout />
+      <LeftLayout>
+        <MobileMenu />
+      </LeftLayout>
       <CenterLayout>
         <Outlet />
       </CenterLayout>

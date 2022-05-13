@@ -19,7 +19,8 @@ const SIZES = {
 const COLORS = {
   PRIMARY: "rgb(15, 20, 25)",
 
-  SECONDARY: "rgb(136, 153, 166)",
+  //   SECONDARY: "rgb(136, 153, 166)",
+  SECONDARY: "rgb(113, 118, 123)",
   ACTIONS: "rgb(29, 155, 240)",
 
   BLUE: "rgb(29, 155, 240)",
