@@ -74,6 +74,7 @@ const MobileMenu = () => {
               <Menu.Item icon={<Icon svg="moment" size="SMALLER" />}>
                 Momentos
               </Menu.Item>
+              <Menu.Separator as="li" />
               <Menu.Item icon={<Icon svg="rocket" size="SMALLER" />}>
                 Twitto para profesionales
               </Menu.Item>
@@ -83,12 +84,14 @@ const MobileMenu = () => {
               <Menu.Item icon={<Icon svg="analytics" size="SMALLER" />}>
                 Analytics
               </Menu.Item>
+              <Menu.Separator as="li" />
               <Menu.Item icon={<Icon svg="configuration" size="SMALLER" />}>
                 Configuración y privacidad
               </Menu.Item>
               <Menu.Item icon={<Icon svg="help" size="SMALLER" />}>
                 Centro de ayuda
               </Menu.Item>
+              <Menu.Separator as="li" />
               <Menu.Item icon={<Icon svg="time" size="SMALLER" />}>
                 Ahorrador de datos
               </Menu.Item>
@@ -98,6 +101,7 @@ const MobileMenu = () => {
               <Menu.Item icon={<Icon svg="personcircle" size="SMALLER" />}>
                 Atajos de teclado
               </Menu.Item>
+              <Menu.Separator as="li" />
               <Menu.Item>Cerrar sesión</Menu.Item>
             </Menu>
           </MenuContainerStyle>

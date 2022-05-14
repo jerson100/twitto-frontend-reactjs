@@ -21,4 +21,11 @@ const IconStyle = styled.div`
   margin-right: 0.5rem;
 `;
 
-export { MenuStyle, ItemStyle, ContentStyle, IconStyle };
+const SeparatorStyle = styled.div`
+  background-color: rgb(47, 51, 54);
+  height: 1px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+`;
+
+export { SeparatorStyle, MenuStyle, ItemStyle, ContentStyle, IconStyle };
