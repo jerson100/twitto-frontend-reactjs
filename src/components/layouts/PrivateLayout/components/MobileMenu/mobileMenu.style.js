@@ -60,7 +60,7 @@ const BodyStyle = styled(Flexible)`
 
 const UserStyle = styled(Flexible)`
   flex-wrap: wrap;
-  padding: 1.5rem 1rem;
+  padding: 1.2rem 1rem;
 `;
 
 const UserImgStyle = styled.img`
@@ -70,6 +70,7 @@ const UserImgStyle = styled.img`
 `;
 const UsernameStyle = styled.span`
   word-break: break-word;
+  font-weight: bold;
 `;
 const EmailStyle = styled(Secondary)``;
 const LeftStyle = styled.div`
