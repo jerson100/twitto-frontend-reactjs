@@ -1,5 +1,6 @@
 import React from "react";
 import Add from "../../../../common/Add";
+import Menu from "../../../../common/Menu";
 import {
   MobileMenuContainerStyle,
   MobileMenuStyle,
@@ -17,6 +18,7 @@ import {
   CountGroupStyle,
   CountNumberStyle,
   CountNameStyle,
+  MenuContainerStyle,
 } from "./mobileMenu.style";
 
 const MobileMenu = () => {
@@ -54,6 +56,26 @@ const MobileMenu = () => {
               </CountGroupStyle>
             </BottomStyle>
           </UserStyle>
+          <MenuContainerStyle>
+            <Menu>
+              <Menu.Item svg="profile">Perfil</Menu.Item>
+              <Menu.Item svg="list">Listas</Menu.Item>
+              <Menu.Item svg="theme">Temas</Menu.Item>
+              <Menu.Item svg="save">Guardado</Menu.Item>
+              <Menu.Item svg="moment">Momentos</Menu.Item>
+              <Menu.Item svg="rocket">Twitto para profesionales</Menu.Item>
+              <Menu.Item svg="ads">Twitto Ads</Menu.Item>
+              <Menu.Item svg="analytics">Analytics</Menu.Item>
+              <Menu.Item svg="configuration">
+                Configuración y privacidad
+              </Menu.Item>
+              <Menu.Item svg="help">Centro de ayuda</Menu.Item>
+              <Menu.Item Icon="time">Ahorrador de datos</Menu.Item>
+              <Menu.Item svg="anchor">Mostrar</Menu.Item>
+              <Menu.Item svg="personcircle">Atajos de teclado</Menu.Item>
+              <Menu.Item>Cerrar sesión</Menu.Item>
+            </Menu>
+          </MenuContainerStyle>
         </BodyStyle>
       </MobileMenuStyle>
     </MobileMenuContainerStyle>

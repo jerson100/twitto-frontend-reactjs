@@ -52,8 +52,10 @@ const HeaderCloseStyle = styled(Center)`
     fill: ${({ theme }) => theme.COLORS.PRIMARY};
   }
 `;
-const BodyStyle = styled.div`
+const BodyStyle = styled(Flexible)`
   flex: 1 0 0;
+  flex-direction: column;
+  overflow-y: auto;
 `;
 
 const UserStyle = styled(Flexible)`
@@ -93,6 +95,11 @@ const CountNumberStyle = styled.span`
 `;
 const CountNameStyle = styled(Secondary)``;
 
+const MenuContainerStyle = styled.nav`
+  /* border: solid 1px red; */
+  flex-grow: 1;
+`;
+
 export {
   MobileMenuContainerStyle,
   MobileMenuStyle,
@@ -110,4 +117,5 @@ export {
   CountGroupStyle,
   CountNumberStyle,
   CountNameStyle,
+  MenuContainerStyle,
 };
