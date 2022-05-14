@@ -6,6 +6,7 @@ const MenuStyle = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
+  line-height: 1;
 `;
 const ItemStyle = styled.li`
   padding: 1rem;
@@ -14,13 +15,10 @@ const ItemStyle = styled.li`
 `;
 const ContentStyle = styled.div`
   flex-grow: 1;
-  font-size: 0.86rem;
+  font-size: 0.85rem;
 `;
-const IconStyle = styled.svg`
-  width: 22px;
-  height: 22px;
-  margin-right: 0.4rem;
-  fill: ${({ theme }) => theme.COLORS.PRIMARY};
+const IconStyle = styled.div`
+  margin-right: 0.5rem;
 `;
 
 export { MenuStyle, ItemStyle, ContentStyle, IconStyle };

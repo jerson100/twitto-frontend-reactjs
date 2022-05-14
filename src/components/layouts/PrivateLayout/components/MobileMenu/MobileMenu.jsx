@@ -1,5 +1,6 @@
 import React from "react";
 import Add from "../../../../common/Add";
+import Icon from "../../../../common/Icon/Icon";
 import Menu from "../../../../common/Menu";
 import {
   MobileMenuContainerStyle,
@@ -58,21 +59,45 @@ const MobileMenu = () => {
           </UserStyle>
           <MenuContainerStyle>
             <Menu>
-              <Menu.Item svg="profile">Perfil</Menu.Item>
-              <Menu.Item svg="list">Listas</Menu.Item>
-              <Menu.Item svg="theme">Temas</Menu.Item>
-              <Menu.Item svg="save">Guardado</Menu.Item>
-              <Menu.Item svg="moment">Momentos</Menu.Item>
-              <Menu.Item svg="rocket">Twitto para profesionales</Menu.Item>
-              <Menu.Item svg="ads">Twitto Ads</Menu.Item>
-              <Menu.Item svg="analytics">Analytics</Menu.Item>
-              <Menu.Item svg="configuration">
+              <Menu.Item icon={<Icon svg="profile" size="SMALLER" />}>
+                Perfil
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="list" size="SMALLER" />}>
+                Listas
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="theme" size="SMALLER" />}>
+                Temas
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="save" size="SMALLER" />}>
+                Guardado
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="moment" size="SMALLER" />}>
+                Momentos
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="rocket" size="SMALLER" />}>
+                Twitto para profesionales
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="ads" size="SMALLER" />}>
+                Twitto Ads
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="analytics" size="SMALLER" />}>
+                Analytics
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="configuration" size="SMALLER" />}>
                 Configuración y privacidad
               </Menu.Item>
-              <Menu.Item svg="help">Centro de ayuda</Menu.Item>
-              <Menu.Item Icon="time">Ahorrador de datos</Menu.Item>
-              <Menu.Item svg="anchor">Mostrar</Menu.Item>
-              <Menu.Item svg="personcircle">Atajos de teclado</Menu.Item>
+              <Menu.Item icon={<Icon svg="help" size="SMALLER" />}>
+                Centro de ayuda
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="time" size="SMALLER" />}>
+                Ahorrador de datos
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="anchor" size="SMALLER" />}>
+                Mostrar
+              </Menu.Item>
+              <Menu.Item icon={<Icon svg="personcircle" size="SMALLER" />}>
+                Atajos de teclado
+              </Menu.Item>
               <Menu.Item>Cerrar sesión</Menu.Item>
             </Menu>
           </MenuContainerStyle>

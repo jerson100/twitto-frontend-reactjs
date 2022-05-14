@@ -3,8 +3,8 @@ import { SIZES } from "../../../configs/style";
 
 const ICON_SIZES = {
   [SIZES.SMALLER]: css`
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   `,
   [SIZES.SMALL]: css`
     width: 24px;
@@ -28,14 +28,13 @@ const IconContainerStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px red;
   ${({ $size }) => $size && (ICON_SIZES[$size] || $size)}
 `;
 
 const IconSvgStyle = styled.svg`
   height: 100%;
   width: 100%;
-  fill: ${({ theme, color }) => (!color ? theme.COLORS.primary : color)};
+  fill: ${({ theme, color }) => (color ? color : theme.COLORS.PRIMARY)};
 `;
 
 export { IconContainerStyle, IconSvgStyle };

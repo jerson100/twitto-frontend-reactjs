@@ -7,7 +7,11 @@ const Icon = ({ svg, size, color }) => {
   return (
     <IconContainerStyle $size={size}>
       {svgs[svg] && (
-        <IconSvgStyle viewBox={svgs[svg].viewBox} color={color}>
+        <IconSvgStyle
+          viewBox={svgs[svg].viewBox}
+          color={color}
+          xmlns="http://www.w3.org/2000/svg"
+        >
           {svgs[svg].svg}
         </IconSvgStyle>
       )}
@@ -15,7 +19,7 @@ const Icon = ({ svg, size, color }) => {
   );
 };
 
-Icon.PropTypes = {
+Icon.propTypes = {
   size: PropTypes.oneOf(["SMALLER", "SMALL", "NORMAL", "BIG", "VERY_BIG"]),
   color: PropTypes.string,
 };

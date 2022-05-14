@@ -6,19 +6,10 @@ const Menu = ({ children }) => {
   return <MenuStyle>{children}</MenuStyle>;
 };
 
-const Item = ({ children, svg }) => {
-  const svgRender = svgs[svg] || svgs.default;
+const Item = ({ children, icon }) => {
   return (
     <ItemStyle>
-      {svgRender && (
-        <IconStyle
-          viewBox={svgRender.viewBox}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {svgRender.svg}
-        </IconStyle>
-      )}
-
+      <IconStyle>{icon}</IconStyle>
       <ContentStyle>{children}</ContentStyle>
     </ItemStyle>
   );
