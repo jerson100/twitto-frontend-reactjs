@@ -12,6 +12,9 @@ const MenuStyle = styled.ul`
 const ItemStyle = styled.li``;
 const ContentStyle = styled.div`
   flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 0.85rem;
 `;
 const IconStyle = styled.div`
