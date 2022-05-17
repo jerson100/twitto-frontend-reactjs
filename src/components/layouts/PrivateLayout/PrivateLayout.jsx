@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useAuth } from "../../../hooks/useAuth";
 import MobileMenu from "./components/MobileMenu";
@@ -6,6 +6,7 @@ import { CenterLayout, LeftLayout, RightLayout } from "./privateLayout.style";
 
 const PrivateLayout = ({ to = "/i/flow/login" }) => {
   const { user, previousLoadingUser } = useAuth();
+  const [show, setShow] = useState(false);
   const location = useLocation();
   if (previousLoadingUser) return <p>Loading....</p>;
   if (!user) {
@@ -14,10 +15,10 @@ const PrivateLayout = ({ to = "/i/flow/login" }) => {
   return (
     <>
       <LeftLayout>
-        <MobileMenu />
+        <MobileMenu show={show} setShow={setShow} />
       </LeftLayout>
       <CenterLayout>
-        <Outlet />
+        <Outlet context={[show, setShow]} />
       </CenterLayout>
       <RightLayout />
     </>

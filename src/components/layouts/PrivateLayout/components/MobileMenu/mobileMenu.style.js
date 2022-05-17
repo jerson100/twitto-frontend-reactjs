@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
 
 const Secondary = styled.span`
   color: ${({ theme }) => theme.COLORS.SECONDARY};
@@ -14,7 +16,7 @@ const Center = styled(Flexible)`
   align-items: center;
 `;
 
-const MobileMenuContainerStyle = styled.div`
+const MobileMenuContainerStyle = styled(motion.div)`
   position: fixed;
   left: 0;
   top: 0;
@@ -58,6 +60,7 @@ const BodyStyle = styled(Flexible)`
   overflow-y: auto;
 `;
 
+/* User */
 const UserStyle = styled(Flexible)`
   flex-wrap: wrap;
   padding: 1.2rem 1rem;
@@ -67,12 +70,25 @@ const UserImgStyle = styled.img`
   width: 38px;
   height: 38px;
   border-radius: 50%;
+  cursor: pointer;
 `;
-const UsernameStyle = styled.span`
-  word-break: break-word;
-  font-weight: bold;
+
+const UserLinkStyle = styled(Link)`
+  text-decoration: none;
+  user-select: none;
+  display: inline-block;
+  line-height: 0;
 `;
-const EmailStyle = styled(Secondary)``;
+
+const UsernameStyle = styled(Secondary)``;
+const EmailStyle = styled(UserLinkStyle)`
+  line-height: 1;
+  color: inherit;
+  font-weight: 700;
+`;
+
+/* FIN User */
+
 const LeftStyle = styled.div`
   flex-basis: 50%;
   flex-shrink: 0;
@@ -119,4 +135,5 @@ export {
   CountNumberStyle,
   CountNameStyle,
   MenuContainerStyle,
+  UserLinkStyle,
 };

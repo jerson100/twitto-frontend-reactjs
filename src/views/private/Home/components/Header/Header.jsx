@@ -9,7 +9,7 @@ import {
   FeaturedSvgStyle,
 } from "../../home.style";
 
-const Header = () => {
+const Header = ({ setShow }) => {
   return (
     <HeaderStyle>
       <UserContainerStyle>
@@ -17,6 +17,7 @@ const Header = () => {
           src={
             "https://pbs.twimg.com/profile_images/1456456434187636736/bYB38_bW_bigger.jpg"
           }
+          onClick={() => setShow(true)}
         />
       </UserContainerStyle>
       <TitleStyle>
