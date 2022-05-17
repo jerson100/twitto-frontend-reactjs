@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const MenuStyle = styled.ul`
   list-style: none;
@@ -8,11 +9,7 @@ const MenuStyle = styled.ul`
   flex-direction: column;
   line-height: 1;
 `;
-const ItemStyle = styled.li`
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-`;
+const ItemStyle = styled.li``;
 const ContentStyle = styled.div`
   flex-grow: 1;
   font-size: 0.85rem;
@@ -28,4 +25,19 @@ const SeparatorStyle = styled.div`
   margin-top: 2px;
 `;
 
-export { SeparatorStyle, MenuStyle, ItemStyle, ContentStyle, IconStyle };
+const NavLinkStyle = styled(NavLink)`
+  color: inherit;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+`;
+
+export {
+  NavLinkStyle,
+  SeparatorStyle,
+  MenuStyle,
+  ItemStyle,
+  ContentStyle,
+  IconStyle,
+};

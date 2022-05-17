@@ -59,46 +59,58 @@ const MobileMenu = () => {
           </UserStyle>
           <MenuContainerStyle>
             <Menu>
-              <Menu.Item icon={<Icon svg="profile" size="SMALLER" />}>
+              <Menu.Item
+                to="/home"
+                icon={<Icon svg="profile" size="SMALLER" />}
+              >
                 Perfil
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="list" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="list" size="SMALLER" />}>
                 Listas
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="theme" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="theme" size="SMALLER" />}>
                 Temas
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="save" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="save" size="SMALLER" />}>
                 Guardado
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="moment" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="moment" size="SMALLER" />}>
                 Momentos
               </Menu.Item>
               <Menu.Separator as="li" />
-              <Menu.Item icon={<Icon svg="rocket" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="rocket" size="SMALLER" />}>
                 Twitto para profesionales
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="ads" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="ads" size="SMALLER" />}>
                 Twitto Ads
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="analytics" size="SMALLER" />}>
+              <Menu.Item
+                to="/home"
+                icon={<Icon svg="analytics" size="SMALLER" />}
+              >
                 Analytics
               </Menu.Item>
               <Menu.Separator as="li" />
-              <Menu.Item icon={<Icon svg="configuration" size="SMALLER" />}>
+              <Menu.Item
+                to="/home"
+                icon={<Icon svg="configuration" size="SMALLER" />}
+              >
                 Configuración y privacidad
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="help" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="help" size="SMALLER" />}>
                 Centro de ayuda
               </Menu.Item>
               <Menu.Separator as="li" />
-              <Menu.Item icon={<Icon svg="time" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="time" size="SMALLER" />}>
                 Ahorrador de datos
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="anchor" size="SMALLER" />}>
+              <Menu.Item to="/home" icon={<Icon svg="anchor" size="SMALLER" />}>
                 Mostrar
               </Menu.Item>
-              <Menu.Item icon={<Icon svg="personcircle" size="SMALLER" />}>
+              <Menu.Item
+                to="/home"
+                icon={<Icon svg="personcircle" size="SMALLER" />}
+              >
                 Atajos de teclado
               </Menu.Item>
               <Menu.Separator as="li" />
