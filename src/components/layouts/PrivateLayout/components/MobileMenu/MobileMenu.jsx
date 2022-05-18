@@ -24,7 +24,7 @@ import {
   UserLinkStyle,
 } from "./mobileMenu.style";
 
-import variantsMobileMenu from "./variantsMobileMenu";
+import { variants_bg, variants_menu } from "./variantsMobileMenu";
 
 const MobileMenu = ({ show, setShow }) => {
   const refContainerBg = useRef(null);
@@ -44,11 +44,11 @@ const MobileMenu = ({ show, setShow }) => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            variants={variantsMobileMenu}
+            variants={variants_bg}
             ref={refContainerBg}
             onClick={handleClick}
           >
-            <MobileMenuStyle>
+            <MobileMenuStyle variants={variants_menu}>
               <HeaderStyle>
                 <HeaderTextStyle>Información de la cuenta</HeaderTextStyle>
                 <HeaderCloseStyle onClick={handleClose}>

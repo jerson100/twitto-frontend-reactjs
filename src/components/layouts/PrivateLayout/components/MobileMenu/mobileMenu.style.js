@@ -25,13 +25,16 @@ const MobileMenuContainerStyle = styled(motion.div)`
   width: 100%;
   background-color: rgba(91, 112, 131, 0.4);
 `;
-const MobileMenuStyle = styled(Flexible)`
+
+const MobileMenuStyle = styled(motion.div)`
   width: 280px;
   height: 100%;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   flex-direction: column;
   box-shadow: rgb(217 217 217 / 20%) 0px 0px 5px,
     rgb(217 217 217 / 25%) 0px 1px 4px 1px;
+  justify-content: center;
+  display: flex;
 `;
 
 const HeaderStyle = styled.div`

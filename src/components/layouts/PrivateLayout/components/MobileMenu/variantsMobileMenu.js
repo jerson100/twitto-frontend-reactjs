@@ -1,4 +1,4 @@
-const variants = {
+const variants_menu = {
   hidden: {
     opacity: 0,
     x: "-100%",
@@ -19,4 +19,19 @@ const variants = {
   },
 };
 
-export default variants;
+const variants_bg = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      delay: 0.3,
+    },
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+    },
+  },
+};
+
+export { variants_bg, variants_menu };
