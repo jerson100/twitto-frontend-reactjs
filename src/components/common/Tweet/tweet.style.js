@@ -16,7 +16,6 @@ const ContentStyle = styled.div`
   display: flex;
 `;
 const LeftStyle = styled.div`
-  min-width: 54px;
   margin-right: 12px;
 `;
 const UserImageStyle = styled.img`
