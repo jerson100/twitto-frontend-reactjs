@@ -63,7 +63,7 @@ const MobileMenu = ({ show, setShow }) => {
                 <UserStyle>
                   <LeftStyle>
                     <UserLinkStyle to="/profile">
-                      <UserImgStyle src="https://pbs.twimg.com/profile_images/1456456434187636736/bYB38_bW_x96.jpg" />
+                      <UserImgStyle src="https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg" />
                     </UserLinkStyle>
                     <EmailStyle to="/profile">@loveting100</EmailStyle>
                     <UsernameStyle>loveting100</UsernameStyle>

@@ -8,7 +8,7 @@ const twitts = [
       username: "jerson",
       gmail: "@jerson100",
       _id: "1515",
-      img: "https://pbs.twimg.com/profile_images/1456456434187636736/bYB38_bW_bigger.jpg",
+      img: "https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg",
     },
     date: "1h",
     content:
@@ -23,7 +23,7 @@ const twitts = [
       username: "mateo1503",
       gmail: "@matep54",
       _id: "155",
-      img: "https://pbs.twimg.com/profile_images/1322660411225874435/R4xkBm3w_x96.jpg",
+      img: "https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg",
     },
     date: "11h",
     content:
@@ -38,7 +38,7 @@ const twitts = [
       username: "quispe",
       gmail: "@qyispe,",
       _id: "10",
-      img: "https://pbs.twimg.com/profile_images/1408273472841789440/5sWHLRlx_x96.jpg",
+      img: "https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg",
     },
     date: "2h",
     content:
@@ -52,7 +52,7 @@ const twitts = [
       username: "quispe",
       gmail: "@qyispe,",
       _id: "10",
-      img: "https://pbs.twimg.com/profile_images/1408273472841789440/5sWHLRlx_x96.jpg",
+      img: "https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg",
     },
     date: "2h",
     content:
@@ -66,7 +66,7 @@ const twitts = [
       username: "quispe",
       gmail: "@qyispe,",
       _id: "10",
-      img: "https://pbs.twimg.com/profile_images/1408273472841789440/5sWHLRlx_x96.jpg",
+      img: "https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg",
     },
     date: "2h",
     content:

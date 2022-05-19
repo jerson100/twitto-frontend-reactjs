@@ -15,7 +15,7 @@ const Header = ({ setShow }) => {
       <UserContainerStyle>
         <UserStyle
           src={
-            "https://pbs.twimg.com/profile_images/1456456434187636736/bYB38_bW_bigger.jpg"
+            "https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg"
           }
           onClick={() => setShow(true)}
         />

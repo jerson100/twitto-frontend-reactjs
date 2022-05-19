@@ -74,6 +74,7 @@ const UserImgStyle = styled.img`
   height: 38px;
   border-radius: 50%;
   cursor: pointer;
+  object-fit: cover;
 `;
 
 const UserLinkStyle = styled(Link)`

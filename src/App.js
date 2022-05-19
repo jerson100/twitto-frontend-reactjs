@@ -28,7 +28,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const [theme, settheme] = useState("DARK_NIGHT");
+  //   const [theme, settheme] = useState("DEFAULT");
+  const [theme, settheme] = useState("LIGHT_NIGHT");
+  //   const [theme, settheme] = useState("DARK_NIGHT");
 
   return (
     <>

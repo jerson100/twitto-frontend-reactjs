@@ -27,7 +27,8 @@ const HeaderStyle = styled.header`
 const UserStyle = styled.img`
   height: 32px;
   border-radius: 50%;
-  width: auto;
+  width: 32px;
+  object-fit: cover;
 `;
 const UserContainerStyle = styled.div`
   min-width: 56px;
