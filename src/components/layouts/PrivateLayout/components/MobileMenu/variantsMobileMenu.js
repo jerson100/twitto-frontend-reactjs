@@ -5,7 +5,7 @@ const variants_menu = {
     transition: {
       type: "spring",
       stiffness: 80,
-      mass: 0.5,
+      mass: 0.4,
     },
   },
   show: {
@@ -14,7 +14,7 @@ const variants_menu = {
     transition: {
       type: "spring",
       stiffness: 80,
-      mass: 0.5,
+      mass: 0.4,
     },
   },
 };
@@ -29,7 +29,7 @@ const variants_bg = {
   show: {
     opacity: 1,
     transition: {
-      delayChildren: 0.3,
+      delayChildren: 0.1,
     },
   },
 };
