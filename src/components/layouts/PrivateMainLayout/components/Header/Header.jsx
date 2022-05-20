@@ -1,8 +1,8 @@
 import React from "react";
-import { LeftStyle } from "../../../../common/Tweet/tweet.style";
 import {
   CenterStyle,
   HeaderStyle,
+  LeftStyle,
   RightStyle,
   SubTitleStyle,
   TextStyle,
@@ -12,7 +12,7 @@ import {
 const Header = ({ iconLeft, title, subtitle, iconRight }) => {
   return (
     <HeaderStyle>
-      <LeftStyle>{iconLeft}</LeftStyle>
+      <LeftStyle>{iconLeft && iconLeft}</LeftStyle>
       <CenterStyle>
         <TextStyle>
           <TitleStyle ass="h1" type="h4">
@@ -23,7 +23,7 @@ const Header = ({ iconLeft, title, subtitle, iconRight }) => {
           </SubTitleStyle>
         </TextStyle>
       </CenterStyle>
-      <RightStyle>{iconRight}</RightStyle>
+      {iconRight && <RightStyle>{RightStyle}</RightStyle>}
     </HeaderStyle>
   );
 };

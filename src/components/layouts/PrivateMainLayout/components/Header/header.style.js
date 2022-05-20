@@ -34,15 +34,22 @@ const TextStyle = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   border: solid 1px yellow;
 `;
 const TitleStyle = styled(Paragraph)`
   margin-bottom: 0;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 const SubTitleStyle = styled(Paragraph)`
   margin-bottom: 0;
   color: ${({ theme }) => theme.COLORS.SECONDARY};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export {
