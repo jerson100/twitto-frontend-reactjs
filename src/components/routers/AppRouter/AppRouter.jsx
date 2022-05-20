@@ -32,18 +32,18 @@ const AppRouter = () => {
         <Route path="/" element={<PrivateLayout />}>
           <Route path="/home" element={<HomeView />} />
           <Route path="/settings" element={<SettingLayout />}>
-            <Route path="/account" element={<AccessibilityDispLg />} />
+            <Route path="account" element={<AccessibilityDispLg />} />
             <Route
-              path="/security_and_account_access"
+              path="security_and_account_access"
               element={<AccessibilityDispLg />}
             />
             <Route
-              path="/privacy_and_safety"
+              path="privacy_and_safety"
               element={<AccessibilityDispLg />}
             />
-            <Route path="/notifications" element={<AccessibilityDispLg />} />
+            <Route path="notifications" element={<AccessibilityDispLg />} />
             <Route
-              path="/accessibility_display_and_languages"
+              path="accessibility_display_and_languages"
               element={<AccessibilityDispLg />}
             />
           </Route>
