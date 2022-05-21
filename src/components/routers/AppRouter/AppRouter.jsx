@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomeView from "../../../views/private/Home";
 import AccessibilityDispLg from "../../../views/private/Settings/views/AccessibilityDispLg";
+import NavigationSetting from "../../../views/private/Settings/views/NavigationSetting";
 import AuthView from "../../../views/public/Auth";
 import LoginView from "../../../views/public/Login";
 import NotFound from "../../common/NotFound/NotFound";
@@ -32,6 +33,7 @@ const AppRouter = () => {
         <Route path="/" element={<PrivateLayout />}>
           <Route path="/home" element={<HomeView />} />
           <Route path="/settings" element={<SettingLayout />}>
+            <Route path="" element={<NavigationSetting />} />
             <Route path="account" element={<AccessibilityDispLg />} />
             <Route
               path="security_and_account_access"
