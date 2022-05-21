@@ -3,20 +3,22 @@ import Color from "color";
 
 const SeparatorContainerStyle = styled.div`
   position: relative;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  /* padding-top: 1rem;
+  padding-bottom: 1rem; */
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 `;
 
 const SeparetorLineStyle = styled.div`
   height: 1px;
   position: relative;
   z-index: 1;
-  background-color: ${({
+  /* background-color: ${({
     theme: {
       COLORS: { PRIMARY },
     },
-  }) => Color(PRIMARY).darken(0.6)};
+  }) => Color(PRIMARY).darken(0.6)}; */
+  background-color: rgb(56, 68, 77);
 `;
 
 const SeparatortextStyle = styled.span`

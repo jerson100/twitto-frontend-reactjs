@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
       },
     }) => PRIMARY};
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    /* Se debe modificar esto al html */
+    font-size: 13px;
     line-height: 1.5;
   }
 `;
