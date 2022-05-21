@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Icon from "../../../../components/common/Icon/Icon";
 import List from "../../../../components/common/List";
 import Paragraph from "../../../../components/common/Paragraph";
 import Space from "../../../../components/common/Space";
+import { usePrivateMainLayoutContext } from "../../../../hooks/usePrivateMainLayoutContext";
 import {
   AccessibilityDispLgStyle,
   ContentStyle,
 } from "./accessibilityDispLg.style";
 
 const AccessibilityDispLg = () => {
+  const { changeTitle } = usePrivateMainLayoutContext();
+  useEffect(() => {
+    changeTitle("Accesibilidad, pantalla e idiomas");
+  }, [changeTitle]);
   return (
     <AccessibilityDispLgStyle>
       <Space type="SMALL" />

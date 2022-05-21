@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import PrivateMainLayoutContext from "../../context/PrivateMainLayoutContext";
 import {
   CenterStyle,
   HeaderStyle,
@@ -10,8 +11,9 @@ import {
   TitleStyle,
 } from "./header.style";
 
-const Header = ({ iconLeft, title, subtitle, iconRight }) => {
+const Header = ({ iconLeft, iconRight }) => {
   const navigate = useNavigate();
+  const { title, subtitle } = useContext(PrivateMainLayoutContext); // :-)
   const handleClick = () => {
     navigate(-1);
   };

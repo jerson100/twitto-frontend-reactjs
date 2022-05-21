@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Icon from "../../../../components/common/Icon/Icon";
 import List from "../../../../components/common/List";
+import { usePrivateMainLayoutContext } from "../../../../hooks/usePrivateMainLayoutContext";
 
 const SettingNavigation = () => {
+  const { changeTitle } = usePrivateMainLayoutContext();
+  useEffect(() => {
+    changeTitle("Configuración");
+  }, [changeTitle]);
   return (
     <List
       iconRight={

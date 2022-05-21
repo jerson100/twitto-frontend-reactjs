@@ -10,7 +10,6 @@ const SettingLayout = () => {
       <PrivateMainLayout
         iconLeft={<Icon svg="leftArrow" size="SMALL" />}
         title="Configuración"
-        subtitle="@loveting100"
       >
         <Outlet />
       </PrivateMainLayout>
