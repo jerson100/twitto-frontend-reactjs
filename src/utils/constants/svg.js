@@ -133,6 +133,14 @@ const svgs = {
       </g>
     )
   ),
+  RightArrowTwo: new Icon(
+    "0 0 24 24",
+    (
+      <g>
+        <path d="M17.207 11.293l-7.5-7.5c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L15.086 12l-6.793 6.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293l7.5-7.5c.39-.39.39-1.023 0-1.414z"></path>
+      </g>
+    )
+  ),
   // Muy importante agregar un valor por default que regrese null
   // para evitar problemas por si llegamos a escribir mal el nombre de un ícono
   default: null,

@@ -23,7 +23,7 @@ const Header = ({ iconLeft, title, subtitle, iconRight }) => {
           </SubTitleStyle>
         </TextStyle>
       </CenterStyle>
-      {iconRight && <RightStyle>{RightStyle}</RightStyle>}
+      {iconRight && <RightStyle>{iconRight}</RightStyle>}
     </HeaderStyle>
   );
 };
