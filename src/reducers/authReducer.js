@@ -19,6 +19,8 @@ const authReducer = (state, action) => {
       return { user: null, auth_token: null, previousLoadingUser: false };
     case AUTH_ACTIONS.SET_PREVIOUS_LOADING:
       return { ...state, previousLoadingUser: action.payload };
+    default:
+      return state;
   }
 };
 

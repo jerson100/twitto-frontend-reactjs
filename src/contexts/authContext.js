@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
+import { createContext, useCallback, useEffect, useReducer } from "react";
 import { login } from "../api/authorization";
 import { whoIAm } from "../api/user";
 import {

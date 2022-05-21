@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 import MobileMenu from "../../../components/layouts/PrivateLayout/components/MobileMenu";
 import Header from "./components/Header";
 import Main from "./components/Main";

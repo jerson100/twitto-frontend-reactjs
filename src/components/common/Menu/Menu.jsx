@@ -1,5 +1,4 @@
 import React from "react";
-import svgs from "../../../utils/constants/svg";
 
 import {
   ItemStyle,

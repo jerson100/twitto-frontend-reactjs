@@ -1,6 +1,4 @@
 import React from "react";
-import Icon from "../../common/Icon/Icon";
-import List from "../../common/List";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import { PrivateMaintStyle } from "./headerMaintLayout.style";

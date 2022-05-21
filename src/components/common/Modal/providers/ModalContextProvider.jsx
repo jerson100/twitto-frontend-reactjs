@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const ModalContextProvider = ({ show, onCancel, children }) => {
   const handleClose = useCallback(() => {
     onCancel();
-  }, []);
+  }, [onCancel]);
   return (
     <modalContext.Provider value={{ show, handleClose }}>
       {children}

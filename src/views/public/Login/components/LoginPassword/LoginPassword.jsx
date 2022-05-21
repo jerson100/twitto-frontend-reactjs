@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import Button from "../../../../../components/common/Button";
 import JeLink from "../../../../../components/common/JeLink";
 import Paragraph from "../../../../../components/common/Paragraph";
@@ -12,10 +11,10 @@ const LoginPassword = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const { onLogin } = useAuthContext();
-  const navigate = useNavigate();
+  //   const navigate = useNavigate();
   const handleClick = async () => {
     try {
-      const v = await onLogin(email, password);
+      await onLogin(email, password);
       //   navigate("/home", {
       //     replace: true,
       //   });

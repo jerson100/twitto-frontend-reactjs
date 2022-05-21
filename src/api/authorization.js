@@ -10,13 +10,16 @@ const login = async (email, password) => {
   });
   const dataJson = await data.json();
   if (!data.ok) {
-    let msg = "Ocurrió un error al procesar";
+    let msg;
     switch (data.status) {
       case 401:
         msg = "El usuario o contraseña son incorrectos.";
         break;
       case 400:
         msg = dataJson.message;
+        break;
+      default:
+        msg = "Ocurrió un error al procesar";
     }
     throw msg;
   }

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BREAKPOINTS } from "../../../../../configs/style";
 
 const AuthBodyStyleContainer = styled.div`
   flex: 1 0 0;
