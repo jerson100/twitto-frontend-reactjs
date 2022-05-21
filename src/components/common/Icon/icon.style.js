@@ -34,7 +34,12 @@ const IconContainerStyle = styled.div`
 const IconSvgStyle = styled.svg`
   height: 100%;
   width: 100%;
-  fill: ${({ theme, color }) => (color ? color : theme.COLORS.PRIMARY)};
+  fill: ${({ theme, color }) =>
+    color
+      ? color === "SECONDARY"
+        ? theme.COLORS.SECONDARY
+        : color
+      : theme.COLORS.PRIMARY};
 `;
 
 export { IconContainerStyle, IconSvgStyle };

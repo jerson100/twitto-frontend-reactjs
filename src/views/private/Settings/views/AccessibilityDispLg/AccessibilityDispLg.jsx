@@ -15,10 +15,14 @@ const AccessibilityDispLg = () => {
           Administra cómo ves el contenido de twitto
         </Paragraph>
       </ContentStyle>
-      <List iconRight={<Icon svg="RightArrowTwo" size="SMALLER" />}>
+      <List
+        iconRight={
+          <Icon svg="RightArrowTwo" size="SMALLER" color="SECONDARY" />
+        }
+      >
         <List.Item
           to="/settings/accessibility_display_and_languages"
-          iconLeft={<Icon svg="closedEyes" size="SMALLER" />}
+          iconLeft={<Icon svg="closedEyes" size="SMALLER" color="SECONDARY" />}
         >
           <Paragraph ass="p" type="h5" marginBottom={false}>
             Accesibilidad
