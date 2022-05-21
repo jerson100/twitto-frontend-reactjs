@@ -8,17 +8,17 @@ const BUTTONS_SIZE = {
     height: 24px;
   `,
   [SIZES.NORMAL]: css`
-    font-size: 16px;
+    font-size: 14px;
     height: 32px;
     padding: 4px 12px;
   `,
   [SIZES.BIG]: css`
-    font-size: 17px;
+    font-size: 15px;
     padding: 4px 16px;
     height: 40px;
   `,
   [SIZES.VERY_BIG]: css`
-    font-size: 18px;
+    font-size: 16px;
     height: 48px;
     padding: 4px 20px;
   `,

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../../../../../components/common/Button";
 import Paragraph from "../../../../../../components/common/Paragraph";
 import Separator from "../../../../../../components/common/Separator";
 import Tweet from "../../../../../../components/common/Tweet";
@@ -30,6 +31,35 @@ const DisplayView = () => {
         </Paragraph>
       </ContentStyle>
       <Tweet {...tweet} />
+      <Separator />
+      <ContentStyle>
+        <Paragraph ass="h2" type="h2">
+          Tamaño de la fuente
+        </Paragraph>
+        <Paragraph color="SECONDARY">En proceso</Paragraph>
+      </ContentStyle>
+      <Separator />
+      <ContentStyle>
+        <Paragraph ass="h2" type="h2">
+          Color
+        </Paragraph>
+        <Paragraph color="SECONDARY">En proceso</Paragraph>
+      </ContentStyle>
+      <Separator />
+      <ContentStyle>
+        <Paragraph ass="h2" type="h2">
+          Imagen de fondo
+        </Paragraph>
+        <Button color="NORMAL" size="VERY_BIG">
+          Predt.
+        </Button>
+        <Button color="NORMAL" type="GOSTH" size="VERY_BIG">
+          Noche clara
+        </Button>
+        <Button color="BLACK" size="VERY_BIG">
+          Oscuro
+        </Button>
+      </ContentStyle>
       <Separator />
     </>
   );

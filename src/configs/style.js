@@ -98,7 +98,7 @@ const TEXT = {
           XL: "2.8rem",
           XLL: "3.6rem",
         },
-        MARGIN: "1.5rem",
+        MARGIN: "1.1rem",
       },
       H2: {
         SIZE: {
@@ -109,7 +109,7 @@ const TEXT = {
           XL: "2.4rem",
           XLL: "2.7rem",
         },
-        MARGIN: { name: "XS", val: "1.4rem" },
+        MARGIN: "1.05rem",
       },
       H3: {
         SIZE: {
@@ -120,7 +120,7 @@ const TEXT = {
           XL: "2rem",
           XLL: "2.2rem",
         },
-        MARGIN: "1.35rem",
+        MARGIN: "1.05rem",
       },
       H4: {
         SIZE: {
@@ -131,7 +131,7 @@ const TEXT = {
           XL: "1.7rem",
           XLL: "2rem",
         },
-        MARGIN: "1.45rem",
+        MARGIN: "1rem",
       },
       H5: {
         SIZE: {
@@ -142,7 +142,7 @@ const TEXT = {
           XL: "1.4rem",
           XLL: "1.5rem",
         },
-        MARGIN: "1.2rem",
+        MARGIN: ".9rem",
       },
       H6: {
         SIZE: {
@@ -153,7 +153,7 @@ const TEXT = {
           XL: "1.1rem",
           XLL: "1.2rem",
         },
-        MARGIN: "1.1rem",
+        MARGIN: ".8rem",
       },
     },
   },
