@@ -34,7 +34,7 @@ const AccessibilityDispLg = () => {
         </List.Item>
         <List.Item
           to="/settings/accessibility_display_and_languages"
-          iconLeft={<Icon svg="closedEyes" size="SMALLER" color="SECONDARY" />}
+          iconLeft={<Icon svg="pencil" size="SMALLER" color="SECONDARY" />}
         >
           <Paragraph ass="p" type="h5" marginBottom={false}>
             Mostrar
@@ -46,7 +46,7 @@ const AccessibilityDispLg = () => {
         </List.Item>
         <List.Item
           to="/settings/accessibility_display_and_languages"
-          iconLeft={<Icon svg="closedEyes" size="SMALLER" color="SECONDARY" />}
+          iconLeft={<Icon svg="world" size="SMALLER" color="SECONDARY" />}
         >
           <Paragraph ass="p" type="h5" marginBottom={false}>
             Idiomas
@@ -58,7 +58,7 @@ const AccessibilityDispLg = () => {
         </List.Item>
         <List.Item
           to="/settings/accessibility_display_and_languages"
-          iconLeft={<Icon svg="closedEyes" size="SMALLER" color="SECONDARY" />}
+          iconLeft={<Icon svg="barGraphic" size="SMALLER" color="SECONDARY" />}
         >
           <Paragraph ass="p" type="h5" marginBottom={false}>
             Uso de datos
