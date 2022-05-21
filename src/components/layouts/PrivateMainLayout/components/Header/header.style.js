@@ -1,3 +1,4 @@
+import Color from "color";
 import styled from "styled-components";
 import Paragraph from "../../../../common/Paragraph";
 
@@ -6,6 +7,11 @@ const HeaderStyle = styled.header`
   display: flex;
   padding-left: 1rem;
   padding-right: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: ${({ theme }) => Color(theme.COLORS.BACKGROUND).alpha(0.9)};
 `;
 
 const LeftStyle = styled.div`
