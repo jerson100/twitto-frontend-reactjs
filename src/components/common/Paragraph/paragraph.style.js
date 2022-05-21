@@ -23,6 +23,11 @@ const ParagraphStyle = styled.p`
         `;
   }};
   ${({ size }) => size && `font-size:${size} !important`}
+  ${({ marginBottom }) =>
+    !marginBottom &&
+    css`
+      margin-bottom: initial;
+    `}
 `;
 
 export { ParagraphStyle };
