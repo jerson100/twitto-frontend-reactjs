@@ -135,7 +135,7 @@ const MobileMenu = ({ show, setShow }) => {
                     </Menu.Item>
                     <Menu.Separator as="li" />
                     <Menu.Item
-                      to="/home"
+                      to="/settings"
                       icon={<Icon svg="configuration" size="SMALLER" />}
                     >
                       Configuración y privacidad
