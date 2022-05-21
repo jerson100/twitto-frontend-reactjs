@@ -3,7 +3,7 @@ import PrivateMainLayoutContext from "../components/layouts/PrivateMainLayout/co
 
 const usePrivateMainLayoutContext = () => {
   const context = useContext(PrivateMainLayoutContext);
-  if (context) {
+  if (!context) {
     throw new Error("No se puede acceder al contexto de PrivateMainLayout");
   }
   const { title, subtitle, changeTitle, changeSubtitle } = context;
