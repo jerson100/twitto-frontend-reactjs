@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   CenterStyle,
   HeaderStyle,
@@ -10,9 +11,13 @@ import {
 } from "./header.style";
 
 const Header = ({ iconLeft, title, subtitle, iconRight }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(-1);
+  };
   return (
     <HeaderStyle>
-      <LeftStyle>{iconLeft && iconLeft}</LeftStyle>
+      <LeftStyle onClick={handleClick}>{iconLeft && iconLeft}</LeftStyle>
       <CenterStyle>
         <TextStyle>
           <TitleStyle ass="h1" type="h4">
