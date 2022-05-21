@@ -41,7 +41,7 @@ const AccessibilityDispLg = () => {
           </Paragraph>
         </List.Item>
         <List.Item
-          to="/settings/accessibility_display_and_languages"
+          to="/settings/display"
           iconLeft={<Icon svg="pencil" size="SMALLER" color="SECONDARY" />}
         >
           <Paragraph ass="p" type="h5" marginBottom={false}>

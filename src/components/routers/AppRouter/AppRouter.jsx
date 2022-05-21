@@ -38,6 +38,7 @@ const AppRouter = () => {
             <Route path="" element={<NavigationSetting />} />
             <Route path="account" element={<AccessibilityDispLg />} />
             <Route path="accesibility" element={<Accesibility />} />
+            <Route path="display" element={<DisplayView />} />
             <Route
               path="security_and_account_access"
               element={<AccessibilityDispLg />}
@@ -49,7 +50,7 @@ const AppRouter = () => {
             <Route path="notifications" element={<AccessibilityDispLg />} />
             <Route
               path="accessibility_display_and_languages"
-              element={<DisplayView />}
+              element={<AccessibilityDispLg />}
             />
           </Route>
           <Route index element={<NotFound />} />
