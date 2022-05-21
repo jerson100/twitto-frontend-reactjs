@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Button from "../../../../../../components/common/Button";
 import Paragraph from "../../../../../../components/common/Paragraph";
 import Separator from "../../../../../../components/common/Separator";
 import Tweet from "../../../../../../components/common/Tweet";
 import { ContentStyle } from "../../../../../../components/styleComponents/content.style";
 import { useChangeMainHeaderLayout } from "../../../../../../hooks/useChangeMainHeaderLayout";
+import { useThemeContext } from "../../../../../../hooks/useThemeContext";
 
 const tweet = {
   user: {
@@ -20,12 +21,23 @@ const tweet = {
   retwitts: 1,
 };
 
+const THEMES = {
+  "Predet.": "DEFAULT",
+  "Noche Clara": "LIGHT_NIGHT",
+  Oscuro: "DARK_NIGHT",
+};
+
 const DisplayView = () => {
+  const { changeTheme } = useThemeContext();
   useChangeMainHeaderLayout("Mostrar");
+  const changeThemeAUX = useCallback((e) => {
+    changeTheme(THEMES[e.target.textContent]);
+  }, []);
+
   return (
     <>
       <ContentStyle>
-        <Paragraph ass="P" color="SECONDARY" type="h6" marginBottom={false}>
+        <Paragraph ass="p" color="SECONDARY" type="h6" marginBottom={false}>
           Administra el fondo, color y tamaño de la fuente. Esta configuración
           afecta a todas las cuentas de Twitter en este navegador.
         </Paragraph>
@@ -50,13 +62,18 @@ const DisplayView = () => {
         <Paragraph ass="h2" type="h2">
           Imagen de fondo
         </Paragraph>
-        <Button color="NORMAL" size="VERY_BIG">
-          Predt.
+        <Button color="NORMAL" size="VERY_BIG" handleClick={changeThemeAUX}>
+          Predet.
         </Button>
-        <Button color="NORMAL" type="GOSTH" size="VERY_BIG">
-          Noche clara
+        <Button
+          color="NORMAL"
+          type="GOSTH"
+          size="VERY_BIG"
+          handleClick={changeThemeAUX}
+        >
+          Noche Clara
         </Button>
-        <Button color="BLACK" size="VERY_BIG">
+        <Button color="BLACK" size="VERY_BIG" handleClick={changeThemeAUX}>
           Oscuro
         </Button>
       </ContentStyle>

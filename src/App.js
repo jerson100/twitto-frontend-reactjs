@@ -1,8 +1,10 @@
 import AppRouter from "./components/routers/AppRouter/AppRouter";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { THEME } from "./configs/style";
 import { AuthProvider } from "./contexts/authContext";
+import { widthThemeContext } from "./hoc/widthThemeContext";
+import { useThemeContext } from "./hooks/useThemeContext";
 
 const GlobalStyle = createGlobalStyle`
   *::before, *::after, * {
@@ -29,10 +31,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  //   const [theme, settheme] = useState("DEFAULT");
-  const [theme] = useState("LIGHT_NIGHT");
-  //   const [theme, settheme] = useState("DARK_NIGHT");
-
+  const { theme } = useThemeContext();
   return (
     <>
       <ThemeProvider theme={{ ...THEME, COLORS: THEME.COLORS[theme] }}>
@@ -45,4 +44,4 @@ function App() {
   );
 }
 
-export default App;
+export default widthThemeContext(App);

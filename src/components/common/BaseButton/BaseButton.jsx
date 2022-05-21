@@ -18,7 +18,7 @@ const BaseButton = ({
       $size={sizeMemo}
       block={block}
       rounded={rounded}
-      onClick={() => handleClick && handleClick()}
+      onClick={handleClick}
       className={className}
       maxWidth={maxWidth}
     >
