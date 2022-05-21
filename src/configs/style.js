@@ -146,12 +146,12 @@ const TEXT = {
       },
       H6: {
         SIZE: {
-          SM: "0.6rem",
-          XS: "0.8rem",
-          MD: "0.85rem",
-          LG: ".9rem",
-          XL: "1rem",
-          XLL: "1.1rem",
+          SM: "0.7rem",
+          XS: "0.85rem",
+          MD: "0.95rem",
+          LG: "1rem",
+          XL: "1.1rem",
+          XLL: "1.2rem",
         },
         MARGIN: "1.1rem",
       },
