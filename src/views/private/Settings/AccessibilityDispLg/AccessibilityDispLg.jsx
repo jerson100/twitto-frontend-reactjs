@@ -1,28 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Icon from "../../../../components/common/Icon/Icon";
 import List from "../../../../components/common/List";
 import Paragraph from "../../../../components/common/Paragraph";
 import Space from "../../../../components/common/Space";
-import { usePrivateMainLayoutContext } from "../../../../hooks/usePrivateMainLayoutContext";
-import {
-  AccessibilityDispLgStyle,
-  ContentStyle,
-} from "./accessibilityDispLg.style";
+import { ContentStyle } from "../../../../components/styleComponents/content.style";
+import { useChangeMainHeaderLayout } from "../../../../hooks/useChangeMainHeaderLayout";
+import { AccessibilityDispLgStyle } from "./accessibilityDispLg.style";
 
 const AccessibilityDispLg = () => {
-  const { changeTitle } = usePrivateMainLayoutContext();
-  useEffect(() => {
-    changeTitle("Accesibilidad, pantalla e idiomas");
-  }, [changeTitle]);
+  useChangeMainHeaderLayout("Accesibilidad, pantalla e idiomas");
   return (
     <AccessibilityDispLgStyle>
-      <Space type="SMALL" />
       <ContentStyle>
         <Paragraph color="SECONDARY" ass="p" type="h6" marginBottom={false}>
           Administra cómo ves el contenido de twitto
         </Paragraph>
       </ContentStyle>
-      <Space type="SMALL" />
       <List
         iconRight={
           <Icon svg="RightArrowTwo" size="SMALLER" color="SECONDARY" />
