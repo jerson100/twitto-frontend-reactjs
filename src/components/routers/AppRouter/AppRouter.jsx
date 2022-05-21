@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomeView from "../../../views/private/Home";
 import AccessibilityDispLg from "../../../views/private/Settings/AccessibilityDispLg";
 import Accesibility from "../../../views/private/Settings/AccessibilityDispLg/views/Accesibility";
+import DisplayView from "../../../views/private/Settings/AccessibilityDispLg/views/DisplayView/DisplayView";
 import NavigationSetting from "../../../views/private/Settings/NavigationSetting";
 import AuthView from "../../../views/public/Auth";
 import LoginView from "../../../views/public/Login";
@@ -48,7 +49,7 @@ const AppRouter = () => {
             <Route path="notifications" element={<AccessibilityDispLg />} />
             <Route
               path="accessibility_display_and_languages"
-              element={<AccessibilityDispLg />}
+              element={<DisplayView />}
             />
           </Route>
           <Route index element={<NotFound />} />
