@@ -3,7 +3,12 @@ import styled, { css } from "styled-components";
 const headings = ["H1", "H2", "H3", "H4", "H5", "H6"];
 
 const ParagraphStyle = styled.p`
-  color: ${({ theme: COLORS }) => COLORS.PRIMARY};
+  color: ${({ theme: { COLORS }, color }) =>
+    color
+      ? color === "SECONDARY"
+        ? COLORS.SECONDARY
+        : color
+      : COLORS.PRIMARY};
   ${({ theme: { TEXT }, $type }) => {
     const TYPE = $type ? $type.toUpperCase() : "P";
     return headings.includes(TYPE)

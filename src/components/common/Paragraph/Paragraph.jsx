@@ -2,13 +2,15 @@ import React from "react";
 import { ParagraphStyle } from "./paragraph.style";
 import PropTypes from "prop-types";
 
-const Paragraph = ({ children, ass, type, size, className }) => {
+const Paragraph = ({ children, ass, type, size, className, color }) => {
+  console.log(color);
   return (
     <ParagraphStyle
       as={!ass ? (!type ? "p" : type) : ass}
       $type={!type ? (!ass ? "p" : ass) : type}
       size={size}
       className={className}
+      color={color}
     >
       {children}
     </ParagraphStyle>
