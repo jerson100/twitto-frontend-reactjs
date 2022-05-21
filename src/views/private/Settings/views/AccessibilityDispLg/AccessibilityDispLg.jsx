@@ -2,6 +2,8 @@ import React from "react";
 import Icon from "../../../../../components/common/Icon/Icon";
 import List from "../../../../../components/common/List";
 import Paragraph from "../../../../../components/common/Paragraph";
+import Separator from "../../../../../components/common/Separator";
+import Space from "../../../../../components/common/Space";
 import {
   AccessibilityDispLgStyle,
   ContentStyle,
@@ -10,11 +12,13 @@ import {
 const AccessibilityDispLg = () => {
   return (
     <AccessibilityDispLgStyle>
+      <Space type="SMALL" />
       <ContentStyle>
         <Paragraph color="SECONDARY" ass="p" type="h6" marginBottom={false}>
           Administra cómo ves el contenido de twitto
         </Paragraph>
       </ContentStyle>
+      <Space type="SMALL" />
       <List
         iconRight={
           <Icon svg="RightArrowTwo" size="SMALLER" color="SECONDARY" />
