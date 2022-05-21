@@ -1,6 +1,6 @@
 import React from "react";
-import Icon from "../../../../../components/common/Icon/Icon";
-import List from "../../../../../components/common/List";
+import Icon from "../../../../components/common/Icon/Icon";
+import List from "../../../../components/common/List";
 
 const SettingNavigation = () => {
   return (

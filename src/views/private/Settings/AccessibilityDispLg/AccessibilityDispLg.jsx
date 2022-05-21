@@ -1,9 +1,8 @@
 import React from "react";
-import Icon from "../../../../../components/common/Icon/Icon";
-import List from "../../../../../components/common/List";
-import Paragraph from "../../../../../components/common/Paragraph";
-import Separator from "../../../../../components/common/Separator";
-import Space from "../../../../../components/common/Space";
+import Icon from "../../../../components/common/Icon/Icon";
+import List from "../../../../components/common/List";
+import Paragraph from "../../../../components/common/Paragraph";
+import Space from "../../../../components/common/Space";
 import {
   AccessibilityDispLgStyle,
   ContentStyle,
