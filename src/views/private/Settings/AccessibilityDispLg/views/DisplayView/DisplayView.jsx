@@ -66,8 +66,8 @@ const DisplayView = () => {
           Predet.
         </Button>
         <Button
-          color="NORMAL"
-          type="GOSTH"
+          color="LIGHT_NIGHT"
+          //   type="GOSTH"
           size="VERY_BIG"
           handleClick={changeThemeAUX}
         >

@@ -1,3 +1,4 @@
+import { rgba } from "polished";
 import { css } from "styled-components";
 
 const BREAKPOINTS = {
@@ -39,6 +40,10 @@ const COLORS = {
   BG_WHITE_PANEL: "rgb(247, 249, 249)",
   BG_DARK_NIGHT_PANEL: "rgb(21, 24, 28)",
   BG_LIGHT_NIGHT_PANEL: "rgb(25, 39, 52)",
+
+  BORDER_DARK_COLOR: "rgb(47, 51, 54)",
+  BORDER_LIGHT_COLOR: "rgb(56, 68, 77)",
+  BORDER_DEFAULT: "rgb(239, 243, 244)",
 };
 
 const BUTTONS = {
@@ -59,18 +64,23 @@ const BUTTONS = {
       COLOR: COLORS.WHITE,
     },
     BLACK: {
-      BORDER: COLORS.BLACK,
+      BORDER: "rgb(32, 32, 32)",
       BG_COLOR: COLORS.BLACK,
       COLOR: COLORS.WHITE,
     },
     NORMAL: {
-      BORDER: COLORS.WHITE,
+      BORDER: COLORS.BLACK,
       BG_COLOR: COLORS.WHITE,
       COLOR: COLORS.BLACK,
     },
     BLUE: {
       BORDER: COLORS.BLUE,
       BG_COLOR: COLORS.BLUE,
+      COLOR: COLORS.WHITE,
+    },
+    LIGHT_NIGHT: {
+      BORDER: COLORS.BG_LIGHT_NIGHT_PANEL,
+      BG_COLOR: COLORS.BG_LIGHT_NIGHT,
       COLOR: COLORS.WHITE,
     },
   },

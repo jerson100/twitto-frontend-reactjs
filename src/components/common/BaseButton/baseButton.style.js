@@ -27,7 +27,9 @@ const BUTTONS_SIZE = {
 const BaseButtonStyle = styled.button`
   background-color: rgba(255, 255, 255, 1);
   border-radius: ${({ rounded }) => (rounded ? "99999px" : "2px")};
-  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 1);
   cursor: pointer;
   font-weight: 400;
   line-height: 1.5;
