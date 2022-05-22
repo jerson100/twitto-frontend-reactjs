@@ -9,16 +9,17 @@ const Paragraph = ({
   size,
   className,
   color,
-  marginBottom,
+  marginbottom,
 }) => {
   return (
     <ParagraphStyle
       as={!ass ? (!type ? "p" : type) : ass}
+      ass={ass}
       $type={!type ? (!ass ? "p" : ass) : type}
       size={size}
       className={className}
       color={color}
-      marginBottom={marginBottom}
+      marginbottom={marginbottom}
     >
       {children}
     </ParagraphStyle>
@@ -29,11 +30,11 @@ Paragraph.propTypes = {
   ass: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p", undefined]),
   type: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p", undefined]),
   size: PropTypes.string,
-  marginBottom: PropTypes.bool,
+  marginbottom: PropTypes.bool,
 };
 
 Paragraph.defaultProps = {
-  marginBottom: true,
+  marginbottom: true,
 };
 
 export default Paragraph;

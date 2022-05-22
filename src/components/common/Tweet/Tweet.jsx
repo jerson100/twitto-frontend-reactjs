@@ -30,7 +30,7 @@ const Tweet = ({ user, date, content, comments, retwitts, likes }) => {
             <OptionsStyle />
           </HeaderStyle>
           <DataStyle>
-            <Paragraph as="p">{content}</Paragraph>
+            <Paragraph ass="p">{content}</Paragraph>
           </DataStyle>
           <Actions comments={comments} likes={likes} retwitts={retwitts} />
         </RightStyle>

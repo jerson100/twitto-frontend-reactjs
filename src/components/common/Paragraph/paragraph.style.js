@@ -9,18 +9,20 @@ const ParagraphStyle = styled.p`
         ? COLORS.SECONDARY
         : color
       : COLORS.PRIMARY};
-  ${({ theme: { TEXT }, $type }) => {
+  ${({ theme: { TEXT }, $type, ass }) => {
     const TYPE = $type ? $type.toUpperCase() : "P";
-    return headings.includes(TYPE)
-      ? css`
-          ${TEXT.FONT.TITLE.TAGS[TYPE]}
-          font-weight: ${TEXT.FONT.TITLE.WEIGHT};
-        `
-      : css`
-          font-size: ${TEXT.FONT.PARAGRAPH.SIZE};
-          margin-bottom: ${TEXT.FONT.PARAGRAPH.MARGIN};
-          font-weight: ${TEXT.FONT.PARAGRAPH.WEIGHT};
-        `;
+    if (headings.includes(TYPE)) {
+      return css`
+        ${TEXT.FONT.TITLE.TAGS[TYPE]}
+        font-weight: ${ass !== "p" ? TEXT.FONT.TITLE.WEIGHT : "normal"};
+      `;
+    } else {
+      return css`
+        font-size: ${TEXT.FONT.PARAGRAPH.SIZE};
+        margin-bottom: ${TEXT.FONT.PARAGRAPH.MARGIN};
+        font-weight: ${TEXT.FONT.PARAGRAPH.WEIGHT};
+      `;
+    }
   }};
   ${({ size }) => size && `font-size:${size} !important`}
   ${({ marginBottom }) =>
