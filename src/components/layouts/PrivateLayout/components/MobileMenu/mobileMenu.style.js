@@ -4,7 +4,6 @@ import { motion } from "framer-motion/dist/framer-motion";
 
 const Secondary = styled.span`
   color: ${({ theme }) => theme.COLORS.SECONDARY};
-  font-size: 0.85rem;
 `;
 
 const Flexible = styled.div`

@@ -25,6 +25,7 @@ import {
 } from "./mobileMenu.style";
 
 import { variants_bg, variants_menu } from "./variantsMobileMenu";
+import Paragraph from "../../../../common/Paragraph";
 
 const MobileMenu = ({ show, setShow }) => {
   const refContainerBg = useRef(null);
@@ -50,7 +51,11 @@ const MobileMenu = ({ show, setShow }) => {
           >
             <MobileMenuStyle variants={variants_menu}>
               <HeaderStyle>
-                <HeaderTextStyle>Información de la cuenta</HeaderTextStyle>
+                <HeaderTextStyle>
+                  <Paragraph ass="h2" type="h4" marginbottom={false}>
+                    Información de la cuenta
+                  </Paragraph>
+                </HeaderTextStyle>
                 <HeaderCloseStyle onClick={handleClose}>
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <g>

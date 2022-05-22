@@ -21,7 +21,7 @@ const Header = ({ setShow }) => {
         />
       </UserContainerStyle>
       <TitleStyle>
-        <Paragraph className="title" type="h4" as="h1">
+        <Paragraph className="title" type="h3" as="h1">
           Inicio
         </Paragraph>
       </TitleStyle>

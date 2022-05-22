@@ -15,7 +15,7 @@ const ContentStyle = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 0.85rem;
+  /* font-size: 1rem; */
 `;
 const IconStyle = styled.div`
   margin-right: 0.5rem;
