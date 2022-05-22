@@ -26,6 +26,7 @@ import {
 
 import { variants_bg, variants_menu } from "./variantsMobileMenu";
 import Paragraph from "../../../../common/Paragraph";
+import Separator from "../../../../common/Separator";
 
 const MobileMenu = ({ show, setShow }) => {
   const refContainerBg = useRef(null);
@@ -119,7 +120,7 @@ const MobileMenu = ({ show, setShow }) => {
                     >
                       Momentos
                     </Menu.Item>
-                    <Menu.Separator as="li" />
+                    <Separator ass="li" />
                     <Menu.Item
                       to="/home"
                       icon={<Icon svg="rocket" size="SMALLER" />}
@@ -138,7 +139,7 @@ const MobileMenu = ({ show, setShow }) => {
                     >
                       Analytics
                     </Menu.Item>
-                    <Menu.Separator as="li" />
+                    <Separator ass="li" />
                     <Menu.Item
                       to="/settings"
                       icon={<Icon svg="configuration" size="SMALLER" />}
@@ -151,7 +152,7 @@ const MobileMenu = ({ show, setShow }) => {
                     >
                       Centro de ayuda
                     </Menu.Item>
-                    <Menu.Separator as="li" />
+                    <Separator ass="li" />
                     <Menu.Item
                       to="/home"
                       icon={<Icon svg="time" size="SMALLER" />}
@@ -170,7 +171,7 @@ const MobileMenu = ({ show, setShow }) => {
                     >
                       Atajos de teclado
                     </Menu.Item>
-                    <Menu.Separator as="li" />
+                    <Separator ass="li" />
                     <Menu.Item>Cerrar sesión</Menu.Item>
                   </Menu>
                 </MenuContainerStyle>

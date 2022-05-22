@@ -6,9 +6,9 @@ import {
 } from "./separator.style";
 import Proptypes from "prop-types";
 
-const Separator = ({ text }) => {
+const Separator = ({ text, ass }) => {
   return (
-    <SeparatorContainerStyle>
+    <SeparatorContainerStyle as={ass}>
       <SeparetorLineStyle />
       {text && <SeparatortextStyle>{text}</SeparatortextStyle>}
     </SeparatorContainerStyle>
@@ -17,10 +17,12 @@ const Separator = ({ text }) => {
 
 Separator.propTypes = {
   text: Proptypes.string,
+  ass: Proptypes.string,
 };
 
 Separator.defaultProps = {
   text: "",
+  ass: "div",
 };
 
 export default Separator;
