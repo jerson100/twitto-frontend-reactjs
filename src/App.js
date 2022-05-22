@@ -26,13 +26,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     line-height: 1.5;
     @media (min-width: ${BREAKPOINTS.MD}px) {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
   html{
     font-size: 14px;
     @media (min-width: ${BREAKPOINTS.MD}px) {
-      font-size: 16px;
+      font-size: 15px;
     }
     
   }
