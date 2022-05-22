@@ -22,10 +22,10 @@ const Header = ({ iconLeft, iconRight }) => {
       <LeftStyle onClick={handleClick}>{iconLeft && iconLeft}</LeftStyle>
       <CenterStyle>
         <TextStyle>
-          <TitleStyle ass="h1" type="h2">
+          <TitleStyle ass="h1" type="h3">
             {title}
           </TitleStyle>
-          <SubTitleStyle ass="p" type="h4">
+          <SubTitleStyle ass="p" type="h5">
             {subtitle}
           </SubTitleStyle>
         </TextStyle>
