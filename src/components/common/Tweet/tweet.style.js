@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import Color from "color";
 
 const ellipse = css`
   overflow: hidden;
@@ -10,7 +9,11 @@ const ellipse = css`
 const ContainerStyle = styled.div`
   padding: 1rem;
   border-bottom: solid 1px
-    ${({ theme }) => Color(theme.COLORS.SECONDARY).darken(0.65)};
+    ${({
+      theme: {
+        COLORS: { BORDER },
+      },
+    }) => BORDER};
 `;
 const ContentStyle = styled.div`
   display: flex;

@@ -18,7 +18,7 @@ const SeparetorLineStyle = styled.div`
       COLORS: { PRIMARY },
     },
   }) => Color(PRIMARY).darken(0.6)}; */
-  background-color: rgb(56, 68, 77);
+  background-color: ${({ theme }) => theme.COLORS.BORDER};
 `;
 
 const SeparatortextStyle = styled.span`

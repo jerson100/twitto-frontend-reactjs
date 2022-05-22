@@ -43,7 +43,6 @@ const DisplayView = () => {
         </Paragraph>
       </ContentStyle>
       <Tweet {...tweet} />
-      <Separator />
       <ContentStyle>
         <Paragraph ass="h2" type="h2">
           Tamaño de la fuente
@@ -67,7 +66,6 @@ const DisplayView = () => {
         </Button>
         <Button
           color="LIGHT_NIGHT"
-          //   type="GOSTH"
           size="VERY_BIG"
           handleClick={changeThemeAUX}
         >
