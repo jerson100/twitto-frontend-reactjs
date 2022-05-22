@@ -7,7 +7,6 @@ const ListStyle = styled.ul`
 
 const ItemContainerStyle = styled.li`
   padding: 0.7rem 1rem;
-  font-size: 0.85rem;
 `;
 
 const LinkStyle = styled(NavLink)`

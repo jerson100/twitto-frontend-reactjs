@@ -12,7 +12,7 @@ const AccessibilityDispLg = () => {
   return (
     <AccessibilityDispLgStyle>
       <ContentStyle>
-        <Paragraph color="SECONDARY" ass="p" type="h6" marginBottom={false}>
+        <Paragraph color="SECONDARY" ass="p" type="h5" marginBottom={false}>
           Administra cómo ves el contenido de twitto
         </Paragraph>
       </ContentStyle>
@@ -25,10 +25,10 @@ const AccessibilityDispLg = () => {
           to="/settings/accesibility"
           iconLeft={<Icon svg="closedEyes" size="SMALLER" color="SECONDARY" />}
         >
-          <Paragraph ass="p" type="h5" marginBottom={false}>
+          <Paragraph ass="p" type="h4" marginBottom={false}>
             Accesibilidad
           </Paragraph>
-          <Paragraph color="SECONDARY" ass="p" type="h6" marginBottom={false}>
+          <Paragraph color="SECONDARY" ass="p" type="h5" marginBottom={false}>
             Administra diversos aspectos de tu experiencia en Twitter, como
             limitar el contraste de colores y el movimiento.
           </Paragraph>
@@ -37,10 +37,10 @@ const AccessibilityDispLg = () => {
           to="/settings/display"
           iconLeft={<Icon svg="pencil" size="SMALLER" color="SECONDARY" />}
         >
-          <Paragraph ass="p" type="h5" marginBottom={false}>
+          <Paragraph ass="p" type="h4" marginBottom={false}>
             Mostrar
           </Paragraph>
-          <Paragraph color="SECONDARY" ass="p" type="h6" marginBottom={false}>
+          <Paragraph color="SECONDARY" ass="p" type="h5" marginBottom={false}>
             Administra el fondo, color y tamaño de la fuente. Esta configuración
             afecta a todas las cuentas de Twitter en este navegador.
           </Paragraph>
@@ -49,10 +49,10 @@ const AccessibilityDispLg = () => {
           to="/settings/accessibility_display_and_languages"
           iconLeft={<Icon svg="world" size="SMALLER" color="SECONDARY" />}
         >
-          <Paragraph ass="p" type="h5" marginBottom={false}>
+          <Paragraph ass="p" type="h4" marginBottom={false}>
             Idiomas
           </Paragraph>
-          <Paragraph color="SECONDARY" ass="p" type="h6" marginBottom={false}>
+          <Paragraph color="SECONDARY" ass="p" type="h5" marginBottom={false}>
             Administra qué idiomas se usan para personalizar tu experiencia en
             Twitter.
           </Paragraph>
@@ -61,10 +61,10 @@ const AccessibilityDispLg = () => {
           to="/settings/accessibility_display_and_languages"
           iconLeft={<Icon svg="barGraphic" size="SMALLER" color="SECONDARY" />}
         >
-          <Paragraph ass="p" type="h5" marginBottom={false}>
+          <Paragraph ass="p" type="h4" marginBottom={false}>
             Uso de datos
           </Paragraph>
-          <Paragraph color="SECONDARY" ass="p" type="h6" marginBottom={false}>
+          <Paragraph color="SECONDARY" ass="p" type="h5" marginBottom={false}>
             Establece límites para el modo en que Twitter usa algunos de los
             datos de tu red. Esta configuración afecta a todas las cuentas de
             Twitter en este navegador.

@@ -75,7 +75,6 @@ const DisplayView = () => {
           Oscuro
         </Button>
       </ContentStyle>
-      <Separator />
     </>
   );
 };
