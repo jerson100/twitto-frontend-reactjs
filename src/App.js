@@ -25,15 +25,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    @media (min-width: ${BREAKPOINTS.MD}px) {
+    /* @media (min-width: ${BREAKPOINTS.MD}px) {
       font-size: 15px;
-    }
+    } */
   }
   html{
     font-size: 14px;
-    @media (min-width: ${BREAKPOINTS.MD}px) {
+    /* @media (min-width: ${BREAKPOINTS.MD}px) {
       font-size: 15px;
-    }
+    } */
     
   }
 `;
