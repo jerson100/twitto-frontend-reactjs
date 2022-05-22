@@ -1,7 +1,6 @@
 import AppRouter from "./components/routers/AppRouter/AppRouter";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { useCallback, useState } from "react";
-import { THEME } from "./configs/style";
+import { BREAKPOINTS, THEME } from "./configs/style";
 import { AuthProvider } from "./contexts/authContext";
 import { widthThemeContext } from "./hoc/widthThemeContext";
 import { useThemeContext } from "./hooks/useThemeContext";
@@ -24,8 +23,18 @@ const GlobalStyle = createGlobalStyle`
       },
     }) => PRIMARY};
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
+    @media (min-width: ${BREAKPOINTS.MD}px) {
+      font-size: 16px;
+    }
+  }
+  html{
+    font-size: 14px;
+    @media (min-width: ${BREAKPOINTS.MD}px) {
+      font-size: 16px;
+    }
+    
   }
 `;
 

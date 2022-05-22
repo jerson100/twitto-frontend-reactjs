@@ -18,15 +18,15 @@ const ParagraphStyle = styled.p`
       `;
     } else {
       return css`
-        font-size: ${TEXT.FONT.PARAGRAPH.SIZE};
+        /* font-size: ${TEXT.FONT.PARAGRAPH.SIZE}; */
         margin-bottom: ${TEXT.FONT.PARAGRAPH.MARGIN};
         font-weight: ${TEXT.FONT.PARAGRAPH.WEIGHT};
       `;
     }
   }};
   ${({ size }) => size && `font-size:${size} !important`}
-  ${({ marginBottom }) =>
-    !marginBottom &&
+  ${({ marginbottom }) =>
+    !marginbottom &&
     css`
       margin-bottom: initial;
     `}

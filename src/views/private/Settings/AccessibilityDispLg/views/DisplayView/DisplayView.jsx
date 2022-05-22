@@ -37,14 +37,14 @@ const DisplayView = () => {
   return (
     <>
       <ContentStyle>
-        <Paragraph ass="p" color="SECONDARY" type="h6" marginBottom={false}>
+        <Paragraph ass="p" color="SECONDARY" type="h5" marginbottom={false}>
           Administra el fondo, color y tamaño de la fuente. Esta configuración
           afecta a todas las cuentas de Twitter en este navegador.
         </Paragraph>
       </ContentStyle>
       <Tweet {...tweet} />
       <ContentStyle>
-        <Paragraph ass="h2" type="h2">
+        <Paragraph ass="h2" type="h1">
           Tamaño de la fuente
         </Paragraph>
         <Paragraph color="SECONDARY">En proceso</Paragraph>
@@ -58,7 +58,7 @@ const DisplayView = () => {
       </ContentStyle>
       <Separator />
       <ContentStyle>
-        <Paragraph ass="h2" type="h2">
+        <Paragraph ass="h2" type="h1">
           Imagen de fondo
         </Paragraph>
         <Button color="NORMAL" size="VERY_BIG" handleClick={changeThemeAUX}>
