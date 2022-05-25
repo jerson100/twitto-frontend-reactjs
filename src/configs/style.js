@@ -1,4 +1,3 @@
-import { rgba } from "polished";
 import { css } from "styled-components";
 
 const BREAKPOINTS = {
@@ -15,6 +14,12 @@ const SIZES = {
   NORMAL: "NORMAL", //38px
   BIG: "BIG", //40px
   VERY_BIG: "VERY_BIG", //46px
+};
+
+const THEMES = {
+  LIGHT_NIGHT: "LIGHT_NIGHT",
+  DARK_NIGHT: "DARK_NIGHT",
+  DEFAULT: "DEFAULT",
 };
 
 const COLORS = {
@@ -245,4 +250,4 @@ const THEME = {
   },
 };
 
-export { BREAKPOINTS, THEME, COLORS, SIZES, BUTTONS };
+export { BREAKPOINTS, THEME, COLORS, SIZES, BUTTONS, THEMES };
