@@ -3,10 +3,14 @@ import { NavLink } from "react-router-dom";
 
 const ListStyle = styled.ul`
   list-style: none;
+  display: flex;
+  flex-direction: ${({ dir }) => (dir === "vertical" ? "column" : "row")};
+  flex-wrap: wrap;
 `;
 
 const ItemContainerStyle = styled.li`
-  padding: 0.7rem 1rem;
+  flex: 1;
+  height: 100%;
 `;
 
 const LinkStyle = styled(NavLink)`
@@ -14,6 +18,8 @@ const LinkStyle = styled(NavLink)`
   color: inherit;
   display: flex;
   align-items: center;
+  padding: 0.7rem 1rem;
+  height: 100%;
 `;
 
 const LeftItemStyle = styled.div`
