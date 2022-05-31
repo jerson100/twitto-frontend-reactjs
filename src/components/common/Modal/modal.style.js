@@ -48,6 +48,12 @@ const ModalContainerStyle = styled(motion.div)`
   margin: 1rem;
   width: 100%;
   border-radius: 15px;
+  border: solid 1px
+    ${({
+      theme: {
+        COLORS: { BORDER },
+      },
+    }) => BORDER};
 `;
 
 const ModalBodyStyle = styled.div`
