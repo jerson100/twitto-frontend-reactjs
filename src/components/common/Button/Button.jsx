@@ -12,6 +12,7 @@ const Button = ({
   color,
   maxWidth,
   Icon,
+  className,
 }) => {
   return (
     <ButtonInitial
@@ -23,6 +24,7 @@ const Button = ({
       color={color}
       maxWidth={maxWidth}
       Icon={Icon}
+      className={className}
     >
       {children}
     </ButtonInitial>
@@ -39,6 +41,7 @@ const ButtonInitial = ({
   maxWidth,
   children,
   Icon,
+  className,
 }) => {
   return (
     <ButtonStyle
@@ -49,6 +52,7 @@ const ButtonInitial = ({
       type={type}
       color={color}
       maxWidth={maxWidth}
+      className={className}
     >
       <div className="icon">{Icon && Icon}</div>
       <span className="text">{children}</span>

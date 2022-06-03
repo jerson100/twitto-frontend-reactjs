@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BREAKPOINTS } from "../../../configs/style";
 import { motion } from "framer-motion/dist/framer-motion";
 
@@ -22,6 +22,7 @@ const aligns = {
   start: "flex-start",
   center: "center",
   end: "flex-end",
+  stretch: "stretch",
 };
 
 const ModalBackgroundStyle = styled.div`
@@ -38,14 +39,21 @@ const ModalBackgroundStyle = styled.div`
     align && aligns[align.toLowerCase()]
       ? aligns[align.toLowerCase()]
       : "flex-start"};
-  ${({ $size }) => $size && breakpointContainer(BREAKPOINTS[$size])}
+  ${({ $size }) =>
+    $size && ($size === "ALL" || $size === "all")
+      ? ""
+      : breakpointContainer(BREAKPOINTS[$size])}
 `;
 
 const ModalContainerStyle = styled(motion.div)`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   /* border: solid 1px green; */
   /* padding: 1rem; */
-  margin: 1rem;
+  ${({ space }) =>
+    space &&
+    css`
+      margin: 1rem;
+    `}
   width: 100%;
   border-radius: 15px;
   border: solid 1px
