@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from "react";
+import TweetApi from "../../../../../api/tweet";
 import Icon from "../../../../common/Icon/Icon";
 import Modal from "../../../../common/Modal";
 import {
@@ -39,7 +40,22 @@ const NewTweetModal = ({ showModal, setshowModal }) => {
   };
 
   const twittear = useCallback(() => {
-    console.log(text);
+    const create = async () => {
+      if (text) {
+        try {
+          const data = await TweetApi.createTweet(text);
+
+          console.log(data);
+          handleClose(); //cerramos el modal
+        } catch (e) {
+          console.log(e);
+        }
+      } else {
+        console.log("El tweet no puede estar vacío");
+      }
+    };
+
+    create();
   }, [text]);
   return (
     <Modal
