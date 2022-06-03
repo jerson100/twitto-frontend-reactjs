@@ -28,11 +28,7 @@ const THEMES = {
 };
 
 const DisplayView = () => {
-  const { changeTheme } = useThemeContext();
   useChangeMainHeaderLayout("Mostrar");
-  const changeThemeAUX = useCallback((e) => {
-    changeTheme(THEMES[e.target.textContent]);
-  }, []);
 
   return (
     <>
@@ -57,25 +53,31 @@ const DisplayView = () => {
         <Paragraph color="SECONDARY">En proceso</Paragraph>
       </ContentStyle>
       <Separator />
-      <ContentStyle>
-        <Paragraph ass="h2" type="h1">
-          Imagen de fondo
-        </Paragraph>
-        <Button color="NORMAL" size="VERY_BIG" handleClick={changeThemeAUX}>
-          Predet.
-        </Button>
-        <Button
-          color="LIGHT_NIGHT"
-          size="VERY_BIG"
-          handleClick={changeThemeAUX}
-        >
-          Noche Clara
-        </Button>
-        <Button color="BLACK" size="VERY_BIG" handleClick={changeThemeAUX}>
-          Oscuro
-        </Button>
-      </ContentStyle>
+      <BackgroundImage />
     </>
+  );
+};
+
+const BackgroundImage = () => {
+  const { changeTheme } = useThemeContext();
+  const changeThemeAUX = useCallback((e) => {
+    changeTheme(THEMES[e.target.textContent]);
+  }, []);
+  return (
+    <ContentStyle>
+      <Paragraph ass="h2" type="h1">
+        Imagen de fondo
+      </Paragraph>
+      <Button color="NORMAL" size="VERY_BIG" handleClick={changeThemeAUX}>
+        Predet.
+      </Button>
+      <Button color="LIGHT_NIGHT" size="VERY_BIG" handleClick={changeThemeAUX}>
+        Noche Clara
+      </Button>
+      <Button color="BLACK" size="VERY_BIG" handleClick={changeThemeAUX}>
+        Oscuro
+      </Button>
+    </ContentStyle>
   );
 };
 
