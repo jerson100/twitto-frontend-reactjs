@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import Button from "../../../../../../components/common/Button";
 import Paragraph from "../../../../../../components/common/Paragraph";
+import SelectColorGroup from "../../../../../../components/common/SelectColorGroup";
 import Separator from "../../../../../../components/common/Separator";
 import Tweet from "../../../../../../components/common/Tweet";
 import { ContentStyle } from "../../../../../../components/styleComponents/content.style";
@@ -50,7 +51,10 @@ const DisplayView = () => {
         <Paragraph ass="h2" type="h2">
           Color
         </Paragraph>
-        <Paragraph color="SECONDARY">En proceso</Paragraph>
+        <SelectColorGroup
+          colors={["red", "yellow", "blue", "purple", "orange", "white"]}
+          selectedItem="red"
+        />
       </ContentStyle>
       <Separator />
       <BackgroundImage />

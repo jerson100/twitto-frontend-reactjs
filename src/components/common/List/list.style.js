@@ -22,6 +22,15 @@ const LinkStyle = styled(NavLink)`
   height: 100%;
 `;
 
+const ItemContentStyle = styled.div`
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  height: 100%;
+`;
+
 const LeftItemStyle = styled.div`
   margin-right: 1rem;
   width: calc(56px - 1rem);
@@ -45,4 +54,5 @@ export {
   LeftItemStyle,
   LinkStyle,
   CenterItemStyle,
+  ItemContentStyle,
 };
