@@ -1,14 +1,20 @@
 import React from "react";
-import { ColorStyle } from "../slectColorGroup.style";
+import {
+  ColorStyle,
+  ColorContainerStyle,
+  CheckStyle,
+} from "../slectColorGroup.style";
 
 const Color = React.memo(({ color, selected, onClick }) => {
   const handleChange = () => {
     onClick(color);
   };
   return (
-    <ColorStyle selected={selected} onClick={handleChange}>
-      Color
-    </ColorStyle>
+    <ColorContainerStyle>
+      <ColorStyle color={color} selected={selected} onClick={handleChange}>
+        {selected && <CheckStyle svg="check" size="SMALL" />}
+      </ColorStyle>
+    </ColorContainerStyle>
   );
 });
 
