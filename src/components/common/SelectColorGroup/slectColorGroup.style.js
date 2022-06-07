@@ -20,8 +20,4 @@ const ColorContainerStyle = styled.div`
   padding-bottom: 1rem;
 `;
 
-const CheckStyle = styled(Icon)`
-  fill: ${COLORS.WHITE};
-`;
-
-export { ColorStyle, ColorContainerStyle, CheckStyle };
+export { ColorStyle, ColorContainerStyle };

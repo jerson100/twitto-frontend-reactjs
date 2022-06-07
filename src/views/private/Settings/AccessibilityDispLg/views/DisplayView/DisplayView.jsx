@@ -60,7 +60,7 @@ const DisplayView = () => {
             "rgb(255, 122, 0)",
             "rgb(0, 186, 124)",
           ]}
-          selectedItem="red"
+          selectedItem="rgb(29, 155, 240)"
         />
       </ContentStyle>
       <Separator />
