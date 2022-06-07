@@ -9,8 +9,6 @@ const ColorStyle = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: ${({ color }) => color};
 `;
 
