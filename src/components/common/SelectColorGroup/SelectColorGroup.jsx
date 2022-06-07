@@ -11,15 +11,17 @@ const SelectColorGroup = ({ colors, selectedItem: selected }) => {
   };
   return (
     <Row>
-      <Row.Column col={12} sm={6} lg={6} xl={12} xll={23}>
+      <Row.Column col={12} sm={6} md={24} lg={6} xl={4} xll={20}>
         12
       </Row.Column>
-      <Row.Column col={6} xll={1}>
+      <Row.Column col={6} xll={2}>
         6
       </Row.Column>
+      <Row.Column col={3} xll={2}>
+        3
+      </Row.Column>
       <Row.Column col={3}>3</Row.Column>
-      <Row.Column col={3}>3</Row.Column>
-      <Row.Column>24</Row.Column>
+      <Row.Column>:)</Row.Column>
     </Row>
     // <List dir="horizontal">
     //   {colors.map((c, i) => (
