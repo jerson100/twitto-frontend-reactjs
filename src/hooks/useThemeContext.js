@@ -8,7 +8,12 @@ const useThemeContext = () => {
       "No puede acceder al contexto para el cambio de theme de la aplicación"
     );
   }
-  return { theme: context.theme, changeTheme: context.changeTheme };
+  return {
+    theme: context.theme,
+    third_color: context.third_color,
+    changeTheme: context.changeTheme,
+    changeThirdColor: context.changeThirdColor,
+  };
 };
 
 export { useThemeContext };

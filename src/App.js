@@ -39,10 +39,15 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const { theme } = useThemeContext();
+  const { theme, third_color } = useThemeContext();
   return (
     <>
-      <ThemeProvider theme={{ ...THEME, COLORS: THEME.COLORS[theme] }}>
+      <ThemeProvider
+        theme={{
+          ...THEME,
+          COLORS: { ...THEME.COLORS[theme], THIRD_COLOR: third_color },
+        }}
+      >
         <GlobalStyle />
         <AuthProvider>
           <AppRouter />

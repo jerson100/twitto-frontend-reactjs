@@ -5,6 +5,7 @@ import SelectColorGroup from "../../../../../../components/common/SelectColorGro
 import Separator from "../../../../../../components/common/Separator";
 import Tweet from "../../../../../../components/common/Tweet";
 import { ContentStyle } from "../../../../../../components/styleComponents/content.style";
+import { THIRD_COLORS } from "../../../../../../configs/style";
 import { useChangeMainHeaderLayout } from "../../../../../../hooks/useChangeMainHeaderLayout";
 import { useThemeContext } from "../../../../../../hooks/useThemeContext";
 
@@ -51,21 +52,22 @@ const DisplayView = () => {
         <Paragraph ass="h2" type="h2">
           Color
         </Paragraph>
-        <SelectColorGroup
-          colors={[
-            "rgb(29, 155, 240)",
-            "rgb(255, 212, 0)",
-            "rgb(249, 24, 128)",
-            "rgb(120, 86, 255)",
-            "rgb(255, 122, 0)",
-            "rgb(0, 186, 124)",
-          ]}
-          selectedItem="rgb(29, 155, 240)"
-        />
+        <SelectColor />
       </ContentStyle>
       <Separator />
       <BackgroundImage />
     </>
+  );
+};
+
+const SelectColor = () => {
+  const { third_color, changeThirdColor } = useThemeContext();
+  return (
+    <SelectColorGroup
+      colors={THIRD_COLORS}
+      selectedItem={third_color}
+      changeColor={changeThirdColor}
+    />
   );
 };
 
