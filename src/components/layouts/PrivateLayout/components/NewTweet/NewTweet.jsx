@@ -21,7 +21,7 @@ const NewTweet = () => {
   return (
     <>
       <ContainerStyle onClick={handleClick}>
-        <Icon svg="pen" size="SMALL" />
+        <Icon svg="pen" size="SMALL" color="white" />
       </ContainerStyle>
       <NewTweetModal showModal={showModal} setshowModal={setshowModal} />
     </>

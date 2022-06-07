@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { COLORS, SIZES } from "../../../configs/style";
+import { SIZES } from "../../../configs/style";
 
 const BUTTONS_SIZE = {
   [SIZES.SMALL]: css`
@@ -45,10 +45,20 @@ const BaseButtonStyle = styled.button`
     width: 100%;
   `}
   &:focus {
-    outline: solid 2px orange;
+    border: solid 2px
+      ${({
+        theme: {
+          COLORS: { THIRD },
+        },
+      }) => THIRD};
   }
   &:active {
-    outline: solid 2px ${COLORS["BLUE_COLOR"]};
+    border: solid 2px
+      ${({
+        theme: {
+          COLORS: { THIRD },
+        },
+      }) => THIRD} !important;
     background-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.05);
   }

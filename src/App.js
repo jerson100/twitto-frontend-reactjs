@@ -45,7 +45,7 @@ function App() {
       <ThemeProvider
         theme={{
           ...THEME,
-          COLORS: { ...THEME.COLORS[theme], THIRD_COLOR: third_color },
+          COLORS: { ...THEME.COLORS[theme], THIRD: third_color },
         }}
       >
         <GlobalStyle />

@@ -5,7 +5,11 @@ const ContainerStyle = styled.div`
   position: fixed;
   right: 1rem;
   bottom: calc(60px + 1rem);
-  background-color: red;
+  background-color: ${({
+    theme: {
+      COLORS: { THIRD },
+    },
+  }) => THIRD};
   border-radius: 50%;
   padding: 1rem;
 `;
