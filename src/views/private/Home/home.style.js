@@ -58,6 +58,7 @@ const FeaturedSvgStyle = styled.svg`
 
 const MainContainerStyle = styled.main`
   margin-top: 53px;
+  margin-bottom: 53px;
 `;
 
 export {
