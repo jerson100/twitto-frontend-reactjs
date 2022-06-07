@@ -12,6 +12,7 @@ const ContainerStyle = styled.div`
   }) => THIRD};
   border-radius: 50%;
   padding: 1rem;
+  cursor: pointer;
 `;
 
 const HeaderStyle = styled.div`

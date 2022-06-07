@@ -10,6 +10,7 @@ const ColorStyle = styled.div`
   align-items: center;
   border-radius: 50%;
   background-color: ${({ color }) => color};
+  cursor: pointer;
 `;
 
 const ColorContainerStyle = styled.div`
