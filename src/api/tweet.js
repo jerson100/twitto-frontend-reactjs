@@ -37,14 +37,14 @@ const getFeed = async () => {
 
   const data = await fetch(`${URL}/tweets/timeline/feed`, {
     headers: {
-      authorization: `-Bearer ${access_token}`,
+      authorization: `Bearer ${access_token}`,
       "content-type": "application/json",
     },
   });
 
   const dataJson = await data.json();
 
-  if (!dataJson.ok) {
+  if (!data.ok) {
     throw dataJson.message || "Ocurrió un error al procesar la solicitud";
   }
 

@@ -34,10 +34,9 @@ const useTweet = () => {
     getT();
   }, []);
 
-  return {
-    loading: data.loading,
-    tweets: data.tweets,
-  };
+  console.log(data);
+
+  return data;
 };
 
-export default { useTweet };
+export default useTweet;

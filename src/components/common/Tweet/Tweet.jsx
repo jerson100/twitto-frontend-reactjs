@@ -15,22 +15,33 @@ import {
   OptionsStyle,
 } from "./tweet.style";
 
-const Tweet = ({ user, date, content, comments, retwitts, likes }) => {
+const Tweet = ({
+  user,
+  createdAt,
+  description,
+  comments,
+  retwitts,
+  likes,
+  _id,
+}) => {
   return (
     <ContainerStyle>
       <ContentStyle>
         <LeftStyle>
-          <UserImageStyle src={user.img} alt={user.username} />
+          <UserImageStyle
+            src="https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg"
+            alt={user.username}
+          />
         </LeftStyle>
         <RightStyle>
           <HeaderStyle>
             <UserNameStyle>{user.username}</UserNameStyle>
-            <UserGmailStyle>{user.gmail}</UserGmailStyle>
-            <TimeStyle>{date}</TimeStyle>
+            <UserGmailStyle>{user.email}</UserGmailStyle>
+            <TimeStyle>{createdAt}</TimeStyle>
             <OptionsStyle />
           </HeaderStyle>
           <DataStyle>
-            <Paragraph ass="p">{content}</Paragraph>
+            <Paragraph ass="p">{description}</Paragraph>
           </DataStyle>
           <Actions comments={comments} likes={likes} retwitts={retwitts} />
         </RightStyle>

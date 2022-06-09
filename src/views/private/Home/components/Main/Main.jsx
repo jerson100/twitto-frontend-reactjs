@@ -1,5 +1,6 @@
 import React from "react";
 import Tweet from "../../../../../components/common/Tweet";
+import useTweet from "../../../../../hooks/useTweet";
 import { MainContainerStyle } from "../../home.style";
 
 const twitts = [
@@ -78,10 +79,13 @@ const twitts = [
 ];
 
 const Main = () => {
+  const { tweets, loading } = useTweet();
+  console.log(tweets);
   return (
     <MainContainerStyle>
-      {twitts.map((t, i) => (
-        <Tweet {...t} key={i} />
+      {loading && "Cargando data..."}
+      {tweets.map((t, i) => (
+        <Tweet {...t} key={t._id} />
       ))}
     </MainContainerStyle>
   );

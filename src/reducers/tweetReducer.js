@@ -13,7 +13,7 @@ const TWEET_INITIAL_STATE = {
 const tweetReducer = (state, action) => {
   switch (action.type) {
     case TWEET_ACTIONS.TWEET_SET:
-      return { ...state, tweets: state.payload };
+      return { ...state, tweets: action.payload };
     case TWEET_ACTIONS.TWEET_ADD:
       return { ...state, tweets: [...state.tweets, action.payload] };
     case TWEET_ACTIONS.TWEET_DELETE:
