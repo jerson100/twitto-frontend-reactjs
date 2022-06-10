@@ -42,7 +42,7 @@ const getTweetPublicationDate = (publicationDate) => {
     return `${hours} h`;
   }
   if (minutes > 0) {
-    return `${minutes} m`;
+    return `${minutes} min`;
   }
   if (segs > 0) {
     return `${segs} s`;

@@ -43,7 +43,7 @@ const Tweet = ({
           <HeaderStyle>
             <UserNameStyle>{user.username}</UserNameStyle>
             <UserGmailStyle>{user.email}</UserGmailStyle>
-            <TimeStyle>{formatedDate}</TimeStyle>
+            <TimeStyle dateTime={createdAt}>{formatedDate}</TimeStyle>
             <OptionsStyle />
           </HeaderStyle>
           <DataStyle>

@@ -30,6 +30,7 @@ const UserImageStyle = styled.img`
 
 const RightStyle = styled.div`
   overflow: hidden;
+  flex: 1 0 0;
 `;
 const HeaderStyle = styled.div`
   display: flex;
