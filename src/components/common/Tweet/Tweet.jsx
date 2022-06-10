@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Paragraph from "../Paragraph";
 import Actions from "./components/Actions";
+import DateUtils from "../../../utils/functions/date";
 import {
   ContainerStyle,
   ContentStyle,
@@ -24,6 +25,11 @@ const Tweet = ({
   likes,
   _id,
 }) => {
+  const formatedDate = useMemo(() => {
+    console.log(DateUtils.getTweetPublicationDate(new Date(createdAt)));
+    return DateUtils.getTweetPublicationDate(new Date(createdAt));
+  }, []);
+
   return (
     <ContainerStyle>
       <ContentStyle>
@@ -37,7 +43,7 @@ const Tweet = ({
           <HeaderStyle>
             <UserNameStyle>{user.username}</UserNameStyle>
             <UserGmailStyle>{user.email}</UserGmailStyle>
-            <TimeStyle>{createdAt}</TimeStyle>
+            <TimeStyle>{formatedDate}</TimeStyle>
             <OptionsStyle />
           </HeaderStyle>
           <DataStyle>

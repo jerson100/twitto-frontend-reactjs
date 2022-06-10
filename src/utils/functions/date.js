@@ -29,23 +29,23 @@ const differenceDates = (d1, d2) => {
  */
 const getTweetPublicationDate = (publicationDate) => {
   const { years, days, hours, minutes, segs } = differenceDates(
-    new Date(),
-    publicationDate
+    publicationDate,
+    new Date()
   );
   if (years > 0) {
-    return `Hace ${years} año${years > 1 && "s"}`;
+    return `${years} año${years > 1 ? "s" : ""}`;
   }
   if (days > 0) {
-    return `Hace ${days} día${days > 1 && "s"} `;
+    return `${days} día${days > 1 ? "s" : ""} `;
   }
   if (hours > 0) {
-    return `Hace ${hours} hora${hours > 1 && "s"} `;
+    return `${hours} h`;
   }
   if (minutes > 0) {
-    return `Hace ${minutes} minuto${minutes > 1 && "s"} `;
+    return `${minutes} m`;
   }
   if (segs > 0) {
-    return `Hace ${segs} segundo${segs > 1 && "s"} `;
+    return `${segs} s`;
   }
   return "";
 };
