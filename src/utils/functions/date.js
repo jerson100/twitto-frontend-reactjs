@@ -1,3 +1,9 @@
+/**
+ *
+ * @param {fecha1} d1 Fecha menor
+ * @param {fecha2} d2 Fecha mayor
+ * @returns {object} Devuelve un objeto que contiene los años, días, horas, minutos y segundos
+ */
 const differenceDates = (d1, d2) => {
   const d1_Milis = d1.getTime();
   const d2_Milis = d2.getTime();
@@ -16,4 +22,32 @@ const differenceDates = (d1, d2) => {
   };
 };
 
-export default { differenceDates };
+/**
+ *
+ * @param {Date} publicationDate Fecha de publicación
+ * @returns {string} Una cadena de texto mencionando hace cuando se ha realizado la publicación
+ */
+const getTweetPublicationDate = (publicationDate) => {
+  const { years, days, hours, minutes, segs } = differenceDates(
+    new Date(),
+    publicationDate
+  );
+  if (years > 0) {
+    return `Hace ${years} año${years > 1 && "s"}`;
+  }
+  if (days > 0) {
+    return `Hace ${days} día${days > 1 && "s"} `;
+  }
+  if (hours > 0) {
+    return `Hace ${hours} hora${hours > 1 && "s"} `;
+  }
+  if (minutes > 0) {
+    return `Hace ${minutes} minuto${minutes > 1 && "s"} `;
+  }
+  if (segs > 0) {
+    return `Hace ${segs} segundo${segs > 1 && "s"} `;
+  }
+  return "";
+};
+
+export default { differenceDates, getTweetPublicationDate };
