@@ -2,8 +2,8 @@ import { URL } from "../configs/api";
 import { AuthToken } from "../utils/models/token";
 /**
  * Crea un nuevo tweet
- * @param description Descripción del tweet
- * @returns
+ * @param {string} description - Descripción del tweet
+ * @returns {object} Objeto con la información de la respuesta
  */
 const createTweet = async (description) => {
   const access_token = AuthToken.get();
