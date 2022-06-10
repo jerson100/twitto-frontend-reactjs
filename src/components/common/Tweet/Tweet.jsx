@@ -26,7 +26,6 @@ const Tweet = ({
   _id,
 }) => {
   const formatedDate = useMemo(() => {
-    console.log(DateUtils.getTweetPublicationDate(new Date(createdAt)));
     return DateUtils.getTweetPublicationDate(new Date(createdAt));
   }, []);
 

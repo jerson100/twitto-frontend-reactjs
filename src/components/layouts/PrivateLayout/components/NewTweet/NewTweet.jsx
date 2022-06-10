@@ -1,5 +1,4 @@
-import React, { useCallback, useState } from "react";
-import TweetApi from "../../../../../api/tweet";
+import React, { memo, useCallback, useState } from "react";
 import Icon from "../../../../common/Icon/Icon";
 import Modal from "../../../../common/Modal";
 import {
@@ -13,7 +12,7 @@ import {
   ButtonStyle,
 } from "./newTweet.style";
 
-const NewTweet = () => {
+const NewTweet = ({ createTweet }) => {
   const [showModal, setshowModal] = useState(false);
   const handleClick = useCallback(() => {
     setshowModal(true);
@@ -23,12 +22,16 @@ const NewTweet = () => {
       <ContainerStyle onClick={handleClick}>
         <Icon svg="pen" size="SMALL" color="white" />
       </ContainerStyle>
-      <NewTweetModal showModal={showModal} setshowModal={setshowModal} />
+      <NewTweetModal
+        createTweet={createTweet}
+        showModal={showModal}
+        setshowModal={setshowModal}
+      />
     </>
   );
 };
 
-const NewTweetModal = ({ showModal, setshowModal }) => {
+const NewTweetModal = ({ showModal, setshowModal, createTweet }) => {
   const [text, settext] = useState("");
 
   const handleClose = useCallback(() => {
@@ -40,22 +43,7 @@ const NewTweetModal = ({ showModal, setshowModal }) => {
   };
 
   const twittear = useCallback(() => {
-    const create = async () => {
-      if (text) {
-        try {
-          const data = await TweetApi.createTweet(text);
-
-          console.log(data);
-          handleClose(); //cerramos el modal
-        } catch (e) {
-          console.log(e);
-        }
-      } else {
-        console.log("El tweet no puede estar vacío");
-      }
-    };
-
-    create();
+    createTweet(text, handleClose);
   }, [text]);
   return (
     <Modal
@@ -90,4 +78,4 @@ const NewTweetModal = ({ showModal, setshowModal }) => {
   );
 };
 
-export default NewTweet;
+export default memo(NewTweet);

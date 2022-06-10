@@ -4,7 +4,6 @@ import { useAuth } from "../../../hooks/useAuth";
 // import MobileMenu from "./components/MobileMenu";
 import { CenterLayout, LeftLayout, RightLayout } from "./privateLayout.style";
 import BottomNavigationMenu from "./components/BottomNavigationMenu";
-import NewTweet from "./components/NewTweet";
 
 const PrivateLayout = ({ to = "/i/flow/login" }) => {
   const { user, previousLoadingUser } = useAuth();
@@ -22,7 +21,7 @@ const PrivateLayout = ({ to = "/i/flow/login" }) => {
         <Outlet />
       </CenterLayout>
       <RightLayout />
-      <NewTweet />
+
       <BottomNavigationMenu />
     </>
   );

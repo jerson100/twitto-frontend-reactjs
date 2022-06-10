@@ -28,24 +28,22 @@ const differenceDates = (d1, d2) => {
  * @returns {string} Una cadena de texto mencionando hace cuando se ha realizado la publicación
  */
 const getTweetPublicationDate = (publicationDate) => {
-  const { years, days, hours, minutes, segs } = differenceDates(
+  const { days, hours, minutes, segs } = differenceDates(
     publicationDate,
     new Date()
   );
-  if (years > 0) {
-    return `${years} año${years > 1 ? "s" : ""}`;
-  }
+
   if (days > 0) {
     return `${days} día${days > 1 ? "s" : ""} `;
   }
   if (hours > 0) {
-    return `${hours} h`;
+    return `${hours}h`;
   }
   if (minutes > 0) {
-    return `${minutes} min`;
+    return `${minutes}min`;
   }
   if (segs > 0) {
-    return `${segs} s`;
+    return `${segs}s`;
   }
   return "";
 };

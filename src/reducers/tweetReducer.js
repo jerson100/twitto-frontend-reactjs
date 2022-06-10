@@ -15,7 +15,7 @@ const tweetReducer = (state, action) => {
     case TWEET_ACTIONS.TWEET_SET:
       return { ...state, tweets: action.payload };
     case TWEET_ACTIONS.TWEET_ADD:
-      return { ...state, tweets: [...state.tweets, action.payload] };
+      return { ...state, tweets: [action.payload, ...state.tweets] };
     case TWEET_ACTIONS.TWEET_DELETE:
       const id = action.payload;
       const newTweets = state.tweets.filter((t) => t.id !== id);

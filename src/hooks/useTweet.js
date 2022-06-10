@@ -59,7 +59,10 @@ const useTweet = () => {
           type: TWEET_ACTIONS.TWEET_ADD,
           payload: data,
         });
-        cb();
+        console.log("create");
+        if (cb) {
+          cb();
+        }
       } catch (e) {
         console.log(e);
       }
