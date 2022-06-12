@@ -12,8 +12,6 @@ const ActionCountStyle = styled.div`
 const ActionContentStyle = styled.div`
   line-height: 0;
   svg {
-    height: 22px;
-    width: 22px;
     fill: ${({ theme }) => theme.COLORS.SECONDARY};
   }
 `;
