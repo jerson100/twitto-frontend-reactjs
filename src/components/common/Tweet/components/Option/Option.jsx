@@ -1,12 +1,12 @@
 import React from "react";
-import useTweet from "../../../../../hooks/useTweet";
+import { useTweetContext } from "../../../../../hooks/useTweetContext";
 import Icon from "../../../Icon/Icon";
 import { OptionContentStyle, OptionContainerStyle } from "./option.style";
 
 const Option = ({ idTweet }) => {
-  const { deleteTweet } = useTweet();
-  const handleClick = () => {
-    deleteTweet(idTweet);
+  const { deleteTweet } = useTweetContext();
+  const handleClick = async () => {
+    await deleteTweet(idTweet);
   };
   return (
     <OptionContainerStyle>

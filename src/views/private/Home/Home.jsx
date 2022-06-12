@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { useOutletContext } from "react-router-dom";
 import MobileMenu from "../../../components/layouts/PrivateLayout/components/MobileMenu";
+import { TweetProvider } from "../../../contexts/tweetContext";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import { HomeContainerStyle } from "./home.style";
@@ -12,7 +13,9 @@ const Home = () => {
     <HomeContainerStyle>
       <Header setShow={setShow} />
       <MobileMenu show={show} setShow={setShow} />
-      <Main />
+      <TweetProvider>
+        <Main />
+      </TweetProvider>
     </HomeContainerStyle>
   );
 };

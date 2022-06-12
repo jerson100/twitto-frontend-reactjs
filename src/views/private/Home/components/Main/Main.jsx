@@ -1,11 +1,11 @@
 import React from "react";
 import Tweet from "../../../../../components/common/Tweet";
 import NewTweet from "../../../../../components/layouts/PrivateLayout/components/NewTweet";
-import useTweet from "../../../../../hooks/useTweet";
+import { useTweetContext } from "../../../../../hooks/useTweetContext";
 import { MainContainerStyle } from "../../home.style";
 
 const Main = () => {
-  const { tweets, loading, createTweet } = useTweet();
+  const { tweets, loading, createTweet } = useTweetContext();
   return (
     <>
       <MainContainerStyle>

@@ -1,12 +1,15 @@
-import { useCallback, useEffect, useReducer } from "react";
+import { useCallback, useEffect, useReducer, createContext } from "react";
 import {
   tweetReducer,
   TWEET_ACTIONS,
   TWEET_INITIAL_STATE,
 } from "../reducers/tweetReducer";
+
 import TweetApi from "../api/tweet";
 
-const useTweet = () => {
+const TweetContext = createContext();
+
+const TweetProvider = ({ children }) => {
   const [data, dispatch] = useReducer(tweetReducer, TWEET_INITIAL_STATE);
 
   useEffect(() => {
@@ -59,7 +62,6 @@ const useTweet = () => {
           type: TWEET_ACTIONS.TWEET_ADD,
           payload: data,
         });
-        console.log("create");
         if (cb) {
           cb();
         }
@@ -70,24 +72,29 @@ const useTweet = () => {
     create();
   }, []);
 
-  const deleteTweet = async (idTweet) => {
+  const deleteTweet = useCallback(async (idTweet) => {
     try {
-      await TweetApi.deleteTweet(idTweet);
       dispatch({
         type: TWEET_ACTIONS.TWEET_DELETE,
         payload: idTweet,
       });
-      console.log("tweet eliminado");
+      await TweetApi.deleteTweet(idTweet);
     } catch (e) {
-      console.log(e);
+      throw e;
     }
-  };
+  }, []);
 
-  return {
-    ...data,
-    createTweet,
-    deleteTweet,
-  };
+  return (
+    <TweetContext.Provider
+      value={{
+        ...data,
+        createTweet,
+        deleteTweet,
+      }}
+    >
+      {children}
+    </TweetContext.Provider>
+  );
 };
 
-export default useTweet;
+export { TweetContext, TweetProvider };
