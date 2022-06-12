@@ -40,7 +40,12 @@ const getStyleButton = ({ type, theme, color }) => {
       color: ${b_hover};
     }
     &:active {
-      outline: solid 2px ${lighten(0.08, b)};
+      outline-color: ${({
+        theme: {
+          COLORS: { THIRD },
+        },
+      }) => THIRD};
+      border-color: transparent;
     }
   `;
 };

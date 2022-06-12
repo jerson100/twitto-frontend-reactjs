@@ -28,7 +28,7 @@ const BaseButtonStyle = styled.button`
   background-color: rgba(255, 255, 255, 1);
   border-radius: ${({ rounded }) => (rounded ? "99999px" : "2px")};
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: rgba(0, 0, 0, 1);
   cursor: pointer;
   font-weight: 400;
@@ -37,7 +37,7 @@ const BaseButtonStyle = styled.button`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  outline: 0;
+  outline: solid 2px transparent;
   transition: transform 200ms ease;
   ${({ $size }) => BUTTONS_SIZE[$size]}
   ${({ maxWidth }) => css`
@@ -45,20 +45,27 @@ const BaseButtonStyle = styled.button`
     width: 100%;
   `}
   &:focus {
-    border: solid 2px
+    border-color: ${({
+      theme: {
+        COLORS: { THIRD },
+      },
+    }) => THIRD};
+    outline-color: ${({
+      theme: {
+        COLORS: { THIRD },
+      },
+    }) => THIRD};
+  }
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+  &:active {
+    border: solid 1px
       ${({
         theme: {
           COLORS: { THIRD },
         },
       }) => THIRD};
-  }
-  &:active {
-    border: solid 2px
-      ${({
-        theme: {
-          COLORS: { THIRD },
-        },
-      }) => THIRD} !important;
     background-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.05);
   }
