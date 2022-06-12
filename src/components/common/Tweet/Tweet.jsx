@@ -13,8 +13,8 @@ import {
   UserNameStyle,
   UserGmailStyle,
   TimeStyle,
-  OptionsStyle,
 } from "./tweet.style";
+import Option from "./components/Option";
 
 const Tweet = ({
   user,
@@ -43,7 +43,7 @@ const Tweet = ({
             <UserNameStyle>{user.username}</UserNameStyle>
             <UserGmailStyle>{user.email}</UserGmailStyle>
             <TimeStyle dateTime={createdAt}>{formatedDate}</TimeStyle>
-            <OptionsStyle />
+            <Option />
           </HeaderStyle>
           <DataStyle>
             <Paragraph ass="p">{description}</Paragraph>
