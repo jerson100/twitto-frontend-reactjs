@@ -45,7 +45,7 @@ const getTweetPublicationDate = (publicationDate) => {
   if (segs > 0) {
     return `${segs}s`;
   }
-  return "";
+  return "0s";
 };
 
 export default { differenceDates, getTweetPublicationDate };
