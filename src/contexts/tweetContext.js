@@ -65,6 +65,7 @@ const TweetProvider = ({ children }) => {
         if (cb) {
           cb();
         }
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } catch (e) {
         console.log(e);
       }
