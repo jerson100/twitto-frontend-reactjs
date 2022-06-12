@@ -70,9 +70,23 @@ const useTweet = () => {
     create();
   }, []);
 
+  const deleteTweet = async (idTweet) => {
+    try {
+      await TweetApi.deleteTweet(idTweet);
+      dispatch({
+        action: TWEET_ACTIONS.TWEET_DELETE,
+        payload: idTweet,
+      });
+      console.log("tweet eliminado");
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return {
     ...data,
     createTweet,
+    deleteTweet,
   };
 };
 
