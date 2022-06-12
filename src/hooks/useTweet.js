@@ -74,7 +74,7 @@ const useTweet = () => {
     try {
       await TweetApi.deleteTweet(idTweet);
       dispatch({
-        action: TWEET_ACTIONS.TWEET_DELETE,
+        type: TWEET_ACTIONS.TWEET_DELETE,
         payload: idTweet,
       });
       console.log("tweet eliminado");

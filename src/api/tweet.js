@@ -53,17 +53,18 @@ const getFeed = async () => {
 
 const deleteTweet = async (idTweet) => {
   const access_token = AuthToken.get();
-  const data = await fetch(`${URL}/tweets/${idTweet}}`, {
+  const data = await fetch(`${URL}/tweets/${idTweet}`, {
+    method: "delete",
     headers: {
       "content-type": "application/json",
       authorization: `Bearer ${access_token}`,
     },
   });
-  const dataJson = await data.json();
+
   if (!data.ok) {
-    throw dataJson.message || "Ocurrió un error al procesar la solicitud";
+    throw "No se pudo eliminar el tweet";
   }
-  return dataJson.data;
+  return true;
 };
 
 export default { createTweet, getFeed, deleteTweet };
