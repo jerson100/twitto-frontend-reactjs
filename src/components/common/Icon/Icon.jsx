@@ -3,9 +3,9 @@ import svgs from "../../../utils/constants/svg";
 import { IconContainerStyle, IconSvgStyle } from "./icon.style";
 import PropTypes from "prop-types";
 
-const Icon = ({ svg, size, color, handleClick }) => {
+const Icon = ({ svg, size, color, handleClick, className }) => {
   return (
-    <IconContainerStyle $size={size}>
+    <IconContainerStyle $size={size} className={className}>
       {svgs[svg] && (
         <IconSvgStyle
           viewBox={svgs[svg].viewBox}
