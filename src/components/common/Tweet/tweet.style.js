@@ -1,10 +1,5 @@
-import styled, { css } from "styled-components";
-
-const ellipse = css`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 0.5rem;
-`;
+import styled from "styled-components";
+import { ellipse } from "../../styleComponents/text.style";
 
 const ContainerStyle = styled.div`
   padding: 1rem;
@@ -40,13 +35,17 @@ const DataStyle = styled.div``;
 const UserNameStyle = styled.div`
   font-weight: 700;
   ${ellipse}
+  margin-right: 0.5rem;
 `;
 const UserGmailStyle = styled.div`
   color: ${({ theme }) => theme.COLORS.SECONDARY};
   ${ellipse}
+  margin-right: 0.5rem;
 `;
 const TimeStyle = styled.time`
   color: ${({ theme }) => theme.COLORS.SECONDARY};
+  ${ellipse}
+  margin-right: 0.5rem;
 `;
 const OptionsStyle = styled.div``;
 
