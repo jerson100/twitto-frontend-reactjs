@@ -14,7 +14,7 @@ const AuthForm = () => {
     <AuthFormStyle>
       <Button
         rounded
-        size="NORMAL"
+        size="BIG"
         color="normal"
         // maxWidth="300px"
         Icon={<FontAwesomeIcon icon={faGoogle} />}
@@ -23,7 +23,7 @@ const AuthForm = () => {
       </Button>
       <Button
         rounded
-        size="NORMAL"
+        size="BIG"
         color="normal"
         // maxWidth="300px"
         Icon={<FontAwesomeIcon icon={faApple} />}
@@ -32,7 +32,7 @@ const AuthForm = () => {
       </Button>
       <Button
         rounded
-        size="NORMAL"
+        size="BIG"
         color="NORMAL"
         //    maxWidth="300px"
       >

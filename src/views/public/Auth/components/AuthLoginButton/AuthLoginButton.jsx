@@ -15,7 +15,7 @@ const AuthLoginButton = () => {
       </Paragraph>
       <Button
         rounded
-        size="NORMAL"
+        size="BIG"
         color="BLUE"
         type="GOSTH"
         handleClick={handleClick}
