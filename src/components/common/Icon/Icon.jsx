@@ -3,7 +3,7 @@ import svgs from "../../../utils/constants/svg";
 import { IconContainerStyle, IconSvgStyle } from "./icon.style";
 import PropTypes from "prop-types";
 
-const Icon = ({ svg, size, color }) => {
+const Icon = ({ svg, size, color, handleClick }) => {
   return (
     <IconContainerStyle $size={size}>
       {svgs[svg] && (
@@ -11,6 +11,7 @@ const Icon = ({ svg, size, color }) => {
           viewBox={svgs[svg].viewBox}
           color={color}
           xmlns="http://www.w3.org/2000/svg"
+          onClick={handleClick}
         >
           {svgs[svg].svg}
         </IconSvgStyle>
