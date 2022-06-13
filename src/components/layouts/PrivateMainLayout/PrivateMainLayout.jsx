@@ -4,9 +4,14 @@ import Main from "./components/Main";
 import { PrivateMaintStyle } from "./headerMaintLayout.style";
 import PrivateMainLayoutContext from "./context/PrivateMainLayoutContext";
 
-const PrivateMainLayout = ({ iconLeft, children }) => {
-  const [title, settitle] = useState("");
-  const [subtitle, setsubtitle] = useState("@loveting100"); //example
+const PrivateMainLayout = ({
+  iconLeft,
+  children,
+  title: propTitle,
+  subtitle: propSubtitle,
+}) => {
+  const [title, settitle] = useState(propTitle);
+  const [subtitle, setsubtitle] = useState(propSubtitle); //example
   const changeTitle = useCallback((title) => {
     settitle(title);
   }, []);
