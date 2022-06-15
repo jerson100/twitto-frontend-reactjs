@@ -52,11 +52,21 @@ const getStyleButton = ({ type, theme, color }) => {
 
 const ButtonStyle = styled(BaseButton)`
   ${(res) => getStyleButton(res)}
+  ${({ isText }) =>
+    !isText &&
+    css`
+      line-height: 0;
+    `}
   .text {
   }
   .icon {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: 0;
+    ${({ isText }) =>
+      !isText &&
+      css`
+        margin-right: 0;
+      `}
   }
 `;
 

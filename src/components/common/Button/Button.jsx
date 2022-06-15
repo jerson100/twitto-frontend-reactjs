@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ButtonStyle } from "./button.style";
+import Icon from "../Icon/Icon.jsx";
 
 const Button = ({
   children,
@@ -15,35 +16,6 @@ const Button = ({
   className,
 }) => {
   return (
-    <ButtonInitial
-      handleClick={handleClick}
-      size={size}
-      block={block}
-      rounded={rounded}
-      type={type}
-      color={color}
-      maxWidth={maxWidth}
-      Icon={Icon}
-      className={className}
-    >
-      {children}
-    </ButtonInitial>
-  );
-};
-
-const ButtonInitial = ({
-  handleClick,
-  size,
-  block,
-  rounded,
-  type,
-  color,
-  maxWidth,
-  children,
-  Icon,
-  className,
-}) => {
-  return (
     <ButtonStyle
       handleClick={handleClick}
       size={size}
@@ -53,9 +25,10 @@ const ButtonInitial = ({
       color={color}
       maxWidth={maxWidth}
       className={className}
+      isText={children === null}
     >
-      <div className="icon">{Icon && Icon}</div>
-      <span className="text">{children}</span>
+      {Icon && <div className="icon">{Icon}</div>}
+      {children && <span className="text">{children}</span>}
     </ButtonStyle>
   );
 };
