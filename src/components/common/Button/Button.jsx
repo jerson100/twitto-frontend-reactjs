@@ -67,4 +67,4 @@ Button.defaultProps = {
   maxWidth: "100%",
 };
 
-export default Button;
+export default React.memo(Button);
