@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useCallback } from "react";
 import PropTypes from "prop-types";
-import Button from "../Button";
+import { FollowButtonStyle } from "./followButton.style";
 
-const FollowButton = ({ following, setFollowing, toUser }) => {
-  const handleClick = useEffect(() => {}, []);
+const FollowButton = ({ following, setFollowing, toUser, ...props }) => {
+  const handleClick = useCallback(() => {}, []);
   return (
-    <Button size="SMALL" handleClick={handleClick}>
+    <FollowButtonStyle rounded {...props} handleClick={handleClick}>
       {following ? "Siguiendo" : "Seguir"}
-    </Button>
+    </FollowButtonStyle>
   );
 };
 
-FollowedButton.propTypes = {
+FollowButton.propTypes = {
   following: PropTypes.bool,
   setFollowing: PropTypes.func,
   toUser: PropTypes.string,
 };
 
-FollowedButton.defaultProps = {
+FollowButton.defaultProps = {
   following: false,
   setFollowing: null,
 };
