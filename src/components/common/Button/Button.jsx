@@ -23,7 +23,7 @@ const Button = ({
           $size={size}
           block={block}
           rounded={rounded}
-          color={color}
+          $color={color}
           maxWidth={maxWidth}
           className={className}
           isText={children != null || children != undefined}
@@ -39,7 +39,7 @@ const Button = ({
           $size={size}
           block={block}
           rounded={rounded}
-          color={color}
+          $color={color}
           maxWidth={maxWidth}
           className={className}
           isText={children != null || children != undefined}
@@ -84,23 +84,16 @@ Button.propTypes = {
     "BLACK",
     "BLUE",
     "LIGHT_NIGHT",
-    "normal",
-    "purple",
-    "orange",
-    "green",
-    "black",
-    "blue",
-    "light_night",
   ]),
   maxWidth: PropTypes.string,
 };
 
 Button.defaultProps = {
   size: "NORMAL",
-  block: true,
+  block: false,
   rounded: false,
   type: "DEFAULT", //actua dependiendo el tema seleccionado.
-  color: undefined,
+  color: "NORMAL",
   maxWidth: "100%",
 };
 

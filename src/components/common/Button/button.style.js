@@ -2,31 +2,32 @@ import styled, { css } from "styled-components";
 import { BUTTONS } from "../../../configs/style";
 import { darken, lighten } from "polished";
 import { SIZES } from "../../../configs/style";
+import { ellipse } from "../../styleComponents/text.style";
 
 const BUTTONS_SIZE = {
   [SIZES.SMALL]: {
     fontSize: "13px",
     padding: "0 7px",
-    height: 24,
+    height: 26,
   },
   [SIZES.SMALLER]: {
     fontSize: "14px",
     padding: "0 11px",
-    height: 28,
+    height: 32,
   },
   [SIZES.NORMAL]: {
     fontSize: "15px",
-    height: 32,
+    height: 38,
     padding: "4px 12px",
   },
   [SIZES.BIG]: {
     fontSize: "16px",
     padding: "4px 16px",
-    height: 40,
+    height: 42,
   },
   [SIZES.VERY_BIG]: {
     fontSize: "17px",
-    height: 48,
+    height: 54,
     padding: "4px 20px",
   },
 };
@@ -43,16 +44,14 @@ const BaseButtonStyle = styled.button`
   overflow: hidden;
   outline: solid 2px transparent;
   transition: transform 200ms ease;
+  display: inline-flex;
   ${({ $size }) => css`
     font-size: ${BUTTONS_SIZE[$size].fontSize};
     padding: ${BUTTONS_SIZE[$size].padding};
     height: ${BUTTONS_SIZE[$size].height}px;
     min-width: ${BUTTONS_SIZE[$size].height}px;
   `}
-  ${({ maxWidth }) => css`
-    max-width: ${maxWidth};
-    width: 100%;
-  `}
+
   &:focus {
     border-color: ${({ theme }) => theme.COLORS.THIRD};
     outline-color: ${({ theme }) => theme.COLORS.THIRD};
@@ -68,35 +67,45 @@ const BaseButtonStyle = styled.button`
   ${({ block }) =>
     block
       ? css`
-          display: flex;
           margin-bottom: 1rem;
+          max-width: 100%;
           width: 100%;
         `
       : css`
-          display: inline-flex;
           margin-bottom: 1rem;
           margin-right: 1rem;
-          width: initial;
+          width: auto;
         `}
+  ${({ maxWidth }) => css`
+    max-width: ${maxWidth};
+  `}
   align-items: center;
   justify-content: center;
 `;
 
-const ButtonStyle = styled(BaseButtonStyle)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const ButtonStyle = styled(BaseButtonStyle).attrs(({ $color }) => ({
+  bg: BUTTONS.COLORS[$color].BG_COLOR,
+  bc: BUTTONS.COLORS[$color].BORDER,
+  ct: BUTTONS.COLORS[$color].COLOR,
+  bg_hover: darken(0.05, BUTTONS.COLORS[$color].BG_COLOR),
+  b_hover: BUTTONS.COLORS[$color].BG_COLOR,
+  ct_hover: BUTTONS.COLORS[$color].COLOR,
+}))`
   ${({ isText }) =>
     !isText &&
     css`
-      padding: 5px;
+      padding: 8px;
+      min-width: initial;
     `}
   .icon {
     & > div {
+      svg {
+        fill: ${({ ct }) => ct};
+      }
       ${({ $size }) =>
         css`
-          width: ${BUTTONS_SIZE[$size].height - 10}px;
-          height: ${BUTTONS_SIZE[$size].height - 10}px;
+          width: ${BUTTONS_SIZE[$size].height - 18}px;
+          height: ${BUTTONS_SIZE[$size].height - 18}px;
         `}
       ${({ isText }) =>
         isText &&
@@ -106,78 +115,40 @@ const ButtonStyle = styled(BaseButtonStyle)`
     }
   }
   .text {
+    ${ellipse}
   }
+  ${(props) => getButtonStyle(props)}
 `;
 
-const GosthButtonStyle = styled(ButtonStyle)``;
+const GosthButtonStyle = styled(ButtonStyle).attrs(({ bg, bg_hover }) => ({
+  bg: "transparent",
+  bc: bg,
+  ct: bg,
+  bg_hover: "transparent",
+  b_hover: bg_hover,
+  ct_hover: darken(0.1, bg),
+}))``;
 
-const getStyleButton = ({ type, theme, color }) => {
-  let c, b, bg, bg_hover, b_hover;
-  if (color) {
-    color = color?.toUpperCase();
-    if (BUTTONS.COLORS[color]) {
-      c = BUTTONS.COLORS[color].COLOR;
-      bg = BUTTONS.COLORS[color].BG_COLOR;
-      b = BUTTONS.COLORS[color].BORDER;
-    } else {
-      throw new Error("El color no es válido");
-    }
-  } else {
-    c = "#fff";
-    bg = theme.COLORS.ACTIONS;
-    b = theme.COLORS.ACTIONS;
+/**
+ *
+ * bg-> color de fondo
+ * bc-> color de borde
+ * ct-> color de texto
+ * bg_hover-> color de fondo al pasar el mouse
+ * bc_hover-> color de borde al pasar el mouse
+ * ct_hover-> color de texto al pasar el mouse
+ *
+ */
+const getButtonStyle = ({ bg, bc, ct, bg_hover, b_hover, ct_hover }) => css`
+  background-color: ${bg};
+  border-color: ${bc};
+  color: ${ct};
+  &:hover,
+  &:active {
+    background-color: ${bg_hover};
+    border-color: ${b_hover};
+    color: ${ct_hover};
   }
-  bg_hover = darken(0.05, bg);
-  if (type === "GOSTH") {
-    c = bg;
-    b = c;
-    b_hover = lighten(0.1, c);
-    bg = "transparent";
-    bg_hover = "transparent";
-  }
-  return css`
-    background-color: ${bg};
-    border-color: ${b};
-    color: ${c};
-    &:hover {
-      background-color: ${bg_hover};
-      border-color: ${b_hover};
-      color: ${b_hover};
-    }
-    &:active {
-      outline-color: ${({
-        theme: {
-          COLORS: { THIRD },
-        },
-      }) => THIRD};
-      border-color: transparent;
-    }
-  `;
-};
-
-// const ButtonStyle = styled(BaseButton)`
-//   ${(res) => getStyleButton(res)}
-//   ${({ isText }) =>
-//     !isText &&
-//     css`
-//       line-height: 0;
-//       padding: 4px;
-//     `}
-//   .text {
-//   }
-//   .icon {
-//     ${({ isText }) =>
-//       isText &&
-//       css`
-//         margin-right: 0.2rem;
-//       `}
-//     & > div {
-//       width: 14px;
-//       height: 14px;
-//     }
-//   }
-// `;
-
-// const ButtonGosht = styled(ButtonStyle)``;
+`;
 
 export { ButtonStyle, GosthButtonStyle };
