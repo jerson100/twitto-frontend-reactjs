@@ -10,7 +10,7 @@ const BottomNavigationMenu = () => {
   return (
     <BottomStyle>
       <BottomListStyle dir="horizontal">
-        <BottomListStyle.Item to="/">
+        <BottomListStyle.Item to="/home">
           <IconContainerStyle>
             <Icon svg="home" size="SMALL" />
           </IconContainerStyle>

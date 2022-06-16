@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ellipse } from "../../styleComponents/text.style";
 
@@ -32,10 +33,12 @@ const HeaderStyle = styled.div`
   margin-bottom: 0.5rem;
 `;
 const DataStyle = styled.div``;
-const UserNameStyle = styled.div`
+const UserNameStyle = styled(Link)`
   font-weight: 700;
-  ${ellipse}
   margin-right: 0.5rem;
+  text-decoration: none;
+  color: ${({ theme }) => theme.COLORS.PRIMARY};
+  ${ellipse}
 `;
 const UserGmailStyle = styled.div`
   color: ${({ theme }) => theme.COLORS.SECONDARY};

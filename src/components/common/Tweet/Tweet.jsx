@@ -15,6 +15,7 @@ import {
   TimeStyle,
 } from "./tweet.style";
 import Option from "./components/Option";
+import { Link } from "react-router-dom";
 
 const Tweet = ({
   user,
@@ -33,14 +34,18 @@ const Tweet = ({
     <ContainerStyle>
       <ContentStyle>
         <LeftStyle>
-          <UserImageStyle
-            src="https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg"
-            alt={user.username}
-          />
+          <Link to={`/${user.username}`}>
+            <UserImageStyle
+              src="https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg"
+              alt={user.username}
+            />
+          </Link>
         </LeftStyle>
         <RightStyle>
           <HeaderStyle>
-            <UserNameStyle>{user.username}</UserNameStyle>
+            <UserNameStyle to={`/${user.username}`}>
+              {user.username}
+            </UserNameStyle>
             <UserGmailStyle>{user.email}</UserGmailStyle>
             <TimeStyle dateTime={createdAt}>{formatedDate}</TimeStyle>
             <Option idTweet={_id} idUser={user._id} />
