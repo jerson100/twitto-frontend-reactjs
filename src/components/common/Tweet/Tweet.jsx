@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import Paragraph from "../Paragraph";
 import Actions from "./components/Actions";
 import DateUtils from "../../../utils/functions/date";
@@ -25,6 +26,7 @@ const Tweet = ({
   retwitts,
   likes,
   _id,
+  isVisual,
 }) => {
   const formatedDate = useMemo(() => {
     return DateUtils.getTweetPublicationDate(new Date(createdAt));
@@ -48,7 +50,7 @@ const Tweet = ({
             </UserNameStyle>
             <UserGmailStyle>{user.email}</UserGmailStyle>
             <TimeStyle dateTime={createdAt}>{formatedDate}</TimeStyle>
-            <Option idTweet={_id} idUser={user._id} />
+            {!isVisual && <Option idTweet={_id} idUser={user._id} />}
           </HeaderStyle>
           <DataStyle>
             <Paragraph ass="p">{description}</Paragraph>
@@ -58,6 +60,14 @@ const Tweet = ({
       </ContentStyle>
     </ContainerStyle>
   );
+};
+
+Tweet.propTypes = {
+  isVisual: PropTypes.bool,
+};
+
+Tweet.defaultProps = {
+  isVisual: false,
 };
 
 export default Tweet;
