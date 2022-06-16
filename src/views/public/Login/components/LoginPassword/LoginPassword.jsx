@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Button from "../../../../../components/common/Button";
 import JeLink from "../../../../../components/common/JeLink";
 import Paragraph from "../../../../../components/common/Paragraph";
@@ -12,7 +12,8 @@ const LoginPassword = () => {
   const [password, setpassword] = useState("");
   const { onLogin } = useAuthContext();
   //   const navigate = useNavigate();
-  const handleClick = async () => {
+
+  const handleClick = useCallback(async () => {
     try {
       await onLogin(email, password);
       //   navigate("/home", {
@@ -21,7 +22,7 @@ const LoginPassword = () => {
     } catch (e) {
       console.log(e);
     }
-  };
+  }, [email, password]);
   return (
     <LoginPasswordContainerStyle>
       <Paragraph type="h4" as="h1">
@@ -45,7 +46,7 @@ const LoginPassword = () => {
       <Space size="80px" />
       <Button
         type="GOSTH"
-        size="BIG"
+        color="BLUE"
         rounded
         block={false}
         handleClick={handleClick}
