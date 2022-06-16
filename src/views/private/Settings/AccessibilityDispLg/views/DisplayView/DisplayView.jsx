@@ -15,7 +15,7 @@ const tweet = {
     username: "Twitter",
     gmail: "@Twitter",
   },
-  content:
+  description:
     "La esencia de Twitter son mensajes breves llamados Tweets, como este, que pueden incluir fotos, videos, enlaces, texto, hashtags y menciones en el formato ",
   date: "7h",
   comments: 120,
@@ -40,7 +40,7 @@ const DisplayView = () => {
           afecta a todas las cuentas de Twitter en este navegador.
         </Paragraph>
       </ContentStyle>
-      <Tweet {...tweet} />
+      <Tweet {...tweet} isVisual={true} />
       <ContentStyle>
         <Paragraph ass="h2" type="h1">
           Tamaño de la fuente
@@ -81,13 +81,18 @@ const BackgroundImage = () => {
       <Paragraph ass="h2" type="h1">
         Imagen de fondo
       </Paragraph>
-      <Button color="NORMAL" size="VERY_BIG" handleClick={changeThemeAUX}>
+      <Button color="NORMAL" size="VERY_BIG" block handleClick={changeThemeAUX}>
         Predet.
       </Button>
-      <Button color="LIGHT_NIGHT" size="VERY_BIG" handleClick={changeThemeAUX}>
+      <Button
+        color="LIGHT_NIGHT"
+        size="VERY_BIG"
+        block
+        handleClick={changeThemeAUX}
+      >
         Noche Clara
       </Button>
-      <Button color="BLACK" size="VERY_BIG" handleClick={changeThemeAUX}>
+      <Button color="BLACK" size="VERY_BIG" block handleClick={changeThemeAUX}>
         Oscuro
       </Button>
     </ContentStyle>
