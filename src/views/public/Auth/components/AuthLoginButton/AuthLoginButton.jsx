@@ -13,14 +13,7 @@ const AuthLoginButton = () => {
       <Paragraph as="p" type="h6">
         ¿Ya tienes una cuenta?
       </Paragraph>
-      <Button
-        rounded
-        size="BIG"
-        color="BLUE"
-        type="GOSTH"
-        handleClick={handleClick}
-        //   maxWidth="300px"
-      >
+      <Button rounded color="BLUE" type="GOSTH" handleClick={handleClick}>
         Iniciar sesión
       </Button>
     </>

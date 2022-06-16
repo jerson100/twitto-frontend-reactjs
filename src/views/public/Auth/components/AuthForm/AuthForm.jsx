@@ -1,41 +1,23 @@
 import React from "react";
 import Button from "../../../../../components/common/Button";
 import Paragraph from "../../../../../components/common/Paragraph";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle, faApple } from "@fortawesome/free-brands-svg-icons";
 import Space from "../../../../../components/common/Space";
 import JeLink from "../../../../../components/common/JeLink";
 import { AuthFormStyle } from "./authForm.style";
 import AuthLoginButton from "../AuthLoginButton/AuthLoginButton";
 import DescriptionText from "../../../../../components/common/DescriptionText";
+import Icon from "../../../../../components/common/Icon/Icon";
 
 const AuthForm = () => {
   return (
     <AuthFormStyle>
-      <Button
-        rounded
-        size="BIG"
-        color="normal"
-        // maxWidth="300px"
-        Icon={<FontAwesomeIcon icon={faGoogle} />}
-      >
+      <Button rounded block Icon={<Icon svg="google" />}>
         Iniciar sesión con google
       </Button>
-      <Button
-        rounded
-        size="BIG"
-        color="normal"
-        // maxWidth="300px"
-        Icon={<FontAwesomeIcon icon={faApple} />}
-      >
+      <Button rounded block Icon={<Icon svg="apple" />}>
         Iniciar sesión con apple
       </Button>
-      <Button
-        rounded
-        size="BIG"
-        color="NORMAL"
-        //    maxWidth="300px"
-      >
+      <Button rounded block>
         Iniciar sesión con una cuenta de gmail o telèfono
       </Button>
       <DescriptionText>
