@@ -70,4 +70,6 @@ Tweet.defaultProps = {
   isVisual: false,
 };
 
-export default Tweet;
+export default React.memo(Tweet, (prevProps, nextProps)=>{
+  return prevProps._id === nextProps._id
+});
