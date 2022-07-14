@@ -32,10 +32,10 @@ const createTweet = async (description) => {
  * Nos permite obtener todos los tweets del usuario logueado en el sistema, nos muestra en la linea del tiempo, tanto los tweets del usuario como a los que sigue.
  * @returns
  */
-const getFeed = async () => {
+const getFeed = async (per_page = 2) => {
   const access_token = AuthToken.get();
 
-  const data = await fetch(`${URL}/tweets/timeline/feed`, {
+  const data = await fetch(`${URL}/tweets/timeline/feed?per_page=${per_page}`, {
     headers: {
       authorization: `Bearer ${access_token}`,
       "content-type": "application/json",
@@ -50,6 +50,31 @@ const getFeed = async () => {
 
   return dataJson.data;
 };
+
+/**
+ * Obtener los siguientes per_page registros antes de la fecha dateTime
+ * @param dateTime {number} Tiempo en milisegundos
+ * @param per_page {number} Cantidad máxima de documentos a obtener
+ * @author Jerson Omar, Ramírez Ortiz.
+ * @returns {Promise<*>}
+ */
+const getByDateOfLastFeed = async (dateTime, per_page = 2) => {
+  const access_token = AuthToken.get();
+  const data = await fetch(`${URL}/tweets/timeline/feed?datetime=${dateTime}&per_page=${per_page}`, {
+    headers: {
+      authorization: `Bearer ${access_token}`,
+      "content-type": "application/json",
+    },
+  });
+
+  const dataJson = await data.json();
+
+  if (!data.ok) {
+    throw dataJson.message || "Ocurrió un error al procesar la solicitud";
+  }
+
+  return dataJson.data;
+}
 
 const deleteTweet = async (idTweet) => {
   const access_token = AuthToken.get();
@@ -67,4 +92,4 @@ const deleteTweet = async (idTweet) => {
   return true;
 };
 
-export default { createTweet, getFeed, deleteTweet };
+export default { createTweet, getFeed, deleteTweet, getByDateOfLastFeed };

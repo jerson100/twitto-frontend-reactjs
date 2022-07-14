@@ -12,6 +12,15 @@ const TweetContext = createContext();
 const TweetProvider = ({ children }) => {
   const [data, dispatch] = useReducer(tweetReducer, TWEET_INITIAL_STATE);
 
+  useEffect(()=>{
+    const _tweets = data.tweets;
+    const lastTweet = _tweets ? _tweets[_tweets.length && _tweets.length - 1] :  null;
+    dispatch({
+      type: TWEET_ACTIONS.TWEET_SET_DATETIME_OF_LAST_TWEET,
+      payload: lastTweet && new Date(lastTweet.createdAt).getTime()
+    })
+  },[data.tweets])
+
   useEffect(() => {
     let load = true;
     const getT = async () => {
@@ -21,12 +30,15 @@ const TweetProvider = ({ children }) => {
       });
       try {
         const data = await TweetApi.getFeed();
-        // console.log(data);
         if (load) {
           dispatch({
             type: TWEET_ACTIONS.TWEET_SET,
             payload: data,
           });
+          dispatch({
+            type: TWEET_ACTIONS.TWEET_SET_TWEETS_AVAILABLE,
+            payload: true
+          })
         }
       } catch (e) {
         console.log(e);
@@ -85,12 +97,50 @@ const TweetProvider = ({ children }) => {
     }
   }, []);
 
+  const nextTweets = useCallback( () => {
+    const d = async ()=> {
+      dispatch({
+        type: TWEET_ACTIONS.TWEET_SET_LOADING_NEXT_TWEETS,
+        payload: true
+      })
+      try {
+        const datajson = await TweetApi.getByDateOfLastFeed(data.dateTimeOfLastTweet);
+        if(datajson.length > 0){
+          dispatch({
+            type: TWEET_ACTIONS.TWEET_ADD_LAST,
+            payload: datajson
+          })
+        }else{
+          dispatch({
+            type: TWEET_ACTIONS.TWEET_SET_TWEETS_AVAILABLE,
+            payload: false
+          })
+        }
+        dispatch({
+          type: TWEET_ACTIONS.TWEET_SET_LOADING_NEXT_TWEETS,
+          payload: false
+        })
+      }catch (e){
+        console.log(e)
+        dispatch({
+          type: TWEET_ACTIONS.TWEET_SET_LOADING_NEXT_TWEETS,
+          payload: false
+        })
+      }
+    };
+    d()
+  },[data.dateTimeOfLastTweet]);
+
   return (
     <TweetContext.Provider
       value={{
-        ...data,
+        tweets: data.tweets,
+        loading: data.loading,
+        tweetsAvailable: data.tweetsAvailable,
+        loadingNextTweets: data.loadingNextTweets,
         createTweet,
         deleteTweet,
+        nextTweets
       }}
     >
       {children}
