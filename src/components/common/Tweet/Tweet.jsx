@@ -31,14 +31,13 @@ const Tweet = ({
   const formatedDate = useMemo(() => {
     return DateUtils.getTweetPublicationDate(new Date(createdAt));
   }, []);
-
   return (
     <ContainerStyle>
       <ContentStyle>
         <LeftStyle>
           <Link to={`/${user.username}`}>
             <UserImageStyle
-              src="https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg"
+              src={user?.profile_img?.secure_url || "https://res.cloudinary.com/dgakkw9kj/image/upload/v1657909148/twitto/assets/images/profiles/default_n64epa.jpg"}
               alt={user.username}
             />
           </Link>
