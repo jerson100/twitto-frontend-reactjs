@@ -8,14 +8,16 @@ import {
   UserContainerStyle,
   FeaturedSvgStyle,
 } from "../../home.style";
+import {useAuth} from "../../../../../hooks/useAuth";
 
 const Header = ({ setShow }) => {
+  const {user} = useAuth();
   return (
     <HeaderStyle>
       <UserContainerStyle>
         <UserStyle
           src={
-            "https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg"
+              user?.profile_img?.secure_url || "https://res.cloudinary.com/dgakkw9kj/image/upload/v1657909148/twitto/assets/images/profiles/default_n64epa.jpg"
           }
           onClick={() => setShow(true)}
         />

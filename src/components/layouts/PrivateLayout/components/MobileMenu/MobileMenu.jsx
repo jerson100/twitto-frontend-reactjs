@@ -27,9 +27,11 @@ import {
 import { variants_bg, variants_menu } from "./variantsMobileMenu";
 import Paragraph from "../../../../common/Paragraph";
 import Separator from "../../../../common/Separator";
+import {useAuth} from "../../../../../hooks/useAuth";
 
 const MobileMenu = ({ show, setShow }) => {
   const refContainerBg = useRef(null);
+  const {user} = useAuth();
   const handleClose = () => {
     setShow(false);
   };
@@ -69,7 +71,7 @@ const MobileMenu = ({ show, setShow }) => {
                 <UserStyle>
                   <LeftStyle>
                     <UserLinkStyle to="/profile">
-                      <UserImgStyle src="https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg" />
+                      <UserImgStyle src={user?.profile_img?.secure_url || "https://res.cloudinary.com/dgakkw9kj/image/upload/v1657909148/twitto/assets/images/profiles/default_n64epa.jpg"} />
                     </UserLinkStyle>
                     <EmailStyle to="/profile">@loveting100</EmailStyle>
                     <UsernameStyle>loveting100</UsernameStyle>
