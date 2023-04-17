@@ -26,7 +26,7 @@ const Button = ({
           $color={color}
           maxWidth={maxWidth}
           className={className}
-          isText={children != null || children != undefined}
+          isText={children !== null || children !== undefined}
         >
           {Icon && <div className="icon">{Icon}</div>}
           {children && <span className="text">{children}</span>}
@@ -42,14 +42,15 @@ const Button = ({
           $color={color}
           maxWidth={maxWidth}
           className={className}
-          isText={children != null || children != undefined}
+          isText={children !== null || children !== undefined}
         >
-          {Icon && <div className="icon">{Icon}</div>}
-          {children && <span className="text">{children}</span>}
+          {Icon ? <div className="icon">{Icon}</div> : null}
+          {children ? <span className="text">{children}</span> : null}
         </GosthButtonStyle>
       );
+    default:
+      return null;
   }
-  return null;
 
   //   console.log(children !== undefined);
   //   return (

@@ -73,9 +73,12 @@ const SelectColor = () => {
 
 const BackgroundImage = () => {
   const { changeTheme } = useThemeContext();
-  const changeThemeAUX = useCallback((e) => {
-    changeTheme(THEMES[e.target.textContent]);
-  }, []);
+  const changeThemeAUX = useCallback(
+    (e) => {
+      changeTheme(THEMES[e.target.textContent]);
+    },
+    [changeTheme]
+  );
   return (
     <ContentStyle>
       <Paragraph ass="h2" type="h1">

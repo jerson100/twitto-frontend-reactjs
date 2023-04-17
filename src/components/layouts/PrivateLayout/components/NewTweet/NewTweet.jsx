@@ -16,7 +16,7 @@ const NewTweet = ({ createTweet }) => {
   const [showModal, setshowModal] = useState(false);
   const handleClick = useCallback(() => {
     setshowModal(true);
-  });
+  }, [setshowModal]);
   return (
     <>
       <ContainerStyle onClick={handleClick}>
@@ -36,7 +36,7 @@ const NewTweetModal = ({ showModal, setshowModal, createTweet }) => {
 
   const handleClose = useCallback(() => {
     setshowModal(false);
-  }, []);
+  }, [setshowModal]);
 
   const handleChangeText = (e) => {
     settext(e.target.value);
@@ -44,7 +44,7 @@ const NewTweetModal = ({ showModal, setshowModal, createTweet }) => {
 
   const twittear = useCallback(() => {
     createTweet(text, handleClose);
-  }, [text]);
+  }, [text, createTweet, handleClose]);
   return (
     <Modal
       size="all"

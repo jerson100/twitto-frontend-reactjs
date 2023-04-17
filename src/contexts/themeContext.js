@@ -20,7 +20,7 @@ const AppThemeProvider = ({ children }) => {
     dispatch({
       type: THEME_ACTIONS.SET_THRID_COLOR,
       payload:
-        THIRD_COLORS.find((c) => c == thrid_color_storage) || COLORS.BLUE,
+        THIRD_COLORS.find((c) => c === thrid_color_storage) || COLORS.BLUE,
     });
     dispatch({
       type: THEME_ACTIONS.SET_THEME,

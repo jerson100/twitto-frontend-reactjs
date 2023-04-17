@@ -2,7 +2,6 @@ import React from "react";
 import Icon from "../../../../components/common/Icon/Icon";
 import List from "../../../../components/common/List";
 import Paragraph from "../../../../components/common/Paragraph";
-import Space from "../../../../components/common/Space";
 import { ContentStyle } from "../../../../components/styleComponents/content.style";
 import { useChangeMainHeaderLayout } from "../../../../hooks/useChangeMainHeaderLayout";
 import { AccessibilityDispLgStyle } from "./accessibilityDispLg.style";

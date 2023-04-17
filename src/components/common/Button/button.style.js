@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { BUTTONS } from "../../../configs/style";
-import { darken, lighten } from "polished";
+import { darken } from "polished";
 import { SIZES } from "../../../configs/style";
 import { ellipse } from "../../styleComponents/text.style";
 

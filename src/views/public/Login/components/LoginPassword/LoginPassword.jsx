@@ -22,7 +22,7 @@ const LoginPassword = () => {
     } catch (e) {
       console.log(e);
     }
-  }, [email, password]);
+  }, [email, password, onLogin]);
   return (
     <LoginPasswordContainerStyle>
       <Paragraph type="h4" as="h1">

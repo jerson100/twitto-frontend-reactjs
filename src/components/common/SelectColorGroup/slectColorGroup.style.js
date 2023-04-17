@@ -1,6 +1,4 @@
-import styled, { css } from "styled-components";
-import { COLORS } from "../../../configs/style";
-import Icon from "../Icon/Icon";
+import styled from "styled-components";
 
 const ColorStyle = styled.div`
   width: 45px;

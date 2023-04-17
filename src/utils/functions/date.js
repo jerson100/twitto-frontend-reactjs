@@ -48,4 +48,6 @@ const getTweetPublicationDate = (publicationDate) => {
   return "0s";
 };
 
-export default { differenceDates, getTweetPublicationDate };
+const DateFn = { differenceDates, getTweetPublicationDate };
+
+export default DateFn;

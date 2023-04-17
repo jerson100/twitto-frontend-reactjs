@@ -8,7 +8,6 @@ import DisplayView from "../../../views/private/Settings/AccessibilityDispLg/vie
 import NavigationSetting from "../../../views/private/Settings/NavigationSetting";
 import AuthView from "../../../views/public/Auth";
 import LoginView from "../../../views/public/Login";
-import NotFound from "../../common/NotFound/NotFound";
 import PrivateLayout from "../../layouts/PrivateLayout/PrivateLayout";
 import SettingLayout from "../../layouts/SettingLayout/SettingLayout";
 import PublicRoute from "../PublicRoute";

@@ -60,12 +60,15 @@ const getFeed = async (per_page = 2) => {
  */
 const getByDateOfLastFeed = async (dateTime, per_page = 2) => {
   const access_token = AuthToken.get();
-  const data = await fetch(`${URL}/tweets/timeline/feed?datetime=${dateTime}&per_page=${per_page}`, {
-    headers: {
-      authorization: `Bearer ${access_token}`,
-      "content-type": "application/json",
-    },
-  });
+  const data = await fetch(
+    `${URL}/tweets/timeline/feed?datetime=${dateTime}&per_page=${per_page}`,
+    {
+      headers: {
+        authorization: `Bearer ${access_token}`,
+        "content-type": "application/json",
+      },
+    }
+  );
 
   const dataJson = await data.json();
 
@@ -74,7 +77,7 @@ const getByDateOfLastFeed = async (dateTime, per_page = 2) => {
   }
 
   return dataJson.data;
-}
+};
 
 const deleteTweet = async (idTweet) => {
   const access_token = AuthToken.get();
@@ -87,9 +90,11 @@ const deleteTweet = async (idTweet) => {
   });
 
   if (!data.ok) {
-    throw "No se pudo eliminar el tweet";
+    throw new Error("No se pudo eliminar el tweet");
   }
   return true;
 };
 
-export default { createTweet, getFeed, deleteTweet, getByDateOfLastFeed };
+const TweetApi = { createTweet, getFeed, deleteTweet, getByDateOfLastFeed };
+
+export default TweetApi;

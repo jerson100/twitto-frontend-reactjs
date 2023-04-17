@@ -12,14 +12,16 @@ const TweetContext = createContext();
 const TweetProvider = ({ children }) => {
   const [data, dispatch] = useReducer(tweetReducer, TWEET_INITIAL_STATE);
 
-  useEffect(()=>{
+  useEffect(() => {
     const _tweets = data.tweets;
-    const lastTweet = _tweets ? _tweets[_tweets.length && _tweets.length - 1] :  null;
+    const lastTweet = _tweets
+      ? _tweets[_tweets.length && _tweets.length - 1]
+      : null;
     dispatch({
       type: TWEET_ACTIONS.TWEET_SET_DATETIME_OF_LAST_TWEET,
-      payload: lastTweet && new Date(lastTweet.createdAt).getTime()
-    })
-  },[data.tweets])
+      payload: lastTweet && new Date(lastTweet.createdAt).getTime(),
+    });
+  }, [data.tweets]);
 
   useEffect(() => {
     let load = true;
@@ -37,8 +39,8 @@ const TweetProvider = ({ children }) => {
           });
           dispatch({
             type: TWEET_ACTIONS.TWEET_SET_TWEETS_AVAILABLE,
-            payload: true
-          })
+            payload: true,
+          });
         }
       } catch (e) {
         console.log(e);
@@ -97,39 +99,41 @@ const TweetProvider = ({ children }) => {
     }
   }, []);
 
-  const nextTweets = useCallback( () => {
-    const d = async ()=> {
+  const nextTweets = useCallback(() => {
+    const d = async () => {
       dispatch({
         type: TWEET_ACTIONS.TWEET_SET_LOADING_NEXT_TWEETS,
-        payload: true
-      })
+        payload: true,
+      });
       try {
-        const datajson = await TweetApi.getByDateOfLastFeed(data.dateTimeOfLastTweet);
-        if(datajson.length > 0){
+        const datajson = await TweetApi.getByDateOfLastFeed(
+          data.dateTimeOfLastTweet
+        );
+        if (datajson.length > 0) {
           dispatch({
             type: TWEET_ACTIONS.TWEET_ADD_LAST,
-            payload: datajson
-          })
-        }else{
+            payload: datajson,
+          });
+        } else {
           dispatch({
             type: TWEET_ACTIONS.TWEET_SET_TWEETS_AVAILABLE,
-            payload: false
-          })
+            payload: false,
+          });
         }
         dispatch({
           type: TWEET_ACTIONS.TWEET_SET_LOADING_NEXT_TWEETS,
-          payload: false
-        })
-      }catch (e){
-        console.log(e)
+          payload: false,
+        });
+      } catch (e) {
+        console.log(e);
         dispatch({
           type: TWEET_ACTIONS.TWEET_SET_LOADING_NEXT_TWEETS,
-          payload: false
-        })
+          payload: false,
+        });
       }
     };
-    d()
-  },[data.dateTimeOfLastTweet]);
+    d();
+  }, [data.dateTimeOfLastTweet]);
 
   return (
     <TweetContext.Provider
@@ -140,7 +144,7 @@ const TweetProvider = ({ children }) => {
         loadingNextTweets: data.loadingNextTweets,
         createTweet,
         deleteTweet,
-        nextTweets
+        nextTweets,
       }}
     >
       {children}
